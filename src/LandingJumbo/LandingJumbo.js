@@ -1,5 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import slider_ebr from "../assets/slider_ebr.png";
+import logo_ebr from "../assets/logo_ebr.png";
 
 const bannerMove = keyframes`
   0% { transform: translateX(0)}
@@ -32,14 +34,10 @@ const LandingJumbo = () => {
           padding: "2rem 0 0 3rem",
         }}
       >
-        <JumboHeader src="http://eastbayrecorders.com/wp-content/uploads/2016/12/EBR-Word-Mark_white-e1557269084740.png" />
+        <JumboHeader src={logo_ebr} />
       </div>
       <InfiniteJumbo>
-        <img
-          style={{ width: "100%" }}
-          src="https://eastbayrecorders.com/wp-content/uploads/2016/12/ebr_slider_1500.png"
-          alt=""
-        />
+        <img style={{ width: "100%" }} src={slider_ebr} alt="" />
       </InfiniteJumbo>
     </JumboContainer>
   );
