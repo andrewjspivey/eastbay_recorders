@@ -7,7 +7,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   margin: auto;
-  padding: 4rem 0 4rem 0;
+  padding: 4rem 0 3rem 0;
 `;
 
 const IntroContainer = styled.div`

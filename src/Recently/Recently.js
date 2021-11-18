@@ -23,7 +23,7 @@ const AlbumsContainer = styled.div`
 const Header = styled.h1`
   font-family: "Gotham";
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 2rem;
 `;
 
