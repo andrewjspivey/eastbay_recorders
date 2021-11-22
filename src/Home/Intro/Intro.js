@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import intro_ebr from "../assets/intro_ebr.jpeg";
+import intro_ebr from "../../assets/intro_ebr.jpeg";
 
 const Container = styled.div`
   width: 85%;
   display: flex;
   justify-content: center;
   margin: auto;
-  padding-top: 5rem;
+  padding: 4rem 0 4rem 0;
 `;
 
 const IntroContainer = styled.div`

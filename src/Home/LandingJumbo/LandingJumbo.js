@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import slider_ebr from "../assets/slider_ebr.png";
-import logo_ebr from "../assets/logo_ebr.png";
+import slider_ebr from "../../assets/slider_ebr.png";
+import logo_ebr from "../../assets/logo_ebr.png";
 
 const bannerMove = keyframes`
   0% { transform: translateX(0)}
