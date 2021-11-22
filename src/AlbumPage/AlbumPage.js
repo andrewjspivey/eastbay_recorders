@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { producers } from "../data/producerData";
+import { albums } from "../data/albumData";
 
-const ProducerPage = (props) => {
-  const [producer, setProducer] = useState({});
+const AlbumPage = (props) => {
+  const [album, setAlbum] = useState({});
   const { id } = useParams();
   useEffect(() => {
-    const producerInfo = producers.find((p) => p.id === id);
-    setProducer(producerInfo);
+    const albumInfo = albums.find((p) => p.id === id);
+    setAlbum(albumInfo);
   }, []);
   return (
     <>
-      {producer ? (
+      {album ? (
         <div style={{ width: "500px", height: "500px" }}>
           <div style={{ width: "80%", height: "100%" }}>
-            <h1>{producer.name}</h1>
-            <img src={producer.pic} alt="" />
+            <h1>{album.band}</h1>
+            <h2>{album.albumTitle}</h2>
+            <img src={album.albumCoverImg} alt="" />
           </div>
         </div>
       ) : (
@@ -27,4 +28,4 @@ const ProducerPage = (props) => {
   );
 };
 
-export default ProducerPage;
+export default AlbumPage;
