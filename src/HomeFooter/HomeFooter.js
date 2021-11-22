@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import ebr_record_logo from "../assets/ebr_record_logo.png";
-import { Link } from "react-router-dom";
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 const Footer = styled.div`
   width: 100%;
@@ -26,12 +27,21 @@ const HomeFooter = () => {
         <img src={ebr_record_logo} alt="" />
       </div>
       <Social>
-        <a href="https://www.facebook.com/EastBayRecorders/">
-          <h4>FACEBOOK</h4>
+        <a
+          style={{ textDecoration: "none", color: "grey" }}
+          href="https://www.facebook.com/EastBayRecorders/"
+        >
+          <h4>
+            <FaFacebookF /> FACEBOOK
+          </h4>
         </a>
-
-        <a href="https://www.instagram.com/eastbayrecorders/">
-          <h4>INSTAGRAM</h4>
+        <a
+          style={{ textDecoration: "none", color: "grey" }}
+          href="https://www.instagram.com/eastbayrecorders/"
+        >
+          <h4>
+            <FaInstagram /> INSTAGRAM
+          </h4>
         </a>
       </Social>
     </Footer>
