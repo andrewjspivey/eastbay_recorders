@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Urbano_ebr from "../assets/Urbano_ebr.jpeg";
-import white_ebr from "../assets/white_ebr.jpeg";
-import DePrato_ebr from "../assets/DePrato_ebr.jpeg";
+import Urbano_ebr from "../../assets/Urbano_ebr.jpeg";
+import white_ebr from "../../assets/white_ebr.jpeg";
+import DePrato_ebr from "../../assets/DePrato_ebr.jpeg";
 
 const Container = styled.div`
   display: flex;

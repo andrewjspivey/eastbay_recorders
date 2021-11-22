@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import intro_ebr from "../assets/intro_ebr.jpeg";
+import mixer_ebr from "../../assets/mixer_ebr.jpeg";
 
 const Container = styled.div`
   width: 85%;
   display: flex;
   justify-content: center;
   margin: auto;
-  padding: 4rem 0 4rem 0;
+  padding: 4rem 0 3rem 0;
 `;
 
 const IntroContainer = styled.div`
@@ -40,26 +40,28 @@ const Intro = () => {
     <Container>
       <IntroContainer>
         <TextContent>
-          <ContentHeader>REAL MUSIC • REAL TALENT • REAL SONGS</ContentHeader>
+          <ContentHeader>IT'S NOT ABOUT GEAR</ContentHeader>
           <div style={{ paddingTop: "0.2rem", width: "100%" }}>
             <p style={{ lineHeight: "1.7rem", fontWeight: "bold" }}>
-              East Bay Recorders is an intimate, vibey studio where real music
-              gets made. Amazing instruments, vintage recording gear, top-notch
-              digital tools, and the phone numbers of some of the San Francisco
-              Bay Area’s best session players are found here.
+              t’s about the song and doing whatever’s needed with whatever tools
+              to bring it to life. EBR takes a hybrid approach to recording
+              where old school recording technique meets today’s technology. The
+              entire goal is to capture performances and deliver the sounds that
+              feel authentic.
             </p>
           </div>
           <div style={{ paddingTop: "0.2rem", width: "100%" }}>
             <p style={{ lineHeight: "1.5rem", fontWeight: "300" }}>
-              EBR has a long history of recording and mixing dates with legends
-              in jazz (Ray Obiedo, Will Kennedy), punk rock (Rancid, Cock
-              Sparrer), alt-rock (Cracker, Matt Jaffe), and even country
-              (Country Joe McDonald, The Damn Liars). We’re ready when you are.
+              That means our engineers rely on the right microphone to the right
+              preamp into digital recorders for the cleanest signal path
+              possible. Too techy? Okay. Everything that’s on our racks or in
+              our boxes is there to make your music sound better. Check our Gear
+              page for more information.
             </p>
           </div>
         </TextContent>
         <IntroImageCont>
-          <img style={{ width: "90%" }} src={intro_ebr} alt="" />
+          <img style={{ width: "90%" }} src={mixer_ebr} alt="mixer" />
         </IntroImageCont>
       </IntroContainer>
     </Container>

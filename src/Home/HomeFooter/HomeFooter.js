@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import ebr_record_logo from "../assets/ebr_record_logo.png";
+import ebr_record_logo from "../../assets/ebr_record_logo.png";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 

@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Charger_ebr from "../assets/Charger_ebr.jpeg";
-import GHB_Momentum from "../assets/GBH_Momentum_ebr.jpeg";
-import tdl_ebr from "../assets/tdl_ebr.jpeg";
-import TheOldFirmCasuals_ebr from "../assets/TheOldFirmCasuals_ebr.jpeg";
+import Charger_ebr from "../../assets/Charger_ebr.jpeg";
+import GHB_Momentum from "../../assets/GBH_Momentum_ebr.jpeg";
+import tdl_ebr from "../../assets/tdl_ebr.jpeg";
+import TheOldFirmCasuals_ebr from "../../assets/TheOldFirmCasuals_ebr.jpeg";
 
 const Container = styled.div`
   width: 100%;
