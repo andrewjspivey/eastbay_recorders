@@ -16,6 +16,7 @@ const InfiniteJumbo = styled.div`
 
 const JumboContainer = styled.header`
   width: 100%;
+  padding-top: 50px;
   overflow: hidden;
   position: relative;
 `;
