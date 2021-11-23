@@ -18,6 +18,15 @@ const AlbumsContainer = styled.div`
   margin: 2rem;
   padding-bottom: 4rem;
   display: flex;
+  @media (max-width: 768px) {
+    flex-flow: row wrap;
+  }
+`;
+const Album = styled.div`
+  width: 25%;
+  @media (max-width: 768px) {
+    width: 50%;
+  }
 `;
 
 const Header = styled.h1`
@@ -32,34 +41,34 @@ const Recently = () => {
     <Container>
       <Header>Recently @ EBR</Header>
       <AlbumsContainer>
-        <div style={{ width: "25%" }}>
+        <Album>
           <img
             style={{ width: "100%", height: "100%" }}
             src={Charger_ebr}
             alt="Charger"
           />
-        </div>
-        <div style={{ width: "25%" }}>
+        </Album>
+        <Album>
           <img
             style={{ width: "100%", height: "100%" }}
             src={TheOldFirmCasuals_ebr}
             alt="The Old Firm Casuals - Holger Danske"
           />
-        </div>
-        <div style={{ width: "25%" }}>
+        </Album>
+        <Album>
           <img
             style={{ width: "100%", height: "100%" }}
             src={tdl_ebr}
             alt="The Damn Liars - American Ghost Town"
           />
-        </div>
-        <div style={{ width: "25%" }}>
+        </Album>
+        <Album>
           <img
             style={{ width: "100%", height: "100%" }}
             src={GHB_Momentum}
             alt="GHB - Momentum"
           />
-        </div>
+        </Album>
       </AlbumsContainer>
     </Container>
   );

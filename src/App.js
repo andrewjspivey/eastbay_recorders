@@ -6,11 +6,13 @@ import About from "./About/About";
 import Gear from "./Gear/Gear";
 import Scene from "./Scene/Scene";
 import Contact from "./Contact/Contact";
+import Navbar from "./Nav/NavBar";
 
 function App() {
   return (
     <div>
       <Router>
+        <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/about" element={<About />} />

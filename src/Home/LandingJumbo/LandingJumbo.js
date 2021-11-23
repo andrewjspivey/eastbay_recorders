@@ -12,17 +12,28 @@ const InfiniteJumbo = styled.div`
   display: flex;
   width: 200%;
   animation: ${bannerMove} 35s linear infinite;
+  @media (max-width: 768px) {
+    height: 100%;
+  }
 `;
 
 const JumboContainer = styled.header`
   width: 100%;
+  padding-top: 50px;
   overflow: hidden;
   position: relative;
+  @media (max-width: 768px) {
+    height: 40vh;
+  }
 `;
 
 const JumboHeader = styled.img`
   position: absolute;
   z-index: 1;
+  background-color: #dd3233;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const LandingJumbo = () => {
