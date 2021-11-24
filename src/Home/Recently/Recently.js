@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import Charger_ebr from "../../assets/Charger_ebr.jpeg";
 import GHB_Momentum from "../../assets/GBH_Momentum_ebr.jpeg";
 import tdl_ebr from "../../assets/tdl_ebr.jpeg";
@@ -24,9 +25,39 @@ const AlbumsContainer = styled.div`
 `;
 const Album = styled.div`
   width: 25%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    img {
+      opacity: 0.5;
+    }
+  }
   @media (max-width: 768px) {
     width: 50%;
   }
+`;
+const ViewMore = styled.div`
+  width: 50%;
+  height: 35px;
+  position: absolute;
+  border: 2px solid white;
+  display: none;
+  justify-content: center;
+  opacity: 0.9;
+  align-items: center;
+  background-color: #dd3233;
+  &:hover {
+    cursor: pointer;
+    width: 70%;
+    display: flex;
+    opacity: 1;
+  }
+  @media (max-width: 768px) {
+    width: 70%;
+    display: flex;
+  } ;
 `;
 
 const Header = styled.h1`
@@ -42,32 +73,52 @@ const Recently = () => {
       <Header>Recently @ EBR</Header>
       <AlbumsContainer>
         <Album>
-          <img
-            style={{ width: "100%", height: "100%" }}
-            src={Charger_ebr}
-            alt="Charger"
-          />
+          <ViewMore>
+            <h3 style={{ color: "white" }}>View Album</h3>
+          </ViewMore>
+          <Link to="/album/3">
+            <img
+              style={{ width: "100%", height: "100%" }}
+              src={Charger_ebr}
+              alt="Charger"
+            />
+          </Link>
         </Album>
         <Album>
-          <img
-            style={{ width: "100%", height: "100%" }}
-            src={TheOldFirmCasuals_ebr}
-            alt="The Old Firm Casuals - Holger Danske"
-          />
+          <ViewMore>
+            <h3 style={{ color: "white" }}>View Album</h3>
+          </ViewMore>
+          <Link to="/album/4">
+            <img
+              style={{ width: "100%", height: "100%" }}
+              src={TheOldFirmCasuals_ebr}
+              alt="The Old Firm Casuals - Holger Danske"
+            />
+          </Link>
         </Album>
         <Album>
-          <img
-            style={{ width: "100%", height: "100%" }}
-            src={tdl_ebr}
-            alt="The Damn Liars - American Ghost Town"
-          />
+          <ViewMore>
+            <h3 style={{ color: "white" }}>View Album</h3>
+          </ViewMore>
+          <Link to="/album/2">
+            <img
+              style={{ width: "100%", height: "100%" }}
+              src={tdl_ebr}
+              alt="The Damn Liars - American Ghost Town"
+            />
+          </Link>
         </Album>
         <Album>
-          <img
-            style={{ width: "100%", height: "100%" }}
-            src={GHB_Momentum}
-            alt="GHB - Momentum"
-          />
+          <ViewMore>
+            <h3 style={{ color: "white" }}>View Album</h3>
+          </ViewMore>
+          <Link to="/album/1">
+            <img
+              style={{ width: "100%", height: "100%" }}
+              src={GHB_Momentum}
+              alt="GHB - Momentum"
+            />
+          </Link>
         </Album>
       </AlbumsContainer>
     </Container>
