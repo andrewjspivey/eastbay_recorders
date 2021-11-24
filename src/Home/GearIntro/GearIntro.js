@@ -13,6 +13,9 @@ const Container = styled.div`
 const IntroContainer = styled.div`
   display: flex;
   justify-content: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const IntroImageCont = styled.div`
@@ -21,6 +24,9 @@ const IntroImageCont = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const ContentHeader = styled.h2`
@@ -33,6 +39,9 @@ const TextContent = styled.div`
   font-family: "Gotham";
   width: 50%;
   padding: 1rem;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const Intro = () => {

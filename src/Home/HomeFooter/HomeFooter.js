@@ -14,10 +14,10 @@ const Footer = styled.div`
   flex-direction: column;
 `;
 const Social = styled.div`
-  width: 25%;
+  width: 40%;
   height: 5rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 `;
 
 const HomeFooter = () => {
