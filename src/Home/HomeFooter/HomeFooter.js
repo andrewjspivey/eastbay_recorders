@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ebr_record_logo from "../../assets/ebr_record_logo.png";
-import { FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+import { SocialIcon } from "react-social-icons";
 
 const Footer = styled.div`
   width: 100%;
@@ -14,10 +13,13 @@ const Footer = styled.div`
   flex-direction: column;
 `;
 const Social = styled.div`
-  width: 40%;
+  width: 15%;
   height: 5rem;
   display: flex;
   justify-content: space-evenly;
+  @media (max-width: 768px) {
+    width: 65%;
+  }
 `;
 
 const HomeFooter = () => {
@@ -27,22 +29,8 @@ const HomeFooter = () => {
         <img src={ebr_record_logo} alt="" />
       </div>
       <Social>
-        <a
-          style={{ textDecoration: "none", color: "grey" }}
-          href="https://www.facebook.com/EastBayRecorders/"
-        >
-          <h4>
-            <FaFacebookF /> FACEBOOK
-          </h4>
-        </a>
-        <a
-          style={{ textDecoration: "none", color: "grey" }}
-          href="https://www.instagram.com/eastbayrecorders/"
-        >
-          <h4>
-            <FaInstagram /> INSTAGRAM
-          </h4>
-        </a>
+        <SocialIcon url="https://www.facebook.com/EastBayRecorders/" />
+        <SocialIcon url="https://www.instagram.com/eastbayrecorders/" />
       </Social>
     </Footer>
   );

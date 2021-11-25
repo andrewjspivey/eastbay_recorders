@@ -15,12 +15,19 @@ const ContentHeader = styled.h1`
   font-family: "Gotham";
   font-weight: bold;
   font-size: 2.5em;
+  @media (max-width: 354px) {
+    font-size: 2em;
+  } ;
 `;
 
 const RegularsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   width: 90%;
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+  } ;
 `;
 
 const Regular = styled.div`
@@ -33,7 +40,8 @@ const Regular = styled.div`
   position: relative;
   height: 30rem;
   @media (max-width: 768px) {
-    height: 15rem;
+    height: 20rem;
+    width: 90%;
   }
 `;
 
@@ -42,11 +50,12 @@ const RegularHeader = styled.div`
   z-index: 1;
   color: white;
   display: flex;
+  transform: translateY(2rem);
   width: 90%;
   align-items: center;
   flex-direction: column;
   @media (max-width: 768px) {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
 `;
 
@@ -63,8 +72,8 @@ const ViewMore = styled.div`
     cursor: pointer;
     opacity: 1;
   }
-  @media (max-width: 400px) {
-    width: 70%;
+  @media (max-width: 612px) {
+    width: 60%;
   }
 `;
 

@@ -40,23 +40,28 @@ const Album = styled.div`
 `;
 const ViewMore = styled.div`
   width: 50%;
-  height: 35px;
+  height: 2rem;
   position: absolute;
   border: 2px solid white;
   display: none;
   justify-content: center;
   opacity: 0.9;
   align-items: center;
+  transform: translateY(5rem);
   background-color: #dd3233;
   &:hover {
     cursor: pointer;
-    width: 70%;
     display: flex;
     opacity: 1;
   }
   @media (max-width: 768px) {
     width: 70%;
     display: flex;
+    transform: translateY(3rem);
+  }
+  @media (max-width: 375px) {
+    font-size: 0.8rem;
+    height: 1.5rem;
   } ;
 `;
 
