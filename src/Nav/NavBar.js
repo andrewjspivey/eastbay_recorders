@@ -9,6 +9,7 @@ const Nav = styled.nav`
   background-color: #343434;
   color: white;
   position: fixed;
+  top: 0;
   z-index: 20;
   border-bottom: 1px solid black;
   display: flex;
