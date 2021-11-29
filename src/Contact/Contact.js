@@ -1,9 +1,12 @@
 import React from "react";
+import HomeFooter from "../Home/HomeFooter/HomeFooter"
+import ContactHeader from "./ContactHeader/ContactHeader";
 
 const Contact = () => {
   return (
     <div>
-      <h1>CONTACT EBR</h1>
+      <ContactHeader/>
+      <HomeFooter />
     </div>
   );
 };
