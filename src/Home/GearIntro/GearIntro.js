@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import mixer_ebr from "../../assets/mixer_ebr.jpeg";
 
@@ -43,6 +44,28 @@ const TextContent = styled.div`
     width: 90%;
   }
 `;
+const ViewMore = styled.div`
+  width: 30%;
+  height: 2.5rem;
+  border: 2px solid black;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+  align-items: center;
+  background-color: #dd3233;
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+  @media (max-width: 950px) {
+    width: 50%;
+  }
+  @media (max-width: 768px) {
+    align-self: center;
+  }
+`;
 
 const Intro = () => {
   return (
@@ -59,7 +82,14 @@ const Intro = () => {
               feel authentic.
             </p>
           </div>
-          <div style={{ paddingTop: "0.2rem", width: "100%" }}>
+          <div
+            style={{
+              paddingTop: "0.2rem",
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
             <p style={{ lineHeight: "1.5rem", fontWeight: "300" }}>
               That means our engineers rely on the right microphone to the right
               preamp into digital recorders for the cleanest signal path
@@ -67,6 +97,14 @@ const Intro = () => {
               our boxes is there to make your music sound better. Check our Gear
               page for more information.
             </p>
+            <ViewMore>
+              <Link
+                to="/gear"
+                style={{ textDecoration: "none", color: "whitesmoke" }}
+              >
+                <h4 style={{ margin: "0" }}>CHECK IT OUT</h4>
+              </Link>
+            </ViewMore>
           </div>
         </TextContent>
         <IntroImageCont>
