@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ebr_record_logo from "../../assets/ebr_record_logo.png";
 import { SocialIcon } from "react-social-icons";
+import { AiOutlineMail } from "react-icons/ai";
 
 const Footer = styled.div`
   width: 100%;
@@ -13,7 +14,7 @@ const Footer = styled.div`
   flex-direction: column;
 `;
 const Social = styled.div`
-  width: 15%;
+  width: 20%;
   height: 5rem;
   display: flex;
   justify-content: space-evenly;
@@ -30,6 +31,9 @@ const HomeFooter = () => {
       </div>
       <Social>
         <SocialIcon url="https://www.facebook.com/EastBayRecorders/" />
+        <a href="mailto:hello@eastbayrecorders.com">
+          <AiOutlineMail style={{ fontSize: "50px", color: "#dd3233" }} />
+        </a>
         <SocialIcon url="https://www.instagram.com/eastbayrecorders/" />
       </Social>
     </Footer>
