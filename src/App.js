@@ -7,6 +7,7 @@ import Gear from "./Gear/Gear";
 import Scene from "./Scene/Scene";
 import Contact from "./Contact/Contact";
 import Navbar from "./Nav/NavBar";
+import BlogHome from "./BlogHome/BlogHome";
 
 function App() {
   return (
@@ -21,11 +22,8 @@ function App() {
           <Route exact path="/gear" element={<Gear />} />
           <Route exact path="/scene" element={<Scene />} />
           <Route exact path="/contact" element={<Contact />} />
-
-          {/* 
-          <Route exact path="/blog" element={<BlogHome />}> 
-          <Route exact path="/blog/:id" element={<SingleBlog />}> 
-          */}
+          <Route exact path="/blog" element={<BlogHome />} />
+          {/* <Route exact path="/blog/:id" element={<SingleBlog />} /> */}
         </Routes>
       </Router>
     </div>

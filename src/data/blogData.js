@@ -1,11 +1,9 @@
-import {
-  blog_damnLiars,
-  blog_Charger,
-  blog_OFC_Lars,
-  blog_ghb_momentum,
-  blog_Jaffe,
-  blog_CountryJoe,
-} from "../assets";
+import tdl_ebr from "../assets/tdl_ebr.jpeg";
+import blog_OFC_Lars from "../assets/blog_OFC_Lars.jpeg";
+import blog_Charger from "../assets/blog_Charger.jpeg";
+import blog_ghb_momentum from "../assets/blog_ghb_momentum.jpeg";
+import blog_Jaffe from "../assets/blog_Jaffe.jpeg";
+import blog_CountryJoe from "../assets/blog_CountryJoe.jpeg";
 
 export const blogs = [
   {
@@ -13,7 +11,7 @@ export const blogs = [
     name: "THE DAMN LIARS AT EBR",
     story:
       'Chuck Bradley and The Damn Liars are a traditional country rock band from Sacramento. The quartet has made their mark at large outdoor festivals and small intimate venues, converting the unwashed one show at a time. The band came down to East Bay Recorders to track songs that were ten years in the making. "American Ghost Town" came out in April of 2018. Michael Rosen produced and engineered the sessions. "Super cool traditional country album," Rosen reports. "No samples, all real instruments, great songs."',
-    pic: blog_damnLiars,
+    pic: tdl_ebr,
     link: "https://thedamnliars.com/home",
   },
   {
