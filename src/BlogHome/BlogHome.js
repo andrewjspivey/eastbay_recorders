@@ -126,17 +126,26 @@ const BlogHome = () => {
           ))}
           {sessionNotes.map((blog, index) => (
             <SingleBlog key={index}>
-              <BlogImages src={blog.pic} alt="" />
-              <BlogTitle>
-                <h5
-                  style={{
-                    fontSize: "0.9rem",
-                    fontWeight: "500",
-                  }}
-                >
-                  {blog.name}
-                </h5>
-              </BlogTitle>
+              <Link
+                to={blog.blogLink}
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  height: "80%",
+                }}
+              >
+                <BlogImages src={blog.pic} alt="" />
+                <BlogTitle>
+                  <h5
+                    style={{
+                      fontSize: "0.9rem",
+                      fontWeight: "500",
+                    }}
+                  >
+                    {blog.name}
+                  </h5>
+                </BlogTitle>
+              </Link>
             </SingleBlog>
           ))}
         </GridContainer>

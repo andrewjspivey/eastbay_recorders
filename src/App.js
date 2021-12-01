@@ -9,6 +9,7 @@ import Contact from "./Contact/Contact";
 import Navbar from "./Nav/NavBar";
 import BlogHome from "./BlogHome/BlogHome";
 import BlogShowPage from "./BlogShowPage/BlogShowPage";
+import SessionShowPage from "./SessionNotes/SessionShowPage";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/blog" element={<BlogHome />} />
           <Route exact path="/blog/:id" element={<BlogShowPage />} />
+          <Route exact path="/sessionNotes/:id" element={<SessionShowPage />} />
         </Routes>
       </Router>
     </div>
