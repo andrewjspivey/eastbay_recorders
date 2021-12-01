@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import Burger from "./Burger";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import Burger from './Burger';
 
 const Nav = styled.nav`
   width: 100%;
@@ -9,7 +9,8 @@ const Nav = styled.nav`
   background-color: #343434;
   color: white;
   position: fixed;
-  z-index: 20;
+  top: 0;
+  z-index: 20000;
   border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
@@ -22,12 +23,12 @@ const Nav = styled.nav`
 const Navbar = () => {
   return (
     <Nav>
-      <div className="logo">
+      <div className='logo'>
         <Link
-          to="/"
+          to='/'
           style={{
-            color: "whitesmoke",
-            textDecoration: "none",
+            color: 'whitesmoke',
+            textDecoration: 'none',
           }}
         >
           <h4>EAST BAY RECORDERS</h4>
