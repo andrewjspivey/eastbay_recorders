@@ -69,13 +69,17 @@ const BoxImage = styled.img`
   z-index: 1000;
 `;
 
-const Box = styled.div`
+const BoxLeft = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 0 auto;
   width: 566.5px;
+  margin: 0 0 0 -150px;
   z-index: 100;
+`;
+const BoxRight = styled(BoxLeft)`
+  margin: 0 -110px 0 0;
 `;
 
 const Card = styled.div`
@@ -114,7 +118,7 @@ const Gear = () => {
       <Wrapper>
         <Section>
           <BoxImage></BoxImage>
-          <Box style={{ marginLeft: '-150px' }}>
+          <BoxLeft>
             <Card>
               <CardText>
                 <h4>01/</h4>
@@ -128,11 +132,11 @@ const Gear = () => {
                 </p>
               </CardText>
             </Card>
-          </Box>
+          </BoxLeft>
         </Section>
         <SectionFlip>
           <BoxImage></BoxImage>
-          <Box style={{ marginRight: '-110px' }}>
+          <BoxRight>
             <Card>
               <CardText>
                 <h4>01/</h4>
@@ -146,7 +150,7 @@ const Gear = () => {
                 </p>
               </CardText>
             </Card>
-          </Box>
+          </BoxRight>
         </SectionFlip>
       </Wrapper>
     </>
