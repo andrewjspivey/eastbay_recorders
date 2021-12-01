@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { albums } from "../data/albumData";
+import { blogs } from "../data/blogData";
+import styled from "styled-components";
 
-const AlbumPage = (props) => {
-  const [album, setAlbum] = useState({});
+const BlogShowPage = () => {
+  const [blog, setBlog] = useState({});
   const { id } = useParams();
   useEffect(() => {
-    const albumInfo = albums.find((p) => p.id === id);
-    setAlbum(albumInfo);
+    const blogInfo = blogs.find((p) => p.id === id);
+    setBlog(blogInfo);
   }, []);
   return (
     <>
-      {album ? (
+      {blog ? (
         <div style={{ width: "500px", height: "500px" }}>
           <div style={{ width: "80%", height: "100%" }}>
-            <h1>{album.band}</h1>
-            <h2>{album.albumTitle}</h2>
-            <img src={album.albumCoverImg} alt="" />
+            <h1>{blog.name}</h1>
+            <h2>{blog.story}</h2>
+            <img src={blog.pic} alt="" />
           </div>
         </div>
       ) : (
@@ -28,4 +29,4 @@ const AlbumPage = (props) => {
   );
 };
 
-export default AlbumPage;
+export default BlogShowPage;

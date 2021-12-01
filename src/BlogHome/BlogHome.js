@@ -4,6 +4,7 @@ import blog_Home from "../assets/blog_Home.jpeg";
 import logo_ebr from "../assets/logo_ebr.png";
 import { blogs } from "../data/blogData";
 import { sessionNotes } from "../data/sessionNotesData";
+import { Link } from "react-router-dom";
 
 const HeaderPic = styled.div`
   display: flex;
@@ -101,17 +102,26 @@ const BlogHome = () => {
         <GridContainer>
           {blogs.map((blog, index) => (
             <SingleBlog key={index}>
-              <BlogImages src={blog.pic} alt="" />
-              <BlogTitle>
-                <h5
-                  style={{
-                    fontSize: "0.9rem",
-                    fontWeight: "500",
-                  }}
-                >
-                  {blog.name}
-                </h5>
-              </BlogTitle>
+              <Link
+                to={blog.blogLink}
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  height: "80%",
+                }}
+              >
+                <BlogImages src={blog.pic} alt="" />
+                <BlogTitle>
+                  <h5
+                    style={{
+                      fontSize: "0.9rem",
+                      fontWeight: "500",
+                    }}
+                  >
+                    {blog.name}
+                  </h5>
+                </BlogTitle>
+              </Link>
             </SingleBlog>
           ))}
           {sessionNotes.map((blog, index) => (
