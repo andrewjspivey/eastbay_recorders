@@ -19,7 +19,6 @@ const HeaderPic = styled.div`
 
 const JumboContainer = styled.header`
   width: 100%;
-  height: 100%;
   padding-top: 50px;
   /* margin-bottom: 3rem; */
   justify-content: center;
@@ -28,9 +27,11 @@ const JumboContainer = styled.header`
 `;
 
 const JumboTitle = styled.div`
-  position: absolute;
-  z-index: 2;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   font-family: "Gotham";
   font-weight: bold;
   font-size: 2rem;
@@ -75,6 +76,9 @@ const BlogImages = styled.img`
   width: 100%;
   height: 95%;
   object-fit: cover;
+  @media (max-width: 481px) {
+    height: 80%;
+  }
 `;
 
 const BlogTitle = styled.div`
@@ -84,18 +88,41 @@ const BlogTitle = styled.div`
   text-align: center;
 `;
 
+const Underline = styled.div`
+  height: 3px;
+  width: 60px;
+  background-color: white;
+  @media (max-width: 768px) {
+    height: 2px;
+  }
+`;
+const NameContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const BlogHome = () => {
   return (
     <div>
       <JumboContainer>
-        <div style={{ position: "absolute", padding: "2rem 0 0 3rem" }}>
+        <div style={{ position: "absolute", padding: "1rem 0 0 2rem" }}>
           <JumboHeader src={logo_ebr} />
         </div>
         <HeaderPic>
           <img style={{ width: "100%" }} src={blog_Home} alt="" />
-          <JumboTitle>
-            <h1>BLOG</h1>
-          </JumboTitle>
+          <NameContainer>
+            <JumboTitle>
+              <h1 style={{ marginBottom: "10px" }}>BLOG</h1>
+              <Underline />
+            </JumboTitle>
+          </NameContainer>
         </HeaderPic>
       </JumboContainer>
       <MainContainer>

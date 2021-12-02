@@ -15,7 +15,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   .logo {
-    padding-left: 50px;
+    padding-left: 2rem;
     color: #dd3233;
   }
 `;
