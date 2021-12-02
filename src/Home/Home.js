@@ -14,7 +14,6 @@ const Home = () => {
       <Recently />
       <GearIntro />
       <Regulars />
-      <HomeFooter />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useHistory, useParams } from "react-router-dom";
-import { producers } from "../data/producerData";
+import { useParams } from "react-router-dom";
+import { blogs } from "../data/blogData";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -22,9 +22,8 @@ const ContentContainer = styled.div`
 `;
 
 const HeaderContainer = styled.div`
-  margin-top: 4rem;
+  margin-top: 3rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -33,28 +32,13 @@ const HeaderContainer = styled.div`
     line-height: 2.5rem;
   }
 `;
-const NameContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
 
-const ProdName = styled.h1`
+const BlogTitle = styled.h1`
   font-weight: 400;
   font-size: 3rem;
   align-self: center;
-  margin-bottom: -5px;
   @media (max-width: 768px) {
     font-size: 2rem;
-  }
-`;
-const Skills = styled.h3`
-  font-weight: 300;
-  font-size: 2rem;
-  align-self: center;
-  margin-bottom: 1rem;
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
   }
 `;
 const PicContainer = styled.div`
@@ -68,38 +52,24 @@ const BlogImage = styled.img`
   width: 100%;
 `;
 
-const Underline = styled.div`
-  height: 3px;
-  width: 5rem;
-  background-color: black;
-  @media (max-width: 768px) {
-    height: 2px;
-  }
-`;
-
-const ProducerPage = () => {
-  const [producer, setProducer] = useState({});
+const BlogShowPage = () => {
+  const [blog, setBlog] = useState({});
   const { id } = useParams();
   useEffect(() => {
-    const producerInfo = producers.find((p) => p.id === id);
-    setProducer(producerInfo);
+    const blogInfo = blogs.find((p) => p.id === id);
+    setBlog(blogInfo);
+    console.log(blog.story);
   }, []);
   return (
     <Container>
-      {producer ? (
+      {blog ? (
         <ContentContainer>
           <HeaderContainer>
-            <NameContainer>
-              <ProdName>{producer.name}</ProdName>
-              <Underline />
-            </NameContainer>
-            <Skills>{producer.skills}</Skills>
+            <BlogTitle>{blog.name}</BlogTitle>
           </HeaderContainer>
-          <div style={{ lineHeight: "2rem", width: "80%" }}>
-            {producer.story}
-          </div>
+          <div style={{ lineHeight: "2rem", width: "80%" }}>{blog.story}</div>
           <PicContainer>
-            <BlogImage src={producer.pic} alt="" />
+            <BlogImage src={blog.pic} alt="" />
           </PicContainer>
         </ContentContainer>
       ) : (
@@ -111,4 +81,4 @@ const ProducerPage = () => {
   );
 };
 
-export default ProducerPage;
+export default BlogShowPage;

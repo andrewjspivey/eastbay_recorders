@@ -7,6 +7,10 @@ import Gear from "./Gear/Gear";
 import Scene from "./Scene/Scene";
 import Contact from "./Contact/Contact";
 import Navbar from "./Nav/NavBar";
+import BlogHome from "./BlogHome/BlogHome";
+import BlogShowPage from "./BlogShowPage/BlogShowPage";
+import SessionShowPage from "./SessionNotes/SessionShowPage";
+import HomeFooter from "./Home/HomeFooter/HomeFooter";
 
 function App() {
   return (
@@ -21,12 +25,11 @@ function App() {
           <Route exact path="/gear" element={<Gear />} />
           <Route exact path="/scene" element={<Scene />} />
           <Route exact path="/contact" element={<Contact />} />
-
-          {/* 
-          <Route exact path="/blog" element={<BlogHome />}> 
-          <Route exact path="/blog/:id" element={<SingleBlog />}> 
-          */}
+          <Route exact path="/blog" element={<BlogHome />} />
+          <Route exact path="/blog/:id" element={<BlogShowPage />} />
+          <Route exact path="/sessionNotes/:id" element={<SessionShowPage />} />
         </Routes>
+        <HomeFooter />
       </Router>
     </div>
   );
