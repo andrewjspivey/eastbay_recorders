@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import logo_ebr from '../../assets/logo_ebr.png'
-import Microphones from '../../assets/Microphones.jpeg'
+import Mic_contactpage from '../../assets/Mic_contactpage.jpeg'
 
-const ContactContainer = styled.header`
+const Container = styled.header`
   width: 100%;
   padding-top: 50px;
   overflow: hidden;
   position: relative;
-  height: 40vh;
+  height: 60vh;
   @media (max-width: 768px) {
     height: 40vh;
   }
@@ -24,12 +24,37 @@ const ContactHead = styled.img`
 `;
 
 const ContactLogo = styled.div`
+  background-image: url(${Mic_contactpage});
+  display: flex;
+  width: 100%;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @media (max-width: 768px) {
+    height: 100%;
+  }
+`;
 
+const ContactText=styled.div`
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60vh;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Gotham';
 `
 
 const ContactHeader = () => {
   return (
-    <ContactContainer>
+    <Container>
+      <ContactText>
+        <h1>CONTACT</h1>
+      </ContactText>
       <div
         style={{
           position: 'absolute',
@@ -37,10 +62,8 @@ const ContactHeader = () => {
         }}>
         <ContactHead src={logo_ebr} />
       </div>
-      <ContactLogo>
-        <img style={{ width: '100%' }} src={Microphones} alt='' />
-      </ContactLogo>
-    </ContactContainer>
+      <ContactLogo />
+    </Container>
   );
 }
 
