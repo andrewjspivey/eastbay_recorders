@@ -22,9 +22,9 @@ const NameInputGroup = styled.input`
 `;
 
 const CategoryGroup = styled.select`
-  width: 60%;
+  width: 60.5%;
   font-weight: bold;
-  height: 30px;
+  height: 30.5px;
   margin: 1rem;
 `;
 
@@ -61,8 +61,6 @@ const ContactSheet = () => {
           </CategoryGroup>
           <MessageGroup
             name=''
-            id='message'
-            rows='3'
             placeholder='*MESSAGE'></MessageGroup>
         </ContactGroup>
         <ContactButton type='submit'>Submit</ContactButton>
