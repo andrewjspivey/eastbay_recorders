@@ -1,0 +1,27 @@
+@media only screen and (max-width:1200px){
+  .michaelLookingDown {
+    width:400px;
+  }
+}
+
+@media only screen and (max-width:800px){
+  .michaelLookingDown {
+    width:350px;
+  }
+}
+
+@media only screen and (max-width:760px){
+  .michaelLookingDown {
+    width:325px;
+  }
+}
+@media only screen and (max-width:425px){
+  .michaelLookingDown {
+    width:250px;
+  }
+}
+
+
+.michaelLookingDown {
+  text-align:'center';
+}
