@@ -8,7 +8,10 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   margin: auto;
-  padding: 4rem 0 3rem 0;
+  padding: 3rem 0 3rem 0;
+  @media (max-width: 768px) {
+    padding: 2rem 0 1rem 0;
+  }
 `;
 
 const IntroContainer = styled.div`
@@ -16,6 +19,7 @@ const IntroContainer = styled.div`
   justify-content: center;
   @media (max-width: 768px) {
     flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -34,6 +38,9 @@ const ContentHeader = styled.h2`
   font-family: "Gotham";
   font-weight: bold;
   font-size: 2em;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 const TextContent = styled.div`
@@ -64,6 +71,7 @@ const ViewMore = styled.div`
   }
   @media (max-width: 768px) {
     align-self: center;
+    margin: 1rem;
   }
 `;
 

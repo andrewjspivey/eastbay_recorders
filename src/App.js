@@ -10,6 +10,7 @@ import Navbar from "./Nav/NavBar";
 import BlogHome from "./BlogHome/BlogHome";
 import BlogShowPage from "./BlogShowPage/BlogShowPage";
 import SessionShowPage from "./SessionNotes/SessionShowPage";
+import HomeFooter from "./Home/HomeFooter/HomeFooter";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route exact path="/blog/:id" element={<BlogShowPage />} />
           <Route exact path="/sessionNotes/:id" element={<SessionShowPage />} />
         </Routes>
+        <HomeFooter />
       </Router>
     </div>
   );
