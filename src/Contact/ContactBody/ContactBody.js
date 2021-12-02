@@ -16,6 +16,7 @@ display: flex;
 flex-flow: column;
 align-items: center;
 text-align: center;
+font-family: 'Gotham';
 `
 
 const ContactBody = () => {

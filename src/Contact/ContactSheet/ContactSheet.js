@@ -19,13 +19,16 @@ const NameInputGroup = styled.input`
   height: 30px;
   margin: 1rem;
   border: 1px solid black;
+  font-family: 'Gotham';
 `;
 
 const CategoryGroup = styled.select`
   width: 60.5%;
   font-weight: bold;
+  color: #7b7b7b;
   height: 30.5px;
   margin: 1rem;
+  font-family: 'Gotham';
 `;
 
 const MessageGroup = styled.textarea`
@@ -33,6 +36,7 @@ const MessageGroup = styled.textarea`
   font-weight: bold;
   height: 30px;
   margin: 1rem;
+  font-family: 'Gotham';
 `;
 
 const ContactButton = styled.button`
@@ -55,9 +59,9 @@ const ContactSheet = () => {
           <NameInputGroup type='email' id='email' placeholder='*EMAIL' />
           <CategoryGroup>
             <option value='Questions' selected>
-              QUESTIONS
+              *QUESTIONS
             </option>
-            <option value='Comments'>COMMENTS</option>
+            <option value='Comments'>*COMMENTS</option>
           </CategoryGroup>
           <MessageGroup
             name=''
