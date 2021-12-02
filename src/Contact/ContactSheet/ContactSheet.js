@@ -15,7 +15,6 @@ const ContactGroup = styled.div`
 
 const NameInputGroup = styled.input`
   width: 60%;
-  border-radius: 5px;
   font-weight: bold;
   height: 30px;
   margin: 1rem;
@@ -24,7 +23,6 @@ const NameInputGroup = styled.input`
 
 const CategoryGroup = styled.select`
   width: 60%;
-  border-radius: 5px;
   font-weight: bold;
   height: 30px;
   margin: 1rem;
@@ -32,7 +30,6 @@ const CategoryGroup = styled.select`
 
 const MessageGroup = styled.textarea`
   width: 60%;
-  border-radius: 5px;
   font-weight: bold;
   height: 30px;
   margin: 1rem;
