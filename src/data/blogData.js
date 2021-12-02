@@ -50,8 +50,38 @@ export const blogs = [
   {
     id: "6",
     name: "WORKING WITH A LEGEND",
-    story:
-      "Country Joe McDonald is a folk icon, producing generational defining songs like “I Feel Like I’m Fixing to Die Rag” and legendary performances at Woodstock (the original) and Monterey Pop Festival. McDonald came into East Bay Recorders to lay down a handful of acoustic tracks. “It was just him singing and playing,” producer/engineer Michael Rosen recalls. “His manager flipped and said that we had to make a record out of those sessions. ”Rosen took on the challenge, bringing in a couple of his trusted session players — drummer Prairie Prince and guitarist James DePrato. Bassist Blair Hardman and the Bright Light Quartet also contributed. The sessions became Joe’s latest offering, “50.” “He’s fantastic. He knows exactly what he wants. He can still sing and play,” Rosen says. “You hear that voice, and you’re immediately transported back to Woodstock and the FU (“I Feel Like I’m Fixing to Die”) song.” The acoustic dates were straight ahead singer and guitar. Adding the band to those tracks were a blend of sessions at East Bay Recorders and virtual dates where Rosen sent tracks to players who recorded their performance and then he added it to the mix. Joe, Rosen says, was interested in experimenting and finding a way to make a song cool. “His attitude was, ‘If it doesn’t sound right then don’t do it.’ He had no problem with flipping stuff up. In one verse we dropped the drums out. He’s like, ‘Why not?’ “It was cool to try something different and go in another direction,” Rosen continues. “It keeps it green for me, and it was exactly what he wanted to get down.” Following the release of “50,” Country Joe is appearing at Woodstock 50 on August 17, 2019.",
+    story: (
+      <p>
+        Country Joe McDonald is a folk icon, producing generational defining
+        songs like “I Feel Like I’m Fixing to Die Rag” and legendary
+        performances at Woodstock (the original) and Monterey Pop Festival.
+        <br /> McDonald came into East Bay Recorders to lay down a handful of
+        acoustic tracks. “It was just him singing and playing,”
+        producer/engineer Michael Rosen recalls. “His manager flipped and said
+        that we had to make a record out of those sessions.
+        <br />
+        ”Rosen took on the challenge, bringing in a couple of his trusted
+        session players — drummer Prairie Prince and guitarist James DePrato.
+        Bassist Blair Hardman and the Bright Light Quartet also contributed.
+        <br />
+        The sessions became Joe’s latest offering, “50.” “He’s fantastic. He
+        knows exactly what he wants. He can still sing and play,” Rosen says.
+        “You hear that voice, and you’re immediately transported back to
+        Woodstock and the FU (“I Feel Like I’m Fixing to Die”) song.”
+        <br />
+        The acoustic dates were straight ahead singer and guitar. Adding the
+        band to those tracks were a blend of sessions at East Bay Recorders and
+        virtual dates where Rosen sent tracks to players who recorded their
+        performance and then he added it to the mix. Joe, Rosen says, was
+        interested in experimenting and finding a way to make a song cool. “His
+        attitude was, ‘If it doesn’t sound right then don’t do it.’ He had no
+        problem with flipping stuff up. In one verse we dropped the drums out.
+        He’s like, ‘Why not?’ “It was cool to try something different and go in
+        another direction,” Rosen continues. “It keeps it green for me, and it
+        was exactly what he wanted to get down.” Following the release of “50,”
+        Country Joe is appearing at Woodstock 50 on August 17, 2019.
+      </p>
+    ),
     pic: blog_CountryJoe,
     blogLink: "/blog/6",
   },
