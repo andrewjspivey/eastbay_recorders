@@ -27,9 +27,9 @@ const LogoDiv = styled.div`
 `;
 const AboutImg = styled.div`
   background-image: url(${AboutMain});
-  width: 100%;
+  wgidth: 100%;
   height: 60vh;
-  background-repeat: no-repeat;
+  backgground-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 `;
@@ -51,6 +51,9 @@ const Text = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
+  @media (max-width: 425px) {
+    font-size: 20px;
+  }
 `;
 const UnderLine = styled.div`
   width: 80px;
