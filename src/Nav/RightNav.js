@@ -13,16 +13,17 @@ const Ul = styled.div`
     background-color: #343434;
     position: fixed;
     padding-bottom: 20px;
+    padding-top: 20px;
     z-index: 20;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 55px;
-    right: 0;
+    right: -1px;
     height: 55vh;
     width: 300px;
     /* padding-top: 5rem; */
     transition: transform 0.3s ease-in-out;
     a {
-      padding-left: 50px;
+      padding-left: 80px;
     }
   }
 `;

@@ -57,6 +57,9 @@ const RegularHeader = styled.div`
   @media (max-width: 768px) {
     font-size: 0.8rem;
   }
+  @media (max-width: 558px) {
+    font-size: 0.7rem;
+  }
 `;
 
 const ViewMore = styled.div`

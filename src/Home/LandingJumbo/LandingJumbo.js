@@ -23,7 +23,10 @@ const JumboContainer = styled.header`
   overflow: hidden;
   position: relative;
   @media (max-width: 768px) {
-    height: 40vh;
+    height: 30vh;
+  }
+  @media (max-width: 481px) {
+    height: 20vh;
   }
 `;
 
@@ -32,7 +35,11 @@ const JumboHeader = styled.img`
   z-index: 1;
   background-color: #dd3233;
   @media (max-width: 768px) {
-    display: none;
+    /* display: none; */
+    width: 300%;
+  }
+  @media (max-width: 481px) {
+    width: 200%;
   }
 `;
 
