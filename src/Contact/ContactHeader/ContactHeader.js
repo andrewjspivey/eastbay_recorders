@@ -17,9 +17,19 @@ const Container = styled.header`
 const ContactHead = styled.img`
   position: absolute;
   z-index: 1;
-  background-color: #dd3233;
   @media (max-width: 768px) {
     display: none;
+  }
+  @media (max-width: 1024px) {
+    width: 250px;
+  }
+`;
+
+const LogoDiv = styled.div`
+  position: absolute;
+  padding: 1rem 0rem;
+  @media (max-width: 1024px) {
+    padding: 1rem 1.4rem;
   }
 `;
 
@@ -36,7 +46,7 @@ const ContactLogo = styled.div`
   }
 `;
 
-const ContactText=styled.div`
+const ContactText = styled.div`
   position: absolute;
   z-index: 1;
   display: flex;
@@ -47,7 +57,10 @@ const ContactText=styled.div`
   color: white;
   font-size: 2rem;
   font-family: 'Gotham';
-`
+  @media (max-width: 481px) {
+    font-size: 25px;
+  }
+`;
 
 const ContactHeader = () => {
   return (
@@ -55,13 +68,9 @@ const ContactHeader = () => {
       <ContactText>
         <h1>CONTACT</h1>
       </ContactText>
-      <div
-        style={{
-          position: 'absolute',
-          padding: '2rem 0 0 3rem',
-        }}>
-        <ContactHead src={logo_ebr} />
-      </div>
+        <LogoDiv>
+          <ContactHead src={logo_ebr} />
+        </LogoDiv>
       <ContactLogo />
     </Container>
   );

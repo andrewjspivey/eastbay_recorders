@@ -41,7 +41,7 @@ const MessageGroup = styled.textarea`
 
 const ContactButton = styled.button`
   padding: 10px 30px;
-  background-color: #DD3233;
+  background-color: #dd3233;
   border: none;
   cursor: pointer;
   color: white;
@@ -55,8 +55,8 @@ const ContactSheet = () => {
         action='https://formsubmit.co/your@email.com'
         method='POST'>
         <ContactGroup>
-          <NameInputGroup type='name' id='name' placeholder='*FIRST NAME AND LAST NAME' />
-          <NameInputGroup type='email' id='email' placeholder='*EMAIL' />
+          <NameInputGroup type='name' placeholder='*FIRST NAME AND LAST NAME' />
+          <NameInputGroup type='email' placeholder='*EMAIL' />
           <CategoryGroup>
             <option value='Questions' selected>
               *QUESTIONS
