@@ -76,6 +76,9 @@ const BlogImages = styled.img`
   width: 100%;
   height: 95%;
   object-fit: cover;
+  :hover {
+    opacity: 0.9;
+  }
   @media (max-width: 481px) {
     height: 80%;
   }
