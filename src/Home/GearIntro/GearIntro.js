@@ -83,11 +83,11 @@ const Intro = () => {
           <ContentHeader>IT'S NOT ABOUT GEAR</ContentHeader>
           <div style={{ paddingTop: "0.2rem", width: "100%" }}>
             <p style={{ lineHeight: "1.7rem", fontWeight: "bold" }}>
-              t’s about the song and doing whatever’s needed with whatever tools
-              to bring it to life. EBR takes a hybrid approach to recording
-              where old school recording technique meets today’s technology. The
-              entire goal is to capture performances and deliver the sounds that
-              feel authentic.
+              It’s about the song and doing whatever’s needed with whatever
+              tools to bring it to life. EBR takes a hybrid approach to
+              recording where old school recording technique meets today’s
+              technology. The entire goal is to capture performances and deliver
+              the sounds that feel authentic.
             </p>
           </div>
           <div
