@@ -9,6 +9,9 @@ const Logo = styled.img`
   @media (max-width: 1024px) {
     width: 250px;
   }
+  @media (max-width: 900px) {
+    width: 150px;
+  }
   @media (max-width: 768px) {
     display: none;
   }
@@ -24,12 +27,16 @@ const LogoDiv = styled.div`
   @media (max-width: 1024px) {
     padding: 1rem 1.4rem;
   }
+  @media (max-width: 900px) {
+    padding: 1rem 4.5rem;
+  }
+  @m;
 `;
 const AboutImg = styled.div`
   background-image: url(${AboutMain});
-  wgidth: 100%;
-  height: 60vh;
-  backgground-repeat: no-repeat;
+  width: 100%;
+  height: 65vh;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 `;
@@ -45,15 +52,15 @@ const ContactText = styled.div`
   color: white;
   font-size: 2rem;
   font-family: "Gotham";
+  @media (max-width: 425px) {
+    font-size: 20px;
+  }
 `;
 const Text = styled.div`
   font-weight: bold;
   display: flex;
   flex-flow: column;
   align-items: center;
-  @media (max-width: 425px) {
-    font-size: 20px;
-  }
 `;
 const UnderLine = styled.div`
   width: 80px;

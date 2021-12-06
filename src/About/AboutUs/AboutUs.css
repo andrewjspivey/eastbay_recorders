@@ -1,24 +1,34 @@
+@media only screen and (max-width:1440px){
+  .aboutUsImgs {
+    width:500px;
+  }
+}
+@media only screen and (min-width:1210px){
+  .aboutUsImgs {
+    width:500px;
+  }
+}
+
 @media only screen and (max-width:1200px){
   .aboutUsImgs {
-    width:400px;
-  }
-}@media only screen and (max-width:1024px){
-  .aboutUsImgs {
     width:350px;
+  }
+}
+
+
+@media only screen and (max-width:1024px){
+  .aboutUsImgs {
+    width:300px;
   }
 }
 
 @media only screen and (max-width:800px){
   .aboutUsImgs {
-    width:350px;
+    width:300px;
   }
 }
 
-@media only screen and (max-width:760px){
-  .aboutUsImgs {
-    width:325px;
-  }
-}
+
 @media only screen and (max-width:425px){
   .aboutUsImgs {
     width:250px;
