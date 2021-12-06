@@ -1,9 +1,14 @@
 import React from "react";
+import Header from "./Header/Header";
+import Main from "./Main/Main.js";
+import AboutUs from "./AboutUs/AboutUs.js";
 
 const About = () => {
   return (
     <div>
-      <h1 style={{ color: "white" }}>About EBR</h1>
+      <Header />
+      <Main />
+      <AboutUs />
     </div>
   );
 };
