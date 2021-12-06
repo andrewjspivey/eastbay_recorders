@@ -70,6 +70,10 @@ const Header = styled.h1`
   font-weight: bold;
   font-size: 2rem;
   margin: 2rem;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 `;
 const SubHeader = styled.h3`
   font-family: "Gotham";

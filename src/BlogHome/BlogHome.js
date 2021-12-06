@@ -12,8 +12,12 @@ const HeaderPic = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  @media (max-width: 768px) {
-    /* height: 100%; */
+  height: 65vh;
+  @media (max-width: 800px) {
+    height: 100%;
+  }
+  @media (max-width: 1024px) {
+    height: 100%;
   }
 `;
 
@@ -35,6 +39,9 @@ const JumboTitle = styled.div`
   font-family: "Gotham";
   font-weight: bold;
   font-size: 2rem;
+  @media (max-width: 481px) {
+    font-size: 20px;
+  }
 `;
 
 const JumboHeader = styled.img`

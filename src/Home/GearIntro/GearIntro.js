@@ -10,7 +10,7 @@ const Container = styled.div`
   margin: auto;
   padding: 3rem 0 3rem 0;
   @media (max-width: 768px) {
-    padding: 2rem 0 1rem 0;
+    padding: 0.5rem 0 1rem 0;
   }
 `;
 
@@ -37,9 +37,10 @@ const IntroImageCont = styled.div`
 const ContentHeader = styled.h2`
   font-family: "Gotham";
   font-weight: bold;
-  font-size: 2em;
+  font-size: 2rem;
   @media (max-width: 768px) {
     text-align: center;
+    font-size: 1.5rem;
   }
 `;
 

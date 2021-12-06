@@ -7,9 +7,9 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   margin: auto;
-  padding: 3rem 0 4rem 0;
+  padding: 2rem 0 4rem 0;
   @media (max-width: 768px) {
-    padding: 1rem 0 2rem 0;
+    padding: 0.5rem 0 2rem 0;
   }
 `;
 
@@ -38,6 +38,7 @@ const ContentHeader = styled.h2`
   font-weight: bold;
   font-size: 2em;
   @media (max-width: 768px) {
+    font-size: 1.5rem;
     text-align: center;
   }
 `;
@@ -48,6 +49,7 @@ const TextContent = styled.div`
   padding: 1rem;
   @media (max-width: 768px) {
     width: 90%;
+    padding: 0.5rem;
   }
 `;
 

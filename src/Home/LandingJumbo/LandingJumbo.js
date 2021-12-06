@@ -12,22 +12,14 @@ const InfiniteJumbo = styled.div`
   display: flex;
   width: 200%;
   animation: ${bannerMove} 35s linear infinite;
-  @media (max-width: 768px) {
-    height: 100%;
-  }
 `;
 
 const JumboContainer = styled.header`
   width: 100%;
+  height: auto;
   padding-top: 50px;
   overflow: hidden;
   position: relative;
-  @media (max-width: 768px) {
-    height: 30vh;
-  }
-  @media (max-width: 481px) {
-    height: 20vh;
-  }
 `;
 
 const JumboHeader = styled.img`
@@ -35,25 +27,29 @@ const JumboHeader = styled.img`
   z-index: 1;
   background-color: #dd3233;
   @media (max-width: 768px) {
-    /* display: none; */
     width: 300%;
   }
   @media (max-width: 481px) {
-    width: 200%;
+    width: 400%;
+  }
+`;
+const JumboHeaderContainer = styled.div`
+  position: absolute;
+  padding: 2rem 0rem 0rem 3rem;
+  @media (max-width: 768px) {
+    padding: 1rem 0rem 0rem 2rem;
+  }
+  @media (max-width: 481px) {
+    padding: 1rem 0rem 0rem 1rem;
   }
 `;
 
 const LandingJumbo = () => {
   return (
     <JumboContainer>
-      <div
-        style={{
-          position: "absolute",
-          padding: "2rem 0 0 3rem",
-        }}
-      >
+      <JumboHeaderContainer>
         <JumboHeader src={logo_ebr} />
-      </div>
+      </JumboHeaderContainer>
       <InfiniteJumbo>
         <img style={{ width: "100%" }} src={slider_ebr} alt="" />
       </InfiniteJumbo>

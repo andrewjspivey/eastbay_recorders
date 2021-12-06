@@ -14,24 +14,22 @@ import HomeFooter from "./Home/HomeFooter/HomeFooter";
 
 function App() {
   return (
-    <div>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/producer/:id" element={<ProducerPage />} />
-          <Route exact path="/album/:id" element={<AlbumPage />} />
-          <Route exact path="/gear" element={<Gear />} />
-          <Route exact path="/scene" element={<Scene />} />
-          <Route exact path="/contact" element={<Contact />} />
-          <Route exact path="/blog" element={<BlogHome />} />
-          <Route exact path="/blog/:id" element={<BlogShowPage />} />
-          <Route exact path="/sessionNotes/:id" element={<SessionShowPage />} />
-        </Routes>
-        <HomeFooter />
-      </Router>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/producer/:id" element={<ProducerPage />} />
+        <Route exact path="/album/:id" element={<AlbumPage />} />
+        <Route exact path="/gear" element={<Gear />} />
+        <Route exact path="/scene" element={<Scene />} />
+        <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/blog" element={<BlogHome />} />
+        <Route exact path="/blog/:id" element={<BlogShowPage />} />
+        <Route exact path="/sessionNotes/:id" element={<SessionShowPage />} />
+      </Routes>
+      <HomeFooter />
+    </Router>
   );
 }
 
