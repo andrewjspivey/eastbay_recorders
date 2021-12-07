@@ -11,6 +11,10 @@ export const albums = [
     songNote:
       "Michael Rosen teamed up with Lars Frederiksen to mix the latest offering from GBH titled “Momentum.” Epitaph released the record on November of 2017. “It was a new school project where they sent me the files, and I’d mix them here, then send Lars an MP3 for notes, then send an MP3 to the band,” Rosen says. Singer Colin Abrahall told Heavy:  “We laid down all kinds of takes on the songs which made the mixing interesting as we’d send it all off to Michael (Rosen – Engineer) and him and Lars (Fredericksen – Rancid) would send back tracks. You’d think something was maybe a glitch or whatever and it’d come back, and we’d listen and think ‘that’s f*cking amazing’!”",
     links: { spotify: "https://open.spotify.com/album/5VnyOqGjoJOy25AFcSoZeu" },
+    playlist: {
+      spotify:
+        "https://open.spotify.com/embed/album/5VnyOqGjoJOy25AFcSoZeu?utm_source=generator&theme=0",
+    },
     albumCoverImg: GBH_Momentum_ebr,
   },
   {
@@ -24,6 +28,12 @@ export const albums = [
       apple:
         "https://music.apple.com/us/album/american-ghost-town-ep/1370683887",
     },
+    playlist: {
+      spotify:
+        "https://open.spotify.com/embed/album/3J58gPGMsvhlps41nSPNou?utm_source=generator&theme=0",
+      apple:
+        "https://embed.music.apple.com/us/album/american-ghost-town-ep/1370683887",
+    },
     albumCoverImg: tdl_ebr,
   },
   {
@@ -35,6 +45,11 @@ export const albums = [
     links: {
       spotify: "https://open.spotify.com/album/7LpY1yM8MbK0fXR4OJncxQ",
       apple: "https://music.apple.com/us/album/self-titled/1559078777",
+    },
+    playlist: {
+      spotify:
+        "https://open.spotify.com/embed/album/7LpY1yM8MbK0fXR4OJncxQ?utm_source=generator&theme=0",
+      apple: "https://embed.music.apple.com/us/album/self-titled/1559078777",
     },
     albumCoverImg: Charger_ebr,
   },
@@ -48,6 +63,11 @@ export const albums = [
       spotify:
         "https://open.spotify.com/track/3c5RnabhwPWgVCJXvjL1i0?si=_FuycGz-TKmjHJhbRsDS8A&nd=1",
       apple: " https://music.apple.com/us/album/holger-danske/1453081476",
+    },
+    playlist: {
+      spotify:
+        "https://open.spotify.com/embed/album/3OF4WNtkTe1pdJ8dJSiR3a?utm_source=generator&theme=0",
+      apple: "https://embed.music.apple.com/us/album/holger-danske/1453081476",
     },
     albumCoverImg: TheOldFirmCasuals_ebr,
   },
