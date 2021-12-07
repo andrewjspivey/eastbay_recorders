@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { useHistory, useParams } from "react-router-dom";
-import { producers } from "../data/producerData";
+import { useParams } from "react-router-dom";
+import { sessionNotes } from "../data/sessionNotesData";
 import styled from "styled-components";
+import ebr_quote from "../assets/ebr_quote.png";
 
 const Container = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   margin-top: 55px;
 `;
 
@@ -16,15 +17,11 @@ const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (max-width: 768px) {
-    width: 90%;
-  }
 `;
 
 const HeaderContainer = styled.div`
-  margin-top: 4rem;
+  margin-top: 3rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -33,28 +30,28 @@ const HeaderContainer = styled.div`
     line-height: 2.5rem;
   }
 `;
-const NameContainer = styled.div`
+
+const QuoteWrapper = styled.div`
+  line-height: 2rem;
+  width: 80%;
+  padding-top: 3rem;
+  background-color: #eeeee5;
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-const ProdName = styled.h1`
-  font-weight: 400;
-  font-size: 3rem;
-  align-self: center;
-  margin-bottom: -5px;
   @media (max-width: 768px) {
-    font-size: 2rem;
+    width: 90%;
+  }
+  @media (max-width: 418px) {
+    padding-top: 2rem;
   }
 `;
-const Skills = styled.h3`
-  font-weight: 300;
-  font-size: 2rem;
-  align-self: center;
-  margin-bottom: 1rem;
+
+const BlogTitle = styled.h1`
+  font-weight: 400;
+  font-size: 3rem;
   @media (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 `;
 const PicContainer = styled.div`
@@ -67,39 +64,38 @@ const PicContainer = styled.div`
 const BlogImage = styled.img`
   width: 100%;
 `;
-
-const Underline = styled.div`
-  height: 3px;
-  width: 5rem;
-  background-color: black;
+const Quote = styled.p`
+  padding: 0rem 4rem 3rem 4rem;
+  color: #ad1100;
+  text-align: center;
   @media (max-width: 768px) {
-    height: 2px;
+    padding: 1rem 2rem;
+  }
+  @media (max-width: 418px) {
+    padding: 0rem 1rem;
   }
 `;
 
-const ProducerPage = () => {
-  const [producer, setProducer] = useState({});
+const SessionShowPage = () => {
+  const [blog, setBlog] = useState({});
   const { id } = useParams();
   useEffect(() => {
-    const producerInfo = producers.find((p) => p.id === id);
-    setProducer(producerInfo);
+    const blogInfo = sessionNotes.find((p) => p.id === id);
+    setBlog(blogInfo);
   }, []);
   return (
     <Container>
-      {producer ? (
+      {blog ? (
         <ContentContainer>
           <HeaderContainer>
-            <NameContainer>
-              <ProdName>{producer.name}</ProdName>
-              <Underline />
-            </NameContainer>
-            <Skills>{producer.skills}</Skills>
+            <BlogTitle>{blog.name}</BlogTitle>
           </HeaderContainer>
-          <div style={{ lineHeight: "2rem", width: "80%" }}>
-            {producer.story}
-          </div>
+          <QuoteWrapper>
+            <img src={ebr_quote} alt="" />
+            <Quote>{blog.story}</Quote>
+          </QuoteWrapper>
           <PicContainer>
-            <BlogImage src={producer.pic} alt="" />
+            <BlogImage src={blog.pic} alt="" />
           </PicContainer>
         </ContentContainer>
       ) : (
@@ -111,4 +107,4 @@ const ProducerPage = () => {
   );
 };
 
-export default ProducerPage;
+export default SessionShowPage;

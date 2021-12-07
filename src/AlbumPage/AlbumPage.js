@@ -3,6 +3,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import styled from "styled-components";
+import { useParams } from "react-router-dom";
 import { albums } from "../data/albumData";
 
 const MainContainer = styled.div`
