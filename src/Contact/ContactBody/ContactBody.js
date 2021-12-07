@@ -4,7 +4,7 @@ import ContactSheet from '../ContactSheet/ContactSheet'
 
 const Container = styled.header`
   width: 100%;
-  height: 50vh;
+  /* height: 50vh; */
   display: flex;
   flex-flow: column;
   justify-content: center;

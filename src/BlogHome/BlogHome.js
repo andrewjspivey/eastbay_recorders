@@ -13,9 +13,6 @@ const HeaderPic = styled.div`
   align-items: center;
   width: 100%;
   height: 65vh;
-  @media (max-width: 800px) {
-    height: auto;
-  }
   @media (max-width: 1024px) {
     height: auto;
   }
