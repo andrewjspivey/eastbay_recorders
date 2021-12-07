@@ -31,12 +31,12 @@ const Album = styled.div`
   width: 25%;
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  &:hover {
-    img {
-      opacity: 0.5;
-    }
+  :hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    z-index: 1;
   }
   @media (max-width: 768px) {
     width: 50%;
@@ -51,7 +51,7 @@ const ViewMore = styled.div`
   justify-content: center;
   opacity: 0.9;
   align-items: center;
-  transform: translateY(5rem);
+  /* transform: translateY(5rem); */
   background-color: #dd3233;
   &:hover {
     cursor: pointer;
@@ -61,11 +61,12 @@ const ViewMore = styled.div`
   @media (max-width: 768px) {
     width: 70%;
     display: flex;
-    transform: translateY(3rem);
+    transform: translateY(10rem);
   }
-  @media (max-width: 375px) {
+  @media (max-width: 481px) {
     font-size: 0.8rem;
     height: 1.5rem;
+    transform: translateY(5rem);
   } ;
 `;
 
@@ -79,18 +80,41 @@ const Header = styled.h1`
     text-align: center;
   }
 `;
-const SubHeader = styled.h3`
+const AlbumTitle = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0rem 0rem 0rem;
+  line-height: 1rem;
+  text-align: center;
+  width: 80%;
   font-family: "Gotham";
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  margin: 0.5rem;
+  margin: 1rem 0rem 0rem 0rem;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+const BandName = styled.div`
+  display: flex;
+  justify-content: center;
+  /* padding: 1rem 0rem 0rem 0rem; */
+  text-align: center;
+  line-height: 1rem;
+  width: 80%;
+  font-family: "Gotham";
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 1rem 0rem 0rem 0rem;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Recently = () => {
   return (
     <Container>
       <Header>RECENTLY @ EBR</Header>
-      {/* <SubHeader>Check out Albums recorded at EBR</SubHeader> */}
       <AlbumsContainer>
         <Album>
           <ViewMore>
@@ -103,6 +127,8 @@ const Recently = () => {
               alt="Charger"
             />
           </Link>
+          <AlbumTitle>Charger</AlbumTitle>
+          <BandName>Charger</BandName>
         </Album>
         <Album>
           <ViewMore>
@@ -115,6 +141,8 @@ const Recently = () => {
               alt="The Old Firm Casuals - Holger Danske"
             />
           </Link>
+          <AlbumTitle>Holger Danske</AlbumTitle>
+          <BandName>The Old Firm Casuals</BandName>
         </Album>
         <Album>
           <ViewMore>
@@ -127,6 +155,8 @@ const Recently = () => {
               alt="The Damn Liars - American Ghost Town"
             />
           </Link>
+          <AlbumTitle>American Ghost Town</AlbumTitle>
+          <BandName>The Damn Liars</BandName>
         </Album>
         <Album>
           <ViewMore>
@@ -139,6 +169,8 @@ const Recently = () => {
               alt="GHB - Momentum"
             />
           </Link>
+          <AlbumTitle>Momentum</AlbumTitle>
+          <BandName>GHB</BandName>
         </Album>
       </AlbumsContainer>
     </Container>

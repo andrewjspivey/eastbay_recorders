@@ -36,7 +36,7 @@ const IntroImageCont = styled.div`
 const ContentHeader = styled.h2`
   font-family: "Gotham";
   font-weight: bold;
-  font-size: 2em;
+  font-size: 2rem;
   @media (max-width: 768px) {
     font-size: 1.5rem;
     text-align: center;
