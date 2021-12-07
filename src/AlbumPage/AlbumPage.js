@@ -3,7 +3,6 @@ import { useHistory, useParams } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import styled from "styled-components";
-import { useParams } from "react-router-dom";
 import { albums } from "../data/albumData";
 
 const MainContainer = styled.div`
@@ -89,7 +88,6 @@ const LinkContainer = styled.div`
       ? "inset 1px 1px 1.5px lightgrey, inset -1px 0px 1.5px lightgrey"
       : "white"};
   font-size: 12px;
-  border-box: ;
 `;
 
 const LinksList = styled.ul`
@@ -151,7 +149,6 @@ const AlbumPage = (props) => {
                 <img
                   style={{ width: "100%" }}
                   src={album.albumCoverImg}
-                  sd
                   alt=""
                 />
                 <LinkContainer
