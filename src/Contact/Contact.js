@@ -1,9 +1,12 @@
 import React from "react";
+import ContactHeader from "./ContactHeader/ContactHeader";
+import ContactBody from "./ContactBody/ContactBody"
 
 const Contact = () => {
   return (
     <div>
-      <h1>CONTACT EBR</h1>
+      <ContactHeader />
+      <ContactBody />
     </div>
   );
 };
