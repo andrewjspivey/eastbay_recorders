@@ -37,6 +37,7 @@ const ContentHeader = styled.h2`
   font-family: "Gotham";
   font-weight: bold;
   font-size: 2rem;
+  margin-bottom: 0.5rem;
   @media (max-width: 768px) {
     font-size: 1.5rem;
     text-align: center;
@@ -52,13 +53,34 @@ const TextContent = styled.div`
     padding: 0.5rem;
   }
 `;
+const Underline = styled.div`
+  height: 3px;
+  width: 60px;
+  background-color: black;
+  @media (max-width: 768px) {
+    height: 2px;
+  }
+`;
+const NameContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+  display: flex;
+  @media (max-width: 768px) {
+    align-items: center;
+  }
+`;
 
 const Intro = () => {
   return (
     <Container>
       <IntroContainer>
         <TextContent>
-          <ContentHeader>REAL MUSIC • REAL TALENT • REAL SONGS</ContentHeader>
+          <NameContainer>
+            <ContentHeader>REAL MUSIC • REAL TALENT • REAL SONGS</ContentHeader>
+            <Underline />
+          </NameContainer>
           <div style={{ paddingTop: "0.2rem", width: "100%" }}>
             <p style={{ lineHeight: "1.7rem", fontWeight: "bold" }}>
               East Bay Recorders is an intimate, vibey studio where real music

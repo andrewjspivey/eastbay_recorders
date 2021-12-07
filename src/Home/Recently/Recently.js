@@ -74,7 +74,7 @@ const Header = styled.h1`
   font-family: "Gotham";
   font-weight: bold;
   font-size: 2rem;
-  margin: 2rem;
+  margin: 2rem 0rem 0.5rem 0rem;
   @media (max-width: 768px) {
     font-size: 1.5rem;
     text-align: center;
@@ -110,11 +110,33 @@ const BandName = styled.div`
     display: none;
   }
 `;
+const Underline = styled.div`
+  height: 3px;
+  width: 60px;
+  background-color: black;
+  @media (max-width: 768px) {
+    height: 2px;
+  }
+`;
+const NameContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  display: flex;
+  margin-bottom: 1rem;
+  @media (max-width: 768px) {
+    /* align-items: center; */
+  }
+`;
 
 const Recently = () => {
   return (
     <Container>
-      <Header>RECENTLY @ EBR</Header>
+      <NameContainer>
+        <Header>RECENTLY @ EBR</Header>
+        <Underline />
+      </NameContainer>
       <AlbumsContainer>
         <Album>
           <ViewMore>

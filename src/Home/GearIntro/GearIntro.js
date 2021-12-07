@@ -38,6 +38,7 @@ const ContentHeader = styled.h2`
   font-family: "Gotham";
   font-weight: bold;
   font-size: 2rem;
+  margin-bottom: 0.5rem;
   @media (max-width: 768px) {
     text-align: center;
     font-size: 1.5rem;
@@ -75,13 +76,34 @@ const ViewMore = styled.div`
     margin: 1rem;
   }
 `;
+const Underline = styled.div`
+  height: 3px;
+  width: 60px;
+  background-color: black;
+  @media (max-width: 768px) {
+    height: 2px;
+  }
+`;
+const NameContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+  display: flex;
+  @media (max-width: 768px) {
+    align-items: center;
+  }
+`;
 
 const Intro = () => {
   return (
     <Container>
       <IntroContainer>
         <TextContent>
-          <ContentHeader>IT'S NOT ABOUT GEAR</ContentHeader>
+          <NameContainer>
+            <ContentHeader>IT'S NOT ABOUT GEAR</ContentHeader>
+            <Underline />
+          </NameContainer>
           <div style={{ paddingTop: "0.2rem", width: "100%" }}>
             <p style={{ lineHeight: "1.7rem", fontWeight: "bold" }}>
               It’s about the song and doing whatever’s needed with whatever
