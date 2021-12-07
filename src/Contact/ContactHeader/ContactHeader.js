@@ -1,14 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
-import logo_ebr from '../../assets/logo_ebr.png'
-import Mic_contactpage from '../../assets/Mic_contactpage.jpeg'
+import React from "react";
+import styled from "styled-components";
+import logo_ebr from "../../assets/logo_ebr.png";
+import Mic_contactpage from "../../assets/Mic_contactpage.jpeg";
 
 const Container = styled.header`
   width: 100%;
-  padding-top: 50px;
+  padding-top: 55px;
   overflow: hidden;
   position: relative;
-  height: 60vh;
+  height: 65vh;
   @media (max-width: 768px) {
     height: 40vh;
   }
@@ -56,7 +56,7 @@ const ContactText = styled.div`
   height: 60vh;
   color: white;
   font-size: 2rem;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   @media (max-width: 481px) {
     font-size: 25px;
   }
@@ -68,12 +68,12 @@ const ContactHeader = () => {
       <ContactText>
         <h1>CONTACT</h1>
       </ContactText>
-        <LogoDiv>
-          <ContactHead src={logo_ebr} />
-        </LogoDiv>
+      <LogoDiv>
+        <ContactHead src={logo_ebr} />
+      </LogoDiv>
       <ContactLogo />
     </Container>
   );
-}
+};
 
-export default ContactHeader
+export default ContactHeader;

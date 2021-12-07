@@ -19,10 +19,10 @@ const HeaderPic = styled.div`
   width: 100%;
   height: 65vh;
   @media (max-width: 768px) {
-    height: 100%;
+    height: auto;
   }
   @media (max-width: 1024px) {
-    height: 100%;
+    height: auto;
   }
 `;
 

@@ -12,6 +12,10 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 2rem 0rem;
+  @media (max-width: 768px) {
+    padding: 0.5rem 0 2rem 0;
+  }
 `;
 
 const AlbumsContainer = styled.div`

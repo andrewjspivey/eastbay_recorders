@@ -8,9 +8,9 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   margin: auto;
-  padding: 3rem 0 3rem 0;
+  padding: 2rem 0 4rem 0;
   @media (max-width: 768px) {
-    padding: 0.5rem 0 1rem 0;
+    padding: 0.5rem 0 2rem 0;
   }
 `;
 
