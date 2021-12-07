@@ -2,31 +2,34 @@ import React from "react";
 import styled from "styled-components";
 
 const MainWrapper = styled.div`
-  padding: 150px 50px 50px 50px;
+  padding: 50px;
   @media (max-width: 768px) {
-    padding: 100px 50px 50px 50px;
-  }
-  @media (max-width: 600px) {
     padding: 50px 50px 50px 50px;
   }
+  @media (max-width: 600px) {
+    padding: 25px 50px 50px 50px;
+  }
   @media (max-width: 375px) {
-    padding: 50px 30px;
+    padding: 25px 30px;
   }
 `;
 const Title = styled.div`
   text-align: center;
-  font-size: 25px;
+  font-size: 15px;
+  @media (max-width: 768px) {
+    /* font-size: 20px; */
+  }
 `;
 const Body = styled.div`
   font-size: 14px;
-  padding: 50px 50px 50px 50px;
+  padding: 25px 50px 50px 50px;
   display: flex;
   @media (max-width: 768px) {
     display: block;
-    padding: 0px 50px 50px 50px;
+    padding: 25px 50px 50px 50px;
   }
   @media (max-width: 600px) {
-    padding: 0px;
+    padding: 10px;
   }
 `;
 const Paragraph = styled.div`
@@ -40,7 +43,9 @@ const Paragraph = styled.div`
 const Main = () => {
   return (
     <MainWrapper>
-      <Title>"THIS SPOT IS A MAGNET FOR MUSIC."</Title>
+      <Title>
+        <h2 style={{ margin: "0px" }}>"THIS SPOT IS A MAGNET FOR MUSIC."</h2>
+      </Title>
       <Body>
         <Paragraph>
           <p>

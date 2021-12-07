@@ -10,7 +10,7 @@ const Container = styled.div`
   margin: auto;
   padding: 3rem 0 3rem 0;
   @media (max-width: 768px) {
-    padding: 2rem 0 1rem 0;
+    padding: 0.5rem 0 1rem 0;
   }
 `;
 
@@ -37,9 +37,10 @@ const IntroImageCont = styled.div`
 const ContentHeader = styled.h2`
   font-family: "Gotham";
   font-weight: bold;
-  font-size: 2em;
+  font-size: 2rem;
   @media (max-width: 768px) {
     text-align: center;
+    font-size: 1.5rem;
   }
 `;
 
@@ -83,11 +84,11 @@ const Intro = () => {
           <ContentHeader>IT'S NOT ABOUT GEAR</ContentHeader>
           <div style={{ paddingTop: "0.2rem", width: "100%" }}>
             <p style={{ lineHeight: "1.7rem", fontWeight: "bold" }}>
-              t’s about the song and doing whatever’s needed with whatever tools
-              to bring it to life. EBR takes a hybrid approach to recording
-              where old school recording technique meets today’s technology. The
-              entire goal is to capture performances and deliver the sounds that
-              feel authentic.
+              It’s about the song and doing whatever’s needed with whatever
+              tools to bring it to life. EBR takes a hybrid approach to
+              recording where old school recording technique meets today’s
+              technology. The entire goal is to capture performances and deliver
+              the sounds that feel authentic.
             </p>
           </div>
           <div

@@ -68,14 +68,25 @@ const ViewMore = styled.div`
 const Header = styled.h1`
   font-family: "Gotham";
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin: 2rem;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+`;
+const SubHeader = styled.h3`
+  font-family: "Gotham";
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0.5rem;
 `;
 
 const Recently = () => {
   return (
     <Container>
-      <Header>Recently @ EBR</Header>
+      <Header>RECENTLY @ EBR</Header>
+      {/* <SubHeader>Check out Albums recorded at EBR</SubHeader> */}
       <AlbumsContainer>
         <Album>
           <ViewMore>
