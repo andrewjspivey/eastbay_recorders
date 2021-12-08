@@ -6,7 +6,7 @@ import { blogs } from "../data/blogData";
 import { sessionNotes } from "../data/sessionNotesData";
 import { Link } from "react-router-dom";
 
-const HeaderPic = styled.div`
+export const HeaderPic = styled.div`
   display: flex;
   position: relative;
   justify-content: center;
@@ -18,7 +18,7 @@ const HeaderPic = styled.div`
   }
 `;
 
-const JumboContainer = styled.header`
+export const JumboContainer = styled.header`
   width: 100%;
   padding-top: 50px;
   /* margin-bottom: 3rem; */
@@ -27,7 +27,7 @@ const JumboContainer = styled.header`
   position: relative;
 `;
 
-const JumboTitle = styled.div`
+export const JumboTitle = styled.div`
   color: white;
   display: flex;
   flex-direction: column;
@@ -41,7 +41,7 @@ const JumboTitle = styled.div`
   }
 `;
 
-const JumboHeader = styled.img`
+export const JumboHeader = styled.img`
   position: absolute;
   z-index: 1;
   @media (max-width: 768px) {
@@ -49,7 +49,7 @@ const JumboHeader = styled.img`
   }
 `;
 
-const Underline = styled.div`
+export const Underline = styled.div`
   height: 3px;
   width: 60px;
   background-color: white;
@@ -57,7 +57,7 @@ const Underline = styled.div`
     height: 2px;
   }
 `;
-const NameContainer = styled.div`
+export const NameContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

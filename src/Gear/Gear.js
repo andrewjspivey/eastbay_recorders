@@ -1,4 +1,12 @@
 import React from "react";
+import {
+  JumboContainer,
+  JumboHeader,
+  JumboTitle,
+  Underline,
+  HeaderPic,
+  NameContainer,
+} from "../BlogHome/BlogHome";
 import logo_ebr from "../assets/logo_ebr.png";
 import GearMain from "../assets/GearMain.jpeg";
 import OutBoardGear from "../assets/OutBoardGear.jpeg";
@@ -15,10 +23,9 @@ const Row = styled.div`
   justify-content: center;
   padding: 0px 1rem;
   line-height: 30px;
-  color: black;
   font-weight: normal;
   text-align: center;
-  font-size: 25px;
+  font-size: 1.5rem;
   @media (max-width: 768px) {
     font-size: 1rem;
     margin-bottom: 1rem;
@@ -149,66 +156,7 @@ const CardText = styled.text`
   flex-direction: column;
   align-items: center;
 `;
-const Underline = styled.div`
-  height: 3px;
-  width: 60px;
-  background-color: white;
-  @media (max-width: 768px) {
-    height: 2px;
-  }
-`;
-const NameContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  z-index: 2;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-const HeaderPic = styled.div`
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 65vh;
-  @media (max-width: 1024px) {
-    height: auto;
-  }
-`;
 
-const JumboContainer = styled.header`
-  width: 100%;
-  padding-top: 50px;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-`;
-
-const JumboTitle = styled.div`
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  font-family: "Gotham";
-  font-weight: bold;
-  font-size: 2rem;
-  @media (max-width: 481px) {
-    font-size: 20px;
-  }
-`;
-
-const JumboHeader = styled.img`
-  position: absolute;
-  z-index: 1;
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
 const Number = styled.h4`
   margin: 0;
   color: #ad1001;
@@ -233,7 +181,7 @@ const Paragraph = styled.p`
 
 const Gear = () => {
   return (
-    <div style={{ width: "100%vw" }}>
+    <div>
       <JumboContainer>
         <div style={{ position: "absolute", padding: "1rem 0 0 2rem" }}>
           <JumboHeader src={logo_ebr} />
