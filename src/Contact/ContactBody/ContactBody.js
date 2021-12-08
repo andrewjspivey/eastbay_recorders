@@ -1,14 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
-import ContactSheet from '../ContactSheet/ContactSheet'
+import React from "react";
+import styled from "styled-components";
+import ContactSheet from "../ContactSheet/ContactSheet";
 
 const Container = styled.header`
   width: 100%;
-  /* height: 50vh; */
+  height: 70vh;
   display: flex;
   flex-flow: column;
-  justify-content: center;
-  margin-bottom:1rem;
+  align-items: center;
+  margin-bottom: 1rem;
   @media (max-width: 1024px) {
     margin-bottom: 1rem;
   }
@@ -17,6 +17,10 @@ const Container = styled.header`
   }
   @media (max-width: 481px) {
     margin-bottom: 3rem;
+    height: 110vh;
+  }
+  @media (max-width: 320px) {
+    height: 115vh;
   }
 `;
 
@@ -26,7 +30,7 @@ const ContactText = styled.div`
   flex-flow: column;
   align-items: center;
   text-align: center;
-  font-family: 'Gotham';
+  font-family: "Gotham";
   margin-top: 1rem;
   @media (max-width: 1024px) {
     font-size: 15px;
@@ -39,18 +43,26 @@ const ContactText = styled.div`
   }
 `;
 
+const ContactLocation = styled.div`
+  width: 90%;
+  display: flex;
+  justify-content: center;
+`;
+
 const ContactBody = () => {
   return (
     <Container>
       <ContactText>
-        <h1 style={{ width: '60%' }}>
+        <h1 style={{ width: "60%" }}>
           READY TO MAKE SOME MUSIC? LET'S DO IT! SEND US AN EMAIL OR REACH OUT
           TO US ON SOCIAL MEDIA. CAN'T WAIT TO HEAR YOU.
         </h1>
       </ContactText>
+      <ContactLocation>
         <ContactSheet />
+      </ContactLocation>
     </Container>
   );
-}
+};
 
-export default ContactBody
+export default ContactBody;
