@@ -4,7 +4,7 @@ import styled from "styled-components";
 const ContactBody = styled.div`
   width: 100%;
   display: flex;
-  flex-flow: row;
+  /* flex-flow: row; */
   justify-content: space-evenly;
   @media (max-width: 1024px) {
   }
@@ -35,7 +35,7 @@ const ContactGroup = styled.div`
 `;
 
 const NameInputGroup = styled.input`
-  width: 100%;
+  width: 98%;
   font-weight: bold;
   height: 30px;
   margin-top: 1rem;
@@ -51,7 +51,7 @@ const NameInputGroup = styled.input`
 `;
 
 const CategoryGroup = styled.select`
-  width: 101%;
+  width: 98%;
   font-weight: bold;
   color: #7b7b7b;
   height: 35px;
@@ -61,7 +61,7 @@ const CategoryGroup = styled.select`
 `;
 
 const MessageGroup = styled.textarea`
-  width: 100%;
+  width: 98%;
   font-weight: bold;
   height: 60px;
   margin-top: 1rem;

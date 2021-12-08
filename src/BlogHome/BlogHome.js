@@ -49,7 +49,25 @@ const JumboHeader = styled.img`
   }
 `;
 
-// everything under jumbo
+const Underline = styled.div`
+  height: 3px;
+  width: 60px;
+  background-color: white;
+  @media (max-width: 768px) {
+    height: 2px;
+  }
+`;
+const NameContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const MainContainer = styled.div`
   width: 100%;
@@ -93,26 +111,6 @@ const BlogTitle = styled.div`
   padding: 0px;
   overflow: hidden;
   text-align: center;
-`;
-
-const Underline = styled.div`
-  height: 3px;
-  width: 60px;
-  background-color: white;
-  @media (max-width: 768px) {
-    height: 2px;
-  }
-`;
-const NameContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  z-index: 2;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 `;
 
 const BlogHome = () => {

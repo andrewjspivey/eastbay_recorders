@@ -4,12 +4,12 @@ import ContactSheet from "../ContactSheet/ContactSheet";
 
 const Container = styled.header`
   width: 100%;
-  height: 70vh;
+  /* height: 70vh; */
   display: flex;
   flex-flow: column;
   align-items: center;
-  margin-bottom: 1rem;
-  @media (max-width: 1024px) {
+  margin-bottom: 2rem;
+  /* @media (max-width: 1024px) {
     margin-bottom: 1rem;
   }
   @media (max-width: 768px) {
@@ -21,7 +21,7 @@ const Container = styled.header`
   }
   @media (max-width: 320px) {
     height: 115vh;
-  }
+  } */
 `;
 
 const ContactText = styled.div`
