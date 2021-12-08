@@ -85,6 +85,7 @@ const GalleryContainer = styled.div`
 const TextContent = styled.div`
   width: 80%;
   text-align: center;
+  font-weight: 400;
   margin-bottom: 1rem;
   @media (max-width: 768px) {
     font-size: 0.6rem;
@@ -134,11 +135,11 @@ const Scene = () => {
       </JumboContainer>
       <GalleryContainer>
         <TextContent>
-          <h2>
+          <h3>
             FEELS LIKE THERE'S ALWAYS SOMETHING SPECIAL HAPPENING AT EBR. HERE
             IS A BEHIND THE SCENES LOOK AT SOME OF OUR RECORDING DATES AND
             PHOTOS FROM MICHAEL ROSEN'S HISTORY.
-          </h2>
+          </h3>
         </TextContent>
         <StyledGrid>
           {imgArray.map((pic, index) => (

@@ -15,7 +15,7 @@ const MainWrapper = styled.div`
 `;
 const Title = styled.div`
   text-align: center;
-  font-size: 15px;
+  font-size: 2rem;
   @media (max-width: 768px) {
     /* font-size: 20px; */
   }
@@ -44,7 +44,7 @@ const Main = () => {
   return (
     <MainWrapper>
       <Title>
-        <h2 style={{ margin: "0px" }}>"THIS SPOT IS A MAGNET FOR MUSIC."</h2>
+        <h3 style={{ margin: "0px" }}>"THIS SPOT IS A MAGNET FOR MUSIC."</h3>
       </Title>
       <Body>
         <Paragraph>

@@ -2,6 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import AboutMain from "../../assets/AboutMain.jpeg";
 import logo_ebr from "../../assets/logo_ebr.png";
+import {
+  JumboContainer,
+  JumboHeader,
+  JumboTitle,
+  Underline,
+  HeaderPic,
+} from "../../BlogHome/BlogHome";
 
 const Logo = styled.img`
   z-index: 1;
@@ -30,7 +37,6 @@ const LogoDiv = styled.div`
   @media (max-width: 900px) {
     padding: 1rem 4.5rem;
   }
-  @m;
 `;
 const AboutImg = styled.div`
   background-image: url(${AboutMain});

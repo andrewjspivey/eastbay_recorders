@@ -9,13 +9,12 @@ import Instruments from "../assets/Instruments.jpeg";
 import styled from "styled-components";
 
 const Row = styled.div`
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Gotham";
   width: 75%;
   display: flex;
   justify-content: center;
   padding: 0px 1rem;
-  font-size: 1.1rem;
-  line-height: 25px;
+  line-height: 30px;
   color: black;
   font-weight: normal;
   text-align: center;
@@ -86,17 +85,17 @@ const BoxImage = styled.img`
 const BoxRight = styled.div`
   z-index: 100;
   @media (min-width: 1024px) {
-    height: 0 auto;
+    /* height: 0 auto; */
     width: 400px;
     margin: 0 0 0 -25px;
   }
   @media (max-width: 1023px) {
-    height: 0 auto;
+    /* height: 0 auto; */
     width: 350px;
     margin: 0 0 0 -25px;
   }
   @media (max-width: 768px) {
-    height: 0 auto;
+    /* height: 0 auto; */
     width: 100%;
     margin: 0;
   }
@@ -120,11 +119,9 @@ const Card = styled.div`
   background-color: white;
   @media (min-width: 1024px) {
     margin-top: 100px;
-    height: 500px;
   }
   @media (max-width: 1023px) {
     margin-top: 100px;
-    height: 400px;
   }
   @media (max-width: 768px) {
     margin-top: 0;
@@ -138,7 +135,6 @@ const CardText = styled.text`
   padding: 40px 40px;
   background-color: #eeeee5;
   text-align: center;
-  overflow: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -177,7 +173,6 @@ const HeaderPic = styled.div`
 const JumboContainer = styled.header`
   width: 100%;
   padding-top: 50px;
-  /* margin-bottom: 3rem; */
   justify-content: center;
   overflow: hidden;
   position: relative;
@@ -307,7 +302,6 @@ const Gear = () => {
               <CardText>
                 <h4 style={styles.header}>03/</h4>
                 <h4 style={styles.header.weight}>Dynamics</h4>
-
                 <p style={styles.text}>
                   dbx 160 VU Compressor (3) • dbx 160x Compressor (3) • dbx 163x
                   (2) • UREI 1178 Stereo Compressor • Distressor EL8 (3) •
