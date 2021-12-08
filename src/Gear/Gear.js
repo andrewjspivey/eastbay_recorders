@@ -10,7 +10,6 @@ import styled from 'styled-components';
 const Jumbo = styled.div`
   height: 60vh;
   width: 100%;
-  position: relative;
   background-image: url(${GearMain});
   background-position: center;
   background-repeat: no-repeat;
@@ -19,7 +18,7 @@ const Jumbo = styled.div`
 `;
 const Text = styled.div`
   width: 100%;
-  top: 50%;
+  top: 70%;
   text-align: center;
   color: white;
   z-index: 10;
@@ -38,7 +37,6 @@ const Row = styled.div`
   font-size: 25px;
 `;
 const Wrapper = styled.div`
-  height: 100vh;
   width: 100vw;
 `;
 
@@ -48,7 +46,6 @@ const Section = styled.div`
   align-items: center;
   justify-content: center;
   @media (max-width: 768px) {
-    /* background-color: red; */
     flex-direction: column;
   }
 `;
@@ -56,56 +53,71 @@ const SectionFlip = styled(Section)`
   flex-direction: row-reverse;
   @media (max-width: 768px) {
     flex-direction: column;
-    
   }
 `;
 const BoxImage = styled.img`
+  height: 0 auto;
   display: flex;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: white;
   z-index: 1000;
-  @media (min-width: 1024px) {
-    height: 0 auto;
+  @media (min-width: 1025px) {
     width: 525px;
   }
-  @media (max-width: 1023px) {
-    height: 0 auto;
+  @media (max-width: 1024px) {
     width: 425px;
   }
+  @media (max-width: 900px) {
+    width: 400px;
+  }
   @media (max-width: 768px) {
-    height: 0 auto;
-    width: 525px;
+    width: 425px;
+  }
+  @media (max-width: 425px) {
+    width: 325px;
   }
 `;
 
 const BoxRight = styled.div`
+  height: 0 auto;
   z-index: 100;
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     background-color: purple;
-    height: 0 auto;
     width: 400px;
     margin: 0 0 0 -25px;
   }
-  @media (max-width: 1023px) {
-    height: 0 auto;
+  @media (max-width: 1024px) {
+    background-color: black;
     width: 350px;
     margin: 0 0 0 -25px;
   }
+  @media (max-width: 900px) {
+    background-color: blue;
+    width: 300px;
+    margin: 0 0 0 -15px;
+  }
   @media (max-width: 768px) {
-    height: 0 auto;
-    width: 525px;
+    background-color: green;
+    width: 425px;
+    margin: 0;
+  }
+  @media (max-width: 425px) {
+    background-color: 325px;
     margin: 0;
   }
 `;
 
 const BoxLeft = styled(BoxRight)`
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     margin: 0 -25px 0 0;
   }
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
     margin: 0 -25px 0 0;
+  }
+  @media (max-width: 900px) {
+    margin: 0 -15px 0 0;
   }
   @media (max-width: 768px) {
     margin: 0;
@@ -116,13 +128,17 @@ const Card = styled.div`
   display: flex;
   width: 100%;
   background-color: white;
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     margin-top: 250px;
     height: 500px;
   }
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
     margin-top: 200px;
     height: 400px;
+  }
+  @media (max-width: 900px) {
+    margin-top: 150px;
+    height: 325px;
   }
   @media (max-width: 768px) {
     margin-top: 0;
@@ -136,35 +152,32 @@ const CardText = styled.text`
   background-color: #eeeee5;
   text-align: center;
 `;
+const Number = styled.h4`
+  margin: 0;
+  color: #ad1001;
+  font-style: italic;
+  font-size: 1.7em;
+  line-height: 2rem;
+  font-weight: normal;
+`;
+const Header = styled.h4`
+  margin: 0;
+  color: #ad1001;
+  font-style: italic;
+  font-size: 1.7em;
+  line-height: 2rem;
+  font-weight: bold;
+`;
+const Paragraph = styled.p`
+  font-weight: normal;
+  line-height: 28px;
+  font-size: 0.9em;
+  overflow: hidden;
+`;
 
 const Gear = () => {
-  const styles = {
-    header: {
-      margin: '0',
-      color: '#AD1001',
-      fontStyle: 'italic',
-      fontSize: '1.7em',
-      lineHeight: 'initial',
-      fontWeight: 'normal',
-      weight: {
-        margin: '0',
-        color: '#AD1001',
-        fontStyle: 'italic',
-        fontSize: '1.7em',
-        lineHeight: 'initial',
-        fontWeight: 'bold',
-      },
-    },
-    text: {
-      lineHeight: '28px',
-      fontSize: '0.9em',
-      fontWeight: 'normal',
-    },
-  };
-
   return (
     <>
-
       <Jumbo>
         <Text>
           <h4>Gear</h4>
@@ -186,17 +199,15 @@ const Gear = () => {
           <BoxRight>
             <Card>
               <CardText>
-                <h4 style={styles.header}>01/</h4>
-                <h4 style={styles.header.weight}>
-                  Console, Recorders + Monitors
-                </h4>
-                <p style={styles.text}>
+                <Number>01/</Number>
+                <Header>Console, Recorders + Monitors</Header>
+                <Paragraph>
                   Console: Neve 8816 Summing Mixer 16x2 and Neve 8804 Mixing
                   Pack • Recorders: Digidesign Pro Tools HD 32tk, Digidesign 192
                   I/O, Lynx Aurora I/O 16 in/16 out, Apple G5 2.0, Lacie
                   Firewire Drives • Monitors: JBL LSR 28P • Yamaha NS 10 •
                   Realistic Minimus 7
-                </p>
+                </Paragraph>
               </CardText>
             </Card>
           </BoxRight>
@@ -206,16 +217,16 @@ const Gear = () => {
           <BoxLeft>
             <Card>
               <CardText>
-                <h4 style={styles.header}>02/</h4>
-                <h4 style={styles.header.weight}>Outboard Gear</h4>
-                <p style={styles.text}>
+                <Number>02/</Number>
+                <Header>Outboard Gear</Header>
+                <Paragraph>
                   Neve 33114 Mic Pre/EQ (2) • Calrec PQ 1161Mic Pre/EQ (4) •
                   Telefunken V72 Mic Pre (2) • API 312 Mic Pre (4) • Vintech 473
                   I (4) • Shadow Hill Mic Pre • Peavey VTM Tube Mic Pre/EQ (2) •
                   UA 8110 Mic Pre (8) • UA 410 Mic Pre Amps (4) • Evil Twin Tube
                   Direct Boxes (2) • Radial J48 • Aphex 107 Tube Esscence Mic
                   Pre (2) • Helios Mic Pre Amps (4)
-                </p>
+                </Paragraph>
               </CardText>
             </Card>
           </BoxLeft>
@@ -225,15 +236,15 @@ const Gear = () => {
           <BoxRight>
             <Card>
               <CardText>
-                <h4 style={styles.header}>03/</h4>
-                <h4 style={styles.header.weight}>Dynamics</h4>
+                <Number>03/</Number>
+                <Header>Dynamics</Header>
 
-                <p style={styles.text}>
+                <Paragraph>
                   dbx 160 VU Compressor (3) • dbx 160x Compressor (3) • dbx 163x
                   (2) • UREI 1178 Stereo Compressor • Distressor EL8 (3) •
                   Peavey CDS Compressor (2) • UREI 535 Graphic EQ (4) • Bricasti
                   Reverb • dbx 120 Subharmonic Synthesier
-                </p>
+                </Paragraph>
               </CardText>
             </Card>
           </BoxRight>
@@ -243,9 +254,9 @@ const Gear = () => {
           <BoxLeft>
             <Card>
               <CardText>
-                <h4 style={styles.header}>04/</h4>
-                <h4 style={styles.header.weight}>Microphones</h4>
-                <p style={styles.text}>
+                <Number>04/</Number>
+                <Header>Microphones</Header>
+                <Paragraph>
                   AKG D112 (2) • AKG 414 (2) • Shure Beta 52 (2) • Shure Beta 57
                   (4) • Shure 57 (2) • Royer 121 Ribbon • Royer 122 Ribbon •
                   Aston Stealth • Aston Starlight (2) • Aston Spirit • Audio
@@ -255,7 +266,7 @@ const Gear = () => {
                   Lauten Oceanus (3) • Lauten Atlantis FC -387 (3) • Lauten
                   Horizon (2) • Beesneez (2) • Octavia 12 • Mojave MA 200 •
                   Beeznees LuLu’s (2)
-                </p>
+                </Paragraph>
               </CardText>
             </Card>
           </BoxLeft>
@@ -265,9 +276,9 @@ const Gear = () => {
           <BoxRight>
             <Card>
               <CardText>
-                <h4 style={styles.header}>05/</h4>
-                <h4 style={styles.header.weight}>Instruments</h4>
-                <p style={styles.text}>
+                <Number>05/</Number>
+                <Header>Instruments</Header>
+                <Paragraph>
                   Amps + Cabinets: Marshall 1968 Vintage 50 w Lead • Marshall
                   800 • Marshall JMP 50 Combo • Dan Electro guitar amp • Fender
                   De Ville • Fender Princeton • JMP Combo • Guitars + Bass:
@@ -275,7 +286,7 @@ const Gear = () => {
                   Freeman Model • Drums + Cymbals: Vintage Rogers Kit • Sabian
                   Cymbals • Tons of effect pedals • Extensive Sample and Loop
                   Library
-                </p>
+                </Paragraph>
               </CardText>
             </Card>
           </BoxRight>
