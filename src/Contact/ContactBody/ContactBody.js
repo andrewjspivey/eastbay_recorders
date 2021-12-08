@@ -4,11 +4,11 @@ import ContactSheet from '../ContactSheet/ContactSheet'
 
 const Container = styled.header`
   width: 100%;
-  height: 50vh;
+  height: 70vh;
   display: flex;
   flex-flow: column;
-  justify-content: center;
-  margin-bottom:1rem;
+  align-items: center;
+  margin-bottom: 1rem;
   @media (max-width: 1024px) {
     margin-bottom: 1rem;
   }
@@ -17,6 +17,10 @@ const Container = styled.header`
   }
   @media (max-width: 481px) {
     margin-bottom: 3rem;
+    height: 110vh;
+  }
+  @media (max-width: 320px) {
+    height: 115vh;
   }
 `;
 
@@ -39,6 +43,12 @@ const ContactText = styled.div`
   }
 `;
 
+const ContactLocation = styled.div`
+width: 90%;
+display: flex;
+justify-content: center;
+`
+
 const ContactBody = () => {
   return (
     <Container>
@@ -48,7 +58,9 @@ const ContactBody = () => {
           TO US ON SOCIAL MEDIA. CAN'T WAIT TO HEAR YOU.
         </h1>
       </ContactText>
+      <ContactLocation>
         <ContactSheet />
+      </ContactLocation>
     </Container>
   );
 }
