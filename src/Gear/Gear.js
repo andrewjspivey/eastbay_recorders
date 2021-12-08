@@ -89,7 +89,7 @@ const BoxRight = styled.div`
   height: 0 auto;
   z-index: 100;
   @media (min-width: 1024px) {
-    height: 0 auto;
+
     width: 400px;
     margin: 0 0 0 -25px;
   }
@@ -128,15 +128,12 @@ const Card = styled.div`
   background-color: white;
   @media (min-width: 1024px) {
     margin-top: 100px;
-    height: 500px;
   }
   @media (max-width: 1023px) {
     margin-top: 100px;
-    height: 400px;
   }
   @media (max-width: 900px) {
     margin-top: 150px;
-    height: 325px;
   }
   @media (max-width: 768px) {
     margin-top: 0;
@@ -150,7 +147,6 @@ const CardText = styled.text`
   padding: 40px 40px;
   background-color: #eeeee5;
   text-align: center;
-  overflow: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
