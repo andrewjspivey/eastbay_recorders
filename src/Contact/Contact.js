@@ -1,6 +1,6 @@
 import React from "react";
 import ContactHeader from "./ContactHeader/ContactHeader";
-import ContactBody from "./ContactBody/ContactBody"
+import ContactBody from "./ContactBody/ContactBody";
 
 const Contact = () => {
   return (
