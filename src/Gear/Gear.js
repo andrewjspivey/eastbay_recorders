@@ -9,7 +9,7 @@ import styled from 'styled-components';
 
 const Jumbo = styled.div`
   height: 60vh;
-  width: 100vw;
+  width: 100%;
   position: relative;
   background-image: url(${GearMain});
   background-position: center;
@@ -32,7 +32,7 @@ const Row = styled.div`
   padding: 0 60px;
   font-size: 1.07em;
   line-height: 25px;
-  color: #000;
+  color: black;
   font-weight: normal;
   text-align: center;
   font-size: 25px;
@@ -43,65 +43,97 @@ const Wrapper = styled.div`
 `;
 
 const Section = styled.div`
-  width: 90%;
-  max-width: 10000px;
-  margin: 0 auto;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    /* background-color: red; */
+    flex-direction: column;
+  }
 `;
-const SectionFlip = styled.div`
-  width: 90%;
-  max-width: 10000px;
-  margin: 0 auto;
-  display: flex;
+const SectionFlip = styled(Section)`
   flex-direction: row-reverse;
-  align-items: center;
-  justify-content: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    
+  }
 `;
 const BoxImage = styled.img`
   display: flex;
-  height: 458px;
-  width: 610.5px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: white;
   z-index: 1000;
+  @media (min-width: 1024px) {
+    height: 0 auto;
+    width: 525px;
+  }
+  @media (max-width: 1023px) {
+    height: 0 auto;
+    width: 425px;
+  }
+  @media (max-width: 768px) {
+    height: 0 auto;
+    width: 525px;
+  }
 `;
 
 const BoxRight = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 0 auto;
-  width: 566.5px;
   z-index: 100;
   @media (min-width: 1024px) {
-  } margin: 0 0 0 -30px;
-  @media (min-width: 1440px) {
-    margin: 0 0 0 -130px;
+    background-color: purple;
+    height: 0 auto;
+    width: 400px;
+    margin: 0 0 0 -25px;
+  }
+  @media (max-width: 1023px) {
+    height: 0 auto;
+    width: 350px;
+    margin: 0 0 0 -25px;
+  }
+  @media (max-width: 768px) {
+    height: 0 auto;
+    width: 525px;
+    margin: 0;
   }
 `;
 
 const BoxLeft = styled(BoxRight)`
-  margin: 0 -40px 0 0;
+  @media (min-width: 1024px) {
+    margin: 0 -25px 0 0;
+  }
+  @media (max-width: 1023px) {
+    margin: 0 -25px 0 0;
+  }
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 `;
 
 const Card = styled.div`
-  position: relative;
   display: flex;
-  margin-top: 250px;
-  height: 500px;
-  width: 400px;
+  width: 100%;
   background-color: white;
+  @media (min-width: 1024px) {
+    margin-top: 250px;
+    height: 500px;
+  }
+  @media (max-width: 1023px) {
+    margin-top: 200px;
+    height: 400px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 0;
+    margin-bottom: 200px;
+  }
 `;
 
 const CardText = styled.text`
-  position: absolute;
   width: 100%;
+  padding: 40px 40px;
   background-color: #eeeee5;
-  padding: 15% 10% 15% 20%;
   text-align: center;
 `;
 
@@ -124,8 +156,6 @@ const Gear = () => {
       },
     },
     text: {
-      paddingTop: '40px',
-      color: 'rgba(0,0,0,0.6)',
       lineHeight: '28px',
       fontSize: '0.9em',
       fontWeight: 'normal',
@@ -134,6 +164,7 @@ const Gear = () => {
 
   return (
     <>
+
       <Jumbo>
         <Text>
           <h4>Gear</h4>
@@ -215,8 +246,8 @@ const Gear = () => {
                 <h4 style={styles.header}>04/</h4>
                 <h4 style={styles.header.weight}>Microphones</h4>
                 <p style={styles.text}>
-                  s AKG D112 (2) • AKG 414 (2) • Shure Beta 52 (2) • Shure Beta
-                  57 (4) • Shure 57 (2) • Royer 121 Ribbon • Royer 122 Ribbon •
+                  AKG D112 (2) • AKG 414 (2) • Shure Beta 52 (2) • Shure Beta 57
+                  (4) • Shure 57 (2) • Royer 121 Ribbon • Royer 122 Ribbon •
                   Aston Stealth • Aston Starlight (2) • Aston Spirit • Audio
                   Technica 4047 (4) • Audio Technica 4033 (2) • Audio Technica
                   4050 • Audio Technica AE 3000 (3) • Audio Technica AE 5100 (3)
