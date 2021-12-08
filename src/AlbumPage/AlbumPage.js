@@ -1,91 +1,83 @@
 import React, { useState, useEffect } from "react";
-import { useHistory, useParams } from "react-router-dom";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { useParams } from "react-router-dom";
 import "react-tabs/style/react-tabs.css";
 import styled from "styled-components";
 import { albums } from "../data/albumData";
 
 const MainContainer = styled.div`
-  width: 100%;
-  padding-top: 60px;
-`;
-
-// const JumbotronContainer = styled.div`
-//   width: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background: #232020;
-// `;
-
-// const Jumbotron = styled.div`
-//   width: 60%;
-//   height: 700px;
-//   background-image: url(${(props) => props.img});
-//   opacity
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// `;
-
-const AlbumContainer = styled.div`
-  width: 75%;
-  display: column;
-  justify-content: center;
-  margin: auto;
-  @media (max-width: 768px) {
-    padding: 2rem 0 2rem 0;
-  }
-`;
-
-const HeaderContainer = styled.div`
-  width: 100%;
-  display: column;
-  margin-bottom: 10px;
-  border-bottom: 0.5px solid lightgrey;
-  padding: 0;
-`;
-
-const AlbumTitle = styled.h1`
-  margin: 0;
-  margin-bottom: 5px;
-  color: grey;
-`;
-
-const BandTitle = styled.h4`
-  margin: 0;
-  margin-bottom: 5px;
-  padding-left: 10px;
-  color: darkgrey;
-`;
-
-const BodyContainer = styled.div`
-  width: 100%;
-  display: flex;
-`;
-
-const ImageContainer = styled.div`
-  width: 40%;
+  padding-top: 55px;
   display: flex;
   flex-flow: column;
   align-items: center;
-  @media (max-width: 768px) {
-    width: 90%;
-  }
+`;
+
+const JumbotronContainer = styled.div`
+  width: 100%;
+  margin-bottom: 100px;
+`;
+
+const Jumbotron = styled.div`
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(${(props) => props.background});
+  background-size: cover;
+`;
+
+const JumboContent = styled.div`
+  transform: translate(0px, 15%);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+`;
+
+const JumboTitle = styled.p`
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 3.57143em;
+  font-weight: bold;
+  color: white;
+  font-family: "Gotham";
+`;
+
+const JumboSubTitle = styled.p`
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 1.14286em;
+  font-style: italic;
+  text-decoration: underline;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  font-family: "Gotham";
+`;
+
+const JumboImage = styled.img`
+  width: 500px;
+  height: 500px;
 `;
 
 const LinkContainer = styled.div`
-  margin-top: 15px;
+  width: 980px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25px;
+  border-bottom: 2px solid lightgrey;
+`;
+
+const LinkButton = styled.div`
   padding: 15px;
   width: 80px;
-  height: 25px;
+  height: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${(props) => (props.hover ? "white" : "#ad1000")};
+  cursor: pointer;
+  background: ${(props) => (props.hover ? "rgba(0, 0, 0, 0.1)" : "#ad1000")};
   color: ${(props) => (props.hover ? "#ad1000" : "white")};
   box-shadow: ${(props) =>
     props.hover
-      ? "inset 1px 1px 1.5px lightgrey, inset -1px 0px 1.5px lightgrey"
+      ? "inset 1px 1px 2px lightgrey, inset -1px 0px 2px lightgrey"
       : "white"};
   font-size: 12px;
   border-box: ;
@@ -94,19 +86,36 @@ const LinkContainer = styled.div`
 const LinksList = styled.ul`
   margin: 0;
   padding: 0;
-  width: 80px;
+  margin-top: 90px;
+  width: 107px;
   display: ${(props) => (props.hover ? "flex" : "none")};
-  align-items: center;
-  justify-content: center;
   flex-flow: column;
+  position: absolute;
+  background: white;
+  cursor: pointer;
   box-shadow: ${(props) =>
-    props.hover
-      ? "inset 1px 1px 1.5px lightgrey, inset -1px 0px 1.5px lightgrey"
-      : "white"};
+    props.hover ? " 1px 1px 2px lightgrey,  -1px 0px 2px lightgrey" : "white"};
+`;
+
+const Link = styled.a`
+  width: 100%;
+  height: 30px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  &:hover {
+    background: red;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    opacity 0.24s ease-in-out;
+}
 `;
 
 const SongNoteContainer = styled.div`
-  width: 60%;
+  width: 980px;
   padding: 10px;
 `;
 
@@ -137,87 +146,46 @@ const AlbumPage = (props) => {
     <>
       {album ? (
         <MainContainer>
-          {/* <JumbotronContainer>
-            <Jumbotron img={album.albumCoverImg}></Jumbotron>
-          </JumbotronContainer> */}
-          <AlbumContainer>
-            <HeaderContainer>
-              <AlbumTitle>{album.albumTitle}</AlbumTitle>
-              <BandTitle>by: {album.band}</BandTitle>
-            </HeaderContainer>
-            <BodyContainer>
-              <ImageContainer>
-                <img
-                  style={{ width: "100%" }}
-                  src={album.albumCoverImg}
-                  sd
-                  alt=""
-                />
-                <LinkContainer
-                  hover={hover}
-                  onMouseEnter={() => setHover(true)}
-                  onMouseLeave={() => setHover(false)}
-                >
-                  Buy Albums
-                </LinkContainer>
-                <LinksList hover={hover}>
-                  <li>Hello</li>
-                  <li>Hello</li>
-                  <li>Hello</li>
-                </LinksList>
-              </ImageContainer>
-              <SongNoteContainer>
-                <Tabs>
-                  <TabList>
-                    <Tab>
-                      <SongNoteTitle>Song Note</SongNoteTitle>
-                    </Tab>
-                    <Tab>
-                      <SongNoteTitle>Spotify</SongNoteTitle>
-                    </Tab>
-                    <Tab>
-                      <SongNoteTitle>Apple Music</SongNoteTitle>
-                    </Tab>
-                  </TabList>
-                  <TabPanel>
-                    <SongNoteInfo>{album.songNote}</SongNoteInfo>
-                  </TabPanel>
-                  <TabPanel>
-                    {album.playlist?.spotify ? (
-                      <iframe
-                        src={album.playlist?.spotify}
-                        width="100%"
-                        height="400"
-                        frameBorder="0"
-                        allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                      ></iframe>
-                    ) : (
-                      <h3>Currently unavailable on Spotify</h3>
-                    )}
-                  </TabPanel>
-                  <TabPanel>
-                    {album.playlist?.apple ? (
-                      <iframe
-                        allow="autoplay *; encrypted-media *; fullscreen *"
-                        frameborder="0"
-                        height="450"
-                        style={{
-                          width: "100%",
-                          overflow: "hidden",
-                          background: "transparent",
-                        }}
-                        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-                        src={album.playlist?.apple}
-                      ></iframe>
-                    ) : (
-                      <h3>Currently unavailable on Apple Music</h3>
-                    )}
-                  </TabPanel>
-                </Tabs>
-              </SongNoteContainer>
-            </BodyContainer>
-          </AlbumContainer>
+          <JumbotronContainer>
+            <Jumbotron background={album.albumCoverImg}>
+              <JumboContent>
+                <JumboTitle>{album.albumTitle}</JumboTitle>
+                <JumboSubTitle>{album.band}</JumboSubTitle>
+                <JumboImage src={album.albumCoverImg} />
+              </JumboContent>
+            </Jumbotron>
+          </JumbotronContainer>
+          <LinkContainer>
+            <LinkButton
+              hover={hover}
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+            >
+              Buy Albums
+            </LinkButton>
+            <LinksList hover={hover}>
+              <Link
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                target="_blank"
+                href={album?.links?.spotify}
+              >
+                Spotify
+              </Link>
+              <Link
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                target="_blank"
+                href={album?.links?.apple}
+              >
+                MUSIC
+              </Link>
+            </LinksList>
+          </LinkContainer>
+          <SongNoteContainer>
+            <SongNoteTitle>Song Note</SongNoteTitle>
+            <SongNoteInfo>{album.songNote}</SongNoteInfo>
+          </SongNoteContainer>
         </MainContainer>
       ) : (
         <div>
