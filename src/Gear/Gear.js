@@ -1,45 +1,36 @@
-import React from 'react';
-import GearMain from '../assets/GearMain.jpeg';
-import OutBoardGear from '../assets/OutBoardGear.jpeg';
-import ComputerMix from '../assets/computerMix.jpeg';
-import Dynamics from '../assets/Dynamics.jpeg';
-import Microphones from '../assets/Microphones.jpeg';
-import Instruments from '../assets/Instruments.jpeg';
-import styled from 'styled-components';
+import React from "react";
+import logo_ebr from "../assets/logo_ebr.png";
+import GearMain from "../assets/GearMain.jpeg";
+import OutBoardGear from "../assets/OutBoardGear.jpeg";
+import ComputerMix from "../assets/computerMix.jpeg";
+import Dynamics from "../assets/Dynamics.jpeg";
+import Microphones from "../assets/Microphones.jpeg";
+import Instruments from "../assets/Instruments.jpeg";
+import styled from "styled-components";
 
-const Jumbo = styled.div`
-  height: 60vh;
-  width: 100%;
-  position: relative;
-  background-image: url(${GearMain});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -10;
-`;
-const Text = styled.div`
-  width: 100%;
-  top: 50%;
-  text-align: center;
-  color: white;
-  z-index: 10;
-`;
 const Row = styled.div`
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  height: 1080;
-  width: 210;
-  margin: 0 45px;
-  padding: 0 60px;
-  font-size: 1.07em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  padding: 0px 1rem;
+  font-size: 1.1rem;
   line-height: 25px;
   color: black;
   font-weight: normal;
   text-align: center;
   font-size: 25px;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
 `;
 const Wrapper = styled.div`
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Section = styled.div`
@@ -48,15 +39,23 @@ const Section = styled.div`
   align-items: center;
   justify-content: center;
   @media (max-width: 768px) {
-    /* background-color: red; */
     flex-direction: column;
+    width: 481px;
+    align-items: center;
+  }
+  @media (max-width: 481px) {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
   }
 `;
 const SectionFlip = styled(Section)`
   flex-direction: row-reverse;
   @media (max-width: 768px) {
     flex-direction: column;
-    
+  }
+  @media (max-width: 481px) {
+    width: 90%;
   }
 `;
 const BoxImage = styled.img`
@@ -76,14 +75,17 @@ const BoxImage = styled.img`
   }
   @media (max-width: 768px) {
     height: 0 auto;
-    width: 525px;
+    width: 100%;
+  }
+  @media (max-width: 525px) {
+    height: 0 auto;
+    width: 100%;
   }
 `;
 
 const BoxRight = styled.div`
   z-index: 100;
   @media (min-width: 1024px) {
-    background-color: purple;
     height: 0 auto;
     width: 400px;
     margin: 0 0 0 -25px;
@@ -95,7 +97,7 @@ const BoxRight = styled.div`
   }
   @media (max-width: 768px) {
     height: 0 auto;
-    width: 525px;
+    width: 100%;
     margin: 0;
   }
 `;
@@ -117,16 +119,17 @@ const Card = styled.div`
   width: 100%;
   background-color: white;
   @media (min-width: 1024px) {
-    margin-top: 250px;
+    margin-top: 100px;
     height: 500px;
   }
   @media (max-width: 1023px) {
-    margin-top: 200px;
+    margin-top: 100px;
     height: 400px;
   }
   @media (max-width: 768px) {
     margin-top: 0;
-    margin-bottom: 200px;
+    margin-bottom: 2rem;
+    justify-content: center;
   }
 `;
 
@@ -135,54 +138,131 @@ const CardText = styled.text`
   padding: 40px 40px;
   background-color: #eeeee5;
   text-align: center;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+const Underline = styled.div`
+  height: 3px;
+  width: 60px;
+  background-color: white;
+  @media (max-width: 768px) {
+    height: 2px;
+  }
+`;
+const NameContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+const HeaderPic = styled.div`
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 65vh;
+  @media (max-width: 1024px) {
+    height: auto;
+  }
+`;
+
+const JumboContainer = styled.header`
+  width: 100%;
+  padding-top: 50px;
+  /* margin-bottom: 3rem; */
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+`;
+
+const JumboTitle = styled.div`
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: "Gotham";
+  font-weight: bold;
+  font-size: 2rem;
+  @media (max-width: 481px) {
+    font-size: 20px;
+  }
+`;
+
+const JumboHeader = styled.img`
+  position: absolute;
+  z-index: 1;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Gear = () => {
   const styles = {
     header: {
-      margin: '0',
-      color: '#AD1001',
-      fontStyle: 'italic',
-      fontSize: '1.7em',
-      lineHeight: 'initial',
-      fontWeight: 'normal',
+      margin: "0",
+      color: "#AD1001",
+      fontStyle: "italic",
+      fontSize: "1.7em",
+      lineHeight: "2rem",
+      fontWeight: "normal",
       weight: {
-        margin: '0',
-        color: '#AD1001',
-        fontStyle: 'italic',
-        fontSize: '1.7em',
-        lineHeight: 'initial',
-        fontWeight: 'bold',
+        margin: "0",
+        color: "#AD1001",
+        fontStyle: "italic",
+        fontSize: "1.7em",
+        lineHeight: "2rem",
+        fontWeight: "bold",
       },
     },
     text: {
-      lineHeight: '28px',
-      fontSize: '0.9em',
-      fontWeight: 'normal',
+      lineHeight: "28px",
+      fontSize: "0.9em",
+      fontWeight: "normal",
     },
   };
 
   return (
-    <>
-
-      <Jumbo>
-        <Text>
-          <h4>Gear</h4>
-        </Text>
-      </Jumbo>
-      <div style={{ height: '120px' }}></div>
-      <Row>
-        <p>
-          THE DAYS OF BRAGGING ABOUT RECORDING GEAR ARE THANKFULLY OVER. THAT
-          DOESN'T MEAN THAT STUDIOS CAN IGNORE WHAT TOOLS ARE AT THEIR DISPOSAL.
-          EAST BAY RECORDERS HAS A BLEND OF ANALOG AND DIGITAL TOOLS TO MAKE
-          RECORDING EASY AND WARM. WE'VE ALSO BUILT A COLLECTION OF AMAZING
-          INSTRUMENTS FOR THOSE TIMES WHEN AN ARTIST NEEDS SOMETHING NEW.
-        </p>
-      </Row>
+    <div style={{ width: "100%vw" }}>
+      <JumboContainer>
+        <div style={{ position: "absolute", padding: "1rem 0 0 2rem" }}>
+          <JumboHeader src={logo_ebr} />
+        </div>
+        <HeaderPic>
+          <img style={{ width: "100%" }} src={GearMain} alt="" />
+          <NameContainer>
+            <JumboTitle>
+              <h1 style={{ marginBottom: "10px" }}>GEAR</h1>
+              <Underline />
+            </JumboTitle>
+          </NameContainer>
+        </HeaderPic>
+      </JumboContainer>
+      <div
+        style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}
+      >
+        <Row>
+          <p>
+            THE DAYS OF BRAGGING ABOUT RECORDING GEAR ARE THANKFULLY OVER. THAT
+            DOESN'T MEAN THAT STUDIOS CAN IGNORE WHAT TOOLS ARE AT THEIR
+            DISPOSAL. EAST BAY RECORDERS HAS A BLEND OF ANALOG AND DIGITAL TOOLS
+            TO MAKE RECORDING EASY AND WARM. WE'VE ALSO BUILT A COLLECTION OF
+            AMAZING INSTRUMENTS FOR THOSE TIMES WHEN AN ARTIST NEEDS SOMETHING
+            NEW.
+          </p>
+        </Row>
+      </div>
       <Wrapper>
         <Section>
-          <BoxImage src={ComputerMix} alt='Computer Mix'></BoxImage>
+          <BoxImage src={ComputerMix} alt="Computer Mix"></BoxImage>
           <BoxRight>
             <Card>
               <CardText>
@@ -202,7 +282,7 @@ const Gear = () => {
           </BoxRight>
         </Section>
         <SectionFlip>
-          <BoxImage src={OutBoardGear} alt='OutBoard Gear'></BoxImage>
+          <BoxImage src={OutBoardGear} alt="OutBoard Gear"></BoxImage>
           <BoxLeft>
             <Card>
               <CardText>
@@ -221,7 +301,7 @@ const Gear = () => {
           </BoxLeft>
         </SectionFlip>
         <Section>
-          <BoxImage src={Dynamics} alt='Dynamics'></BoxImage>
+          <BoxImage src={Dynamics} alt="Dynamics"></BoxImage>
           <BoxRight>
             <Card>
               <CardText>
@@ -239,7 +319,7 @@ const Gear = () => {
           </BoxRight>
         </Section>
         <SectionFlip>
-          <BoxImage src={Microphones} alt='Microphones'></BoxImage>
+          <BoxImage src={Microphones} alt="Microphones"></BoxImage>
           <BoxLeft>
             <Card>
               <CardText>
@@ -261,7 +341,7 @@ const Gear = () => {
           </BoxLeft>
         </SectionFlip>
         <Section>
-          <BoxImage src={Instruments} alt='Instruments'></BoxImage>
+          <BoxImage src={Instruments} alt="Instruments"></BoxImage>
           <BoxRight>
             <Card>
               <CardText>
@@ -281,7 +361,7 @@ const Gear = () => {
           </BoxRight>
         </Section>
       </Wrapper>
-    </>
+    </div>
   );
 };
 

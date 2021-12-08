@@ -51,7 +51,8 @@ const ViewMore = styled.div`
   justify-content: center;
   opacity: 0.9;
   align-items: center;
-  /* transform: translateY(5rem); */
+  align-self: center;
+  z-index: 5;
   background-color: #dd3233;
   &:hover {
     cursor: pointer;
@@ -61,12 +62,10 @@ const ViewMore = styled.div`
   @media (max-width: 768px) {
     width: 70%;
     display: flex;
-    transform: translateY(10rem);
   }
   @media (max-width: 481px) {
     font-size: 0.8rem;
     height: 1.5rem;
-    transform: translateY(5rem);
   } ;
 `;
 
@@ -125,9 +124,6 @@ const NameContainer = styled.div`
   z-index: 2;
   display: flex;
   margin-bottom: 1rem;
-  @media (max-width: 768px) {
-    /* align-items: center; */
-  }
 `;
 
 const Recently = () => {
@@ -139,10 +135,13 @@ const Recently = () => {
       </NameContainer>
       <AlbumsContainer>
         <Album>
-          <ViewMore>
-            <h3 style={{ color: "white" }}>View Album</h3>
-          </ViewMore>
-          <Link to="/album/3">
+          <Link
+            to="/album/3"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <ViewMore>
+              <h3 style={{ color: "white" }}>View Album</h3>
+            </ViewMore>
             <img
               style={{ width: "100%", height: "100%" }}
               src={Charger_ebr}
@@ -153,10 +152,13 @@ const Recently = () => {
           <BandName>Charger</BandName>
         </Album>
         <Album>
-          <ViewMore>
-            <h3 style={{ color: "white" }}>View Album</h3>
-          </ViewMore>
-          <Link to="/album/4">
+          <Link
+            to="/album/4"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <ViewMore>
+              <h3 style={{ color: "white" }}>View Album</h3>
+            </ViewMore>
             <img
               style={{ width: "100%", height: "100%" }}
               src={TheOldFirmCasuals_ebr}
@@ -167,10 +169,13 @@ const Recently = () => {
           <BandName>The Old Firm Casuals</BandName>
         </Album>
         <Album>
-          <ViewMore>
-            <h3 style={{ color: "white" }}>View Album</h3>
-          </ViewMore>
-          <Link to="/album/2">
+          <Link
+            to="/album/2"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <ViewMore>
+              <h3 style={{ color: "white" }}>View Album</h3>
+            </ViewMore>
             <img
               style={{ width: "100%", height: "100%" }}
               src={tdl_ebr}
@@ -181,10 +186,13 @@ const Recently = () => {
           <BandName>The Damn Liars</BandName>
         </Album>
         <Album>
-          <ViewMore>
-            <h3 style={{ color: "white" }}>View Album</h3>
-          </ViewMore>
-          <Link to="/album/1">
+          <Link
+            to="/album/1"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <ViewMore>
+              <h3 style={{ color: "white" }}>View Album</h3>
+            </ViewMore>
             <img
               style={{ width: "100%", height: "100%" }}
               src={GHB_Momentum}
