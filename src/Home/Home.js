@@ -5,6 +5,7 @@ import Recently from "./Recently/Recently";
 import GearIntro from "./GearIntro/GearIntro";
 import Regulars from "./Regulars/Regulars";
 import HomeFooter from "./HomeFooter/HomeFooter";
+import ContactBody from "../Contact/ContactBody/ContactBody";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Intro />
       <Recently />
       <GearIntro />
+      <ContactBody />
     </div>
   );
 };

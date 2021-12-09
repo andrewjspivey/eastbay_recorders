@@ -1,5 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import {
+  JumboContainer,
+  JumboHeader,
+  JumboTitle,
+  Underline,
+  HeaderPic,
+  NameContainer,
+} from "../BlogHome/BlogHome";
 import logo_ebr from "../assets/logo_ebr.png";
 import theScene_3 from "../assets/theScene_3.jpeg";
 import thescene_1 from "../assets/thescene_1.jpeg";
@@ -11,71 +19,6 @@ import theScene_7 from "../assets/theScene_7.jpeg";
 import theScene_8 from "../assets/theScene_8.jpeg";
 import theScene_9 from "../assets/theScene_9.jpeg";
 
-const HeaderPic = styled.div`
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 65vh;
-  @media (max-width: 768px) {
-    height: auto;
-  }
-  @media (max-width: 1024px) {
-    height: auto;
-  }
-`;
-
-const JumboContainer = styled.header`
-  width: 100%;
-  padding-top: 50px;
-  top: 0;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-`;
-
-const JumboTitle = styled.div`
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  font-family: "Gotham";
-  font-weight: bold;
-  font-size: 2rem;
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-  }
-`;
-
-const JumboHeader = styled.img`
-  position: absolute;
-  z-index: 1;
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const Underline = styled.div`
-  height: 3px;
-  width: 60px;
-  background-color: white;
-  @media (max-width: 768px) {
-    height: 2px;
-  }
-`;
-const NameContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  z-index: 2;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
 const GalleryContainer = styled.div`
   margin: 1rem 3rem;
   display: flex;
@@ -85,9 +28,12 @@ const GalleryContainer = styled.div`
 const TextContent = styled.div`
   width: 80%;
   text-align: center;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 30px;
   margin-bottom: 1rem;
   @media (max-width: 768px) {
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
 `;
 const StyledGrid = styled.div`
@@ -101,6 +47,18 @@ const StyledGrid = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
+  }
+`;
+const ContentHeader = styled.h2`
+  font-family: "Gotham";
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 40px;
+  margin-bottom: 0.5rem;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 25px;
   }
 `;
 
@@ -134,11 +92,11 @@ const Scene = () => {
       </JumboContainer>
       <GalleryContainer>
         <TextContent>
-          <h2>
+          <p>
             FEELS LIKE THERE'S ALWAYS SOMETHING SPECIAL HAPPENING AT EBR. HERE
             IS A BEHIND THE SCENES LOOK AT SOME OF OUR RECORDING DATES AND
             PHOTOS FROM MICHAEL ROSEN'S HISTORY.
-          </h2>
+          </p>
         </TextContent>
         <StyledGrid>
           {imgArray.map((pic, index) => (

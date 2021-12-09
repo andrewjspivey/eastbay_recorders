@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import RightNav from "./RightNav";
 
@@ -36,10 +36,23 @@ const BurgerContainer = styled.div`
 
 const Burger = () => {
   const [open, setOpen] = useState(false);
+  const wrapperRef = useRef(null);
 
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside, false);
+    return () => {
+      document.removeEventListener("click", handleClickOutside, false);
+    };
+  }, []);
+
+  const handleClickOutside = (event) => {
+    if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+      setOpen(false);
+    }
+  };
   return (
     <>
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+      <StyledBurger open={open} onClick={() => setOpen(!open)} ref={wrapperRef}>
         <BurgerContainer open={open}>
           <div className="burger-lines" />
           <div className="burger-lines" />

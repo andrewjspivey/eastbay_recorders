@@ -27,6 +27,7 @@ const Container = styled.header`
 const ContactText = styled.div`
   font-size: 20px;
   display: flex;
+  width: 75%;
   flex-flow: column;
   align-items: center;
   text-align: center;
@@ -48,15 +49,27 @@ const ContactLocation = styled.div`
   display: flex;
   justify-content: center;
 `;
+const ContentHeader = styled.h2`
+  font-family: "Gotham";
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 40px;
+  margin-bottom: 0.5rem;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 25px;
+  }
+`;
 
 const ContactBody = () => {
   return (
     <Container>
       <ContactText>
-        <h1 style={{ width: "60%" }}>
+        <ContentHeader>
           READY TO MAKE SOME MUSIC? LET'S DO IT! SEND US AN EMAIL OR REACH OUT
           TO US ON SOCIAL MEDIA. CAN'T WAIT TO HEAR YOU.
-        </h1>
+        </ContentHeader>
       </ContactText>
       <ContactLocation>
         <ContactSheet />

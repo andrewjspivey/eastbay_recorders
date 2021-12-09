@@ -15,10 +15,10 @@ const MainWrapper = styled.div`
 `;
 const Title = styled.div`
   text-align: center;
-  font-size: 15px;
+  /* font-size: 2rem;
   @media (max-width: 768px) {
-    /* font-size: 20px; */
-  }
+    font-size: 1px;
+  } */
 `;
 const Body = styled.div`
   font-size: 14px;
@@ -39,12 +39,24 @@ const Paragraph = styled.div`
     padding: 0px;
   }
 `;
+const ContentHeader = styled.h2`
+  font-family: "Gotham";
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 40px;
+  margin-bottom: 0.5rem;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 25px;
+  }
+`;
 
 const Main = () => {
   return (
     <MainWrapper>
       <Title>
-        <h2 style={{ margin: "0px" }}>"THIS SPOT IS A MAGNET FOR MUSIC."</h2>
+        <ContentHeader>"THIS SPOT IS A MAGNET FOR MUSIC."</ContentHeader>
       </Title>
       <Body>
         <Paragraph>

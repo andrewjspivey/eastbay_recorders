@@ -1,25 +1,31 @@
-import React from 'react';
-import logo_ebr from '../assets/logo_ebr.png';
-import GearMain from '../assets/GearMain.jpeg';
-import OutBoardGear from '../assets/OutBoardGear.jpeg';
-import ComputerMix from '../assets/computerMix.jpeg';
-import Dynamics from '../assets/Dynamics.jpeg';
-import Microphones from '../assets/Microphones.jpeg';
-import Instruments from '../assets/Instruments.jpeg';
-import styled from 'styled-components';
+import React from "react";
+import {
+  JumboContainer,
+  JumboHeader,
+  JumboTitle,
+  Underline,
+  HeaderPic,
+  NameContainer,
+} from "../BlogHome/BlogHome";
+import logo_ebr from "../assets/logo_ebr.png";
+import GearMain from "../assets/GearMain.jpeg";
+import OutBoardGear from "../assets/OutBoardGear.jpeg";
+import ComputerMix from "../assets/computerMix.jpeg";
+import Dynamics from "../assets/Dynamics.jpeg";
+import Microphones from "../assets/Microphones.jpeg";
+import Instruments from "../assets/Instruments.jpeg";
+import styled from "styled-components";
 
 const Row = styled.div`
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Gotham";
   width: 75%;
   display: flex;
   justify-content: center;
   padding: 0px 1rem;
-  font-size: 1.1rem;
-  line-height: 25px;
-  color: black;
+  line-height: 30px;
   font-weight: normal;
   text-align: center;
-  font-size: 25px;
+  font-size: 1.5rem;
   @media (max-width: 768px) {
     font-size: 1rem;
     margin-bottom: 1rem;
@@ -89,7 +95,6 @@ const BoxRight = styled.div`
   height: 0 auto;
   z-index: 100;
   @media (min-width: 1024px) {
-
     width: 400px;
     margin: 0 0 0 -25px;
   }
@@ -151,66 +156,7 @@ const CardText = styled.text`
   flex-direction: column;
   align-items: center;
 `;
-const Underline = styled.div`
-  height: 3px;
-  width: 60px;
-  background-color: white;
-  @media (max-width: 768px) {
-    height: 2px;
-  }
-`;
-const NameContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  z-index: 2;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-const HeaderPic = styled.div`
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 65vh;
-  @media (max-width: 1024px) {
-    height: auto;
-  }
-`;
 
-const JumboContainer = styled.header`
-  width: 100%;
-  padding-top: 50px;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-`;
-
-const JumboTitle = styled.div`
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  font-family: 'Gotham';
-  font-weight: bold;
-  font-size: 2rem;
-  @media (max-width: 481px) {
-    font-size: 20px;
-  }
-`;
-
-const JumboHeader = styled.img`
-  position: absolute;
-  z-index: 1;
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
 const Number = styled.h4`
   margin: 0;
   color: #ad1001;
@@ -235,23 +181,23 @@ const Paragraph = styled.p`
 
 const Gear = () => {
   return (
-    <div style={{ width: '100%vw' }}>
+    <div>
       <JumboContainer>
-        <div style={{ position: 'absolute', padding: '1rem 0 0 2rem' }}>
+        <div style={{ position: "absolute", padding: "1rem 0 0 2rem" }}>
           <JumboHeader src={logo_ebr} />
         </div>
         <HeaderPic>
-          <img style={{ width: '100%' }} src={GearMain} alt='' />
+          <img style={{ width: "100%" }} src={GearMain} alt="" />
           <NameContainer>
             <JumboTitle>
-              <h1 style={{ marginBottom: '10px' }}>GEAR</h1>
+              <h1 style={{ marginBottom: "10px" }}>GEAR</h1>
               <Underline />
             </JumboTitle>
           </NameContainer>
         </HeaderPic>
       </JumboContainer>
       <div
-        style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}
+        style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}
       >
         <Row>
           <p>
@@ -266,7 +212,7 @@ const Gear = () => {
       </div>
       <Wrapper>
         <Section>
-          <BoxImage src={ComputerMix} alt='Computer Mix'></BoxImage>
+          <BoxImage src={ComputerMix} alt="Computer Mix"></BoxImage>
           <BoxRight>
             <Card>
               <CardText>
@@ -284,7 +230,7 @@ const Gear = () => {
           </BoxRight>
         </Section>
         <SectionFlip>
-          <BoxImage src={OutBoardGear} alt='OutBoard Gear'></BoxImage>
+          <BoxImage src={OutBoardGear} alt="OutBoard Gear"></BoxImage>
           <BoxLeft>
             <Card>
               <CardText>
@@ -303,7 +249,7 @@ const Gear = () => {
           </BoxLeft>
         </SectionFlip>
         <Section>
-          <BoxImage src={Dynamics} alt='Dynamics'></BoxImage>
+          <BoxImage src={Dynamics} alt="Dynamics"></BoxImage>
           <BoxRight>
             <Card>
               <CardText>
@@ -321,7 +267,7 @@ const Gear = () => {
           </BoxRight>
         </Section>
         <SectionFlip>
-          <BoxImage src={Microphones} alt='Microphones'></BoxImage>
+          <BoxImage src={Microphones} alt="Microphones"></BoxImage>
           <BoxLeft>
             <Card>
               <CardText>
@@ -343,7 +289,7 @@ const Gear = () => {
           </BoxLeft>
         </SectionFlip>
         <Section>
-          <BoxImage src={Instruments} alt='Instruments'></BoxImage>
+          <BoxImage src={Instruments} alt="Instruments"></BoxImage>
           <BoxRight>
             <Card>
               <CardText>
