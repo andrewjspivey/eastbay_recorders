@@ -52,11 +52,11 @@ const ContactLocation = styled.div`
 const ContentHeader = styled.h2`
   font-family: "Gotham";
   font-weight: normal;
-  font-size: 2rem;
-  line-height: 40px;
+  font-size: 1.5rem;
+  line-height: 30px;
   margin-bottom: 0.5rem;
   @media (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
     line-height: 25px;
   }
