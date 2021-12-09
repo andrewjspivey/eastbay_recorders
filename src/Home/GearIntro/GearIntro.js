@@ -56,7 +56,6 @@ const TextContent = styled.div`
 const ViewMore = styled.div`
   width: 30%;
   height: 2.5rem;
-  border: 2px solid black;
   color: whitesmoke;
   display: flex;
   justify-content: center;
@@ -133,7 +132,7 @@ const Intro = () => {
                 to="/gear"
                 style={{ textDecoration: "none", color: "whitesmoke" }}
               >
-                <h4 style={{ margin: "0" }}>CHECK IT OUT</h4>
+                <h5 style={{ margin: "0" }}>Check it out</h5>
               </Link>
             </ViewMore>
           </div>

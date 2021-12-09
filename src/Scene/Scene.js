@@ -28,10 +28,12 @@ const GalleryContainer = styled.div`
 const TextContent = styled.div`
   width: 80%;
   text-align: center;
-  font-weight: 400;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 30px;
   margin-bottom: 1rem;
   @media (max-width: 768px) {
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
 `;
 const StyledGrid = styled.div`
@@ -45,6 +47,18 @@ const StyledGrid = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
+  }
+`;
+const ContentHeader = styled.h2`
+  font-family: "Gotham";
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 40px;
+  margin-bottom: 0.5rem;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 25px;
   }
 `;
 
@@ -78,11 +92,11 @@ const Scene = () => {
       </JumboContainer>
       <GalleryContainer>
         <TextContent>
-          <h3>
+          <p>
             FEELS LIKE THERE'S ALWAYS SOMETHING SPECIAL HAPPENING AT EBR. HERE
             IS A BEHIND THE SCENES LOOK AT SOME OF OUR RECORDING DATES AND
             PHOTOS FROM MICHAEL ROSEN'S HISTORY.
-          </h3>
+          </p>
         </TextContent>
         <StyledGrid>
           {imgArray.map((pic, index) => (
