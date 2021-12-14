@@ -9,12 +9,13 @@ const Nav = styled.nav`
   background-color: #343434;
   color: white;
   position: fixed;
-  z-index: 20;
+  top: 0;
+  z-index: 20000;
   border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
   .logo {
-    padding-left: 50px;
+    padding-left: 2rem;
     color: #dd3233;
   }
 `;
