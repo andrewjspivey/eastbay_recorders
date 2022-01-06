@@ -13,17 +13,24 @@ const Ul = styled.div`
     background-color: #343434;
     position: fixed;
     padding-bottom: 20px;
+    padding-top: 20px;
     z-index: 20;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 55px;
-    right: 0;
+    right: -1px;
     height: 55vh;
     width: 300px;
     /* padding-top: 5rem; */
     transition: transform 0.3s ease-in-out;
     a {
-      padding-left: 50px;
+      padding-left: 80px;
     }
+  }
+`;
+
+const NavLinks = styled.h4`
+  :hover {
+    color: #dd3233;
   }
 `;
 
@@ -37,7 +44,7 @@ const RightNav = ({ open }) => {
           textDecoration: "none",
         }}
       >
-        <h4>HOME</h4>
+        <NavLinks>HOME</NavLinks>
       </Link>
       <Link
         to="/about"
@@ -46,7 +53,7 @@ const RightNav = ({ open }) => {
           textDecoration: "none",
         }}
       >
-        <h4>ABOUT EBR</h4>
+        <NavLinks>ABOUT EBR</NavLinks>
       </Link>
 
       <Link
@@ -56,7 +63,7 @@ const RightNav = ({ open }) => {
           textDecoration: "none",
         }}
       >
-        <h4>GEAR</h4>
+        <NavLinks>GEAR</NavLinks>
       </Link>
 
       <Link
@@ -66,7 +73,7 @@ const RightNav = ({ open }) => {
           textDecoration: "none",
         }}
       >
-        <h4>THE SCENE</h4>
+        <NavLinks>THE SCENE</NavLinks>
       </Link>
 
       <Link
@@ -76,7 +83,7 @@ const RightNav = ({ open }) => {
           textDecoration: "none",
         }}
       >
-        <h4>BLOG</h4>
+        <NavLinks>BLOG</NavLinks>
       </Link>
 
       <Link
@@ -86,7 +93,7 @@ const RightNav = ({ open }) => {
           textDecoration: "none",
         }}
       >
-        <h4>CONTACT</h4>
+        <NavLinks>CONTACT</NavLinks>
       </Link>
     </Ul>
   );

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "react-tabs/style/react-tabs.css";
 import styled from "styled-components";
+import { useParams } from "react-router-dom";
 import { albums } from "../data/albumData";
 
 const MainContainer = styled.div`

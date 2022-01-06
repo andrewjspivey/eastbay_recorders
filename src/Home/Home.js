@@ -13,8 +13,6 @@ const Home = () => {
       <Intro />
       <Recently />
       <GearIntro />
-      <Regulars />
-      <HomeFooter />
     </div>
   );
 };

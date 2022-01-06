@@ -10,12 +10,12 @@ const Nav = styled.nav`
   color: white;
   position: fixed;
   top: 0;
-  z-index: 20;
+  z-index: 20000;
   border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
   .logo {
-    padding-left: 50px;
+    padding-left: 2rem;
     color: #dd3233;
   }
 `;
