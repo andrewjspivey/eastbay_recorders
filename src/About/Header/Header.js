@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import AboutMain from "../../assets/AboutMain.jpeg";
 import logo_ebr from "../../assets/logo_ebr.png";
 import {

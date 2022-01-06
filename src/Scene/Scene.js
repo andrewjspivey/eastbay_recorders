@@ -49,18 +49,6 @@ const StyledGrid = styled.div`
     flex-direction: column;
   }
 `;
-const ContentHeader = styled.h2`
-  font-family: "Gotham";
-  font-weight: normal;
-  font-size: 2rem;
-  line-height: 40px;
-  margin-bottom: 0.5rem;
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-    text-align: center;
-    line-height: 25px;
-  }
-`;
 
 const Scene = () => {
   const imgArray = [
