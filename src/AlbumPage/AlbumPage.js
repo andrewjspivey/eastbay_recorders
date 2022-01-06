@@ -288,8 +288,6 @@ const AlbumPage = (props) => {
                       src={album.playlist?.spotify}
                       width="100%"
                       height="400"
-                      frameBorder="0"
-                      allowfullscreen=""
                       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     ></iframe>
                   ) : (
@@ -300,7 +298,6 @@ const AlbumPage = (props) => {
                   {album.playlist?.apple ? (
                     <iframe
                       allow="autoplay *; encrypted-media *; fullscreen *"
-                      frameborder="0"
                       height="450"
                       style={{
                         width: "100%",
