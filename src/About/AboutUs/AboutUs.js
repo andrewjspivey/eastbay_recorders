@@ -3,6 +3,8 @@ import "./AboutUs.css";
 import styled from "styled-components";
 import MichaelLookingDown from "../../assets/MichealLookingDown.jpeg";
 import AnneMarie from "../../assets/AnneMarie.jpeg";
+import Dak from "../../assets/Dak.jpg";
+import AJ_Bio_About from "../../assets/AJ_Bio_About.jpg";
 
 const AboutUsWrapper = styled.div`
   background-color: #626362;
@@ -130,7 +132,7 @@ const AboutUs = () => {
             <br />
             <UnderLine />
             <br />
-            <TitleTag>STUDIO MANAGER + STAFF ENGINEER</TitleTag>
+            <TitleTag>ENGINEER</TitleTag>
             <div style={{ padding: "15px 25px 15px 15px" }}>
               <p>
                 Anne-Marie has been an engineer and studio manager for East Bay
@@ -150,6 +152,66 @@ const AboutUs = () => {
 
         <Div mt="50px">
           <img className="aboutUsImgs" src={AnneMarie} alt="" />
+        </Div>
+      </Body>
+      <Body>
+        <Div mt="50px">
+          <Text>
+            <NameTag>DAKARE DIXON-ESSIEN</NameTag>
+            <br />
+            <UnderLine />
+            <br />
+            <TitleTag>ENGINEER</TitleTag>
+            <div style={{ padding: "15px 25px 15px 15px" }}>
+              <p>
+                Dakare Dixon-Essien is an audio engineer professional who has
+                worked on projects doing both, production and postproduction
+                work. He specializes working in R&B, Hip Hop, and Rock and Roll
+                genres. His work history includes operating as the live sound
+                engineer for the Helen Street Mixer, the audio engineer for
+                Creekside Community Church, and audio and mixing engineer for
+                the BOOTSTRAPS Podcast, as well as commercials for 30First
+                Clothing Company. He has long had a passion for exploring and
+                shaping sounds and has brought that passion with him to East Bay
+                Recorders.
+              </p>
+            </div>
+          </Text>
+        </Div>
+
+        <Div mt="50px">
+          <img className="aboutUsImgs" src={Dak} alt="" />
+        </Div>
+      </Body>
+      <Body>
+        <Div mt="50px">
+          <Text>
+            <NameTag>AJ Hicks</NameTag>
+            <br />
+            <UnderLine />
+            <br />
+            <TitleTag>ENGINEER</TitleTag>
+            <div style={{ padding: "15px 25px 15px 15px" }}>
+              <p>
+                AJ Hicks is an engineer and musician with a focus on full band
+                and live recordings. AJ has a strong musical knowledge as a
+                guitar player and vocalist. He’s been composing, recording, and
+                producing music from a young age. He knows what it takes to find
+                that perfect note and the importance of a positive creative
+                environment to do so. AJ will follow your lead while making sure
+                your session stays on track so all of your focus can be on
+                creativity. AJ has experience working on a variety of styles and
+                projects ranging from entire albums to quick vocal or
+                instrumental overdubs. So whether it’s the recording of a song,
+                question about a note, or a cup of coffee to get you through
+                your session, AJ has your studio needs covered.
+              </p>
+            </div>
+          </Text>
+        </Div>
+
+        <Div mt="50px">
+          <img className="aboutUsImgs" src={AJ_Bio_About} alt="" />
         </Div>
       </Body>
     </AboutUsWrapper>
