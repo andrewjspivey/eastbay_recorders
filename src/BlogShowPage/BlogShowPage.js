@@ -58,7 +58,7 @@ const BlogShowPage = () => {
   useEffect(() => {
     const blogInfo = blogs.find((p) => p.id === id);
     setBlog(blogInfo);
-  }, []);
+  }, [id]);
   return (
     <Container>
       {blog ? (

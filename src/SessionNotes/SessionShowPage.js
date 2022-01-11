@@ -82,7 +82,7 @@ const SessionShowPage = () => {
   useEffect(() => {
     const blogInfo = sessionNotes.find((p) => p.id === id);
     setBlog(blogInfo);
-  }, []);
+  }, [id]);
   return (
     <Container>
       {blog ? (

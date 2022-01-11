@@ -216,7 +216,7 @@ const AlbumPage = (props) => {
   useEffect(() => {
     const albumInfo = albums.find((p) => p.id === id);
     setAlbum(albumInfo);
-  }, []);
+  }, [id]);
 
   return (
     <>
@@ -286,6 +286,8 @@ const AlbumPage = (props) => {
                   {album.playlist?.spotify ? (
                     <iframe
                       src={album.playlist?.spotify}
+                      title="spotify-player"
+                      aria-hidden="true"
                       width="100%"
                       height="400"
                       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -297,6 +299,8 @@ const AlbumPage = (props) => {
                 <TabPanel>
                   {album.playlist?.apple ? (
                     <iframe
+                      title="spotify-player"
+                      aria-hidden="true"
                       allow="autoplay *; encrypted-media *; fullscreen *"
                       height="450"
                       style={{
