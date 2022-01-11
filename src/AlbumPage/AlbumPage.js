@@ -19,7 +19,7 @@ const JumbotronContainer = styled.div`
 `;
 
 const Jumbotron = styled.div`
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(${(props) => props.background});
   background-size: cover;
   background-repeat: no-repeat;
