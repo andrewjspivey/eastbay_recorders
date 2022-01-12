@@ -20,9 +20,6 @@ const JumboContainer = styled.header`
   padding-top: 50px;
   overflow: hidden;
   position: relative;
-  @media (max-width: 481px) {
-    height: 30vh;
-  }
 `;
 
 const JumboHeader = styled.img`
@@ -54,7 +51,7 @@ const LandingJumbo = () => {
         <JumboHeader src={logo_ebr} />
       </JumboHeaderContainer>
       <InfiniteJumbo>
-        <img style={{ width: "100%" }} src={slider_ebr} alt="" />
+        <img style={{ width: "200%" }} src={slider_ebr} alt="" />
       </InfiniteJumbo>
     </JumboContainer>
   );

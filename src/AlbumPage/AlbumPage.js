@@ -115,7 +115,8 @@ const LinkButton = styled.div`
 const LinksList = styled.ul`
   margin: 0;
   padding: 0;
-  margin-top: 90px;
+  padding-top: 10px;
+  margin-top: 105px;
   width: 107px;
   display: ${(props) => (props.hover === true ? "flex" : "none")};
   flex-flow: column;
@@ -127,16 +128,16 @@ const LinksList = styled.ul`
 
 const Link = styled.a`
   width: 100%;
-  height: 30px;
+  height: 35px;
   list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  cursor: pointer;
   color: black;
   &:hover {
-    background: #ad1000;
-    color: white;
+    background-color: #ad1000;
     transition: all 0.3s ease-in-out;
     opacity: 0.24s ease-in-out;
   }
