@@ -96,9 +96,9 @@ const JumboImage = styled.img`
 // `;
 
 const LinkButton = styled.div`
-  padding: 15px;
-  width: 80px;
-  height: 15px;
+  /* padding: 15px; */
+  height: 40px;
+  width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,6 +239,8 @@ const AlbumPage = (props) => {
           </JumbotronContainer>
           <BodyContainer>
             <div
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -251,7 +253,6 @@ const AlbumPage = (props) => {
                 hover={hover}
                 onClick={() => setHover(true)}
                 onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
               >
                 Buy Albums
               </LinkButton>
