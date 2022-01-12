@@ -79,21 +79,21 @@ const JumboImage = styled.img`
   }
 `;
 
-const LinkContainer = styled.div`
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 1rem;
-  padding-bottom: ${(props) => (props.hover === true ? "3rem" : "1rem")};
-  @media (max-width: 768px) {
-    padding-top: 0rem;
-    padding-bottom: 0rem;
-  }
-  @media (min-width: 1081px) {
-    padding-top: 2rem;
-  }
-`;
+// const LinkContainer = styled.div`
+//   display: flex;
+//   flex-flow: column;
+//   align-items: center;
+//   justify-content: center;
+//   padding-top: 1rem;
+//   padding-bottom: ${(props) => (props.hover === true ? "3rem" : "1rem")};
+//   @media (max-width: 768px) {
+//     padding-top: 0rem;
+//     padding-bottom: 0rem;
+//   }
+//   @media (min-width: 1081px) {
+//     padding-top: 2rem;
+//   }
+// `;
 
 const LinkButton = styled.div`
   padding: 15px;
@@ -113,36 +113,36 @@ const LinkButton = styled.div`
   font-size: 12px;
 `;
 
-const LinksList = styled.ul`
-  margin: 0;
-  padding: 0;
-  /* padding-top: 5px; */
-  margin-top: 110px;
-  width: 107px;
-  display: ${(props) => (props.hover === true ? "flex" : "none")};
-  flex-flow: column;
-  position: absolute;
-  background-color: white;
-  cursor: pointer;
-  box-shadow: 1px 1px 2px #d3d3d3, -1px 0px 2px #d3d3d3;
-`;
+// const LinksList = styled.ul`
+//   margin: 0;
+//   padding: 0;
+//   /* padding-top: 5px; */
+//   margin-top: 110px;
+//   width: 107px;
+//   display: ${(props) => (props.hover === true ? "flex" : "none")};
+//   flex-flow: column;
+//   position: absolute;
+//   background-color: white;
+//   cursor: pointer;
+//   box-shadow: 1px 1px 2px #d3d3d3, -1px 0px 2px #d3d3d3;
+// `;
 
-const Link = styled.a`
-  width: 100%;
-  height: 35px;
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  cursor: pointer;
-  color: black;
-  &:hover {
-    background-color: #ad1000;
-    transition: all 0.3s ease-in-out;
-    opacity: 0.24s ease-in-out;
-  }
-`;
+// const Link = styled.a`
+//   width: 100%;
+//   height: 35px;
+//   list-style-type: none;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   text-decoration: none;
+//   cursor: pointer;
+//   color: black;
+//   &:hover {
+//     background-color: #ad1000;
+//     transition: all 0.3s ease-in-out;
+//     opacity: 0.24s ease-in-out;
+//   }
+// `;
 
 const BodyContainer = styled.div`
   width: 100%;
