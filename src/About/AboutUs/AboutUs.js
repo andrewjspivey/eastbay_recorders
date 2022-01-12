@@ -35,6 +35,7 @@ const UnderLine = styled.div`
 
 const Body = styled.div`
   /* width: 100%; */
+  margin: 2rem 0rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,11 +44,11 @@ const Body = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 0;
+    margin: 2rem 0rem 4rem 0rem;
   }
 `;
 
 const Div = styled.div`
-  margin-top: ${(props) => props.mt && props.mt};
   display: flex;
   width: 50%;
   justify-content: center;
@@ -126,7 +127,7 @@ const AboutUs = () => {
         </Div>
       </Body>
       <Body>
-        <Div mt="50px">
+        <Div>
           <Text>
             <NameTag>ANNE-MARIE-PLEAU</NameTag>
             <br />
@@ -150,12 +151,12 @@ const AboutUs = () => {
           </Text>
         </Div>
 
-        <Div mt="50px">
+        <Div>
           <img className="aboutUsImgs" src={AnneMarie} alt="" />
         </Div>
       </Body>
       <Body>
-        <Div mt="50px">
+        <Div>
           <Text>
             <NameTag>DAKARE DIXON-ESSIEN</NameTag>
             <br />
@@ -179,12 +180,12 @@ const AboutUs = () => {
           </Text>
         </Div>
 
-        <Div mt="50px">
-          <img className="aboutUsImgs" src={Dak} alt="" />
+        <Div>
+          <img className="aboutUsImgs" id="dak" src={Dak} alt="" />
         </Div>
       </Body>
       <Body>
-        <Div mt="50px">
+        <Div>
           <Text>
             <NameTag>AJ Hicks</NameTag>
             <br />
@@ -210,7 +211,7 @@ const AboutUs = () => {
           </Text>
         </Div>
 
-        <Div mt="50px">
+        <Div>
           <img className="aboutUsImgs" src={AJ_Bio_About} alt="" />
         </Div>
       </Body>
