@@ -31,7 +31,7 @@ const HomeFooter = () => {
       </div>
       <Social>
         <SocialIcon url="https://www.facebook.com/EastBayRecorders/" />
-        <a href="mailto:hello@eastbayrecorders.com">
+        <a href="mailto:michaelsrosen@comcast.net">
           <AiOutlineMail style={{ fontSize: "50px", color: "#dd3233" }} />
         </a>
         <SocialIcon url="https://www.instagram.com/eastbayrecorders/" />
