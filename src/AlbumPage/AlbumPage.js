@@ -297,7 +297,7 @@ const AlbumPage = (props) => {
                     target="_blank"
                     href={album?.links?.spotify}
                   >
-                    Spotify
+                    <p>Spotify</p>
                   </Link>
                 </li>
                 <li
@@ -311,7 +311,7 @@ const AlbumPage = (props) => {
                     target="_blank"
                     href={album?.links?.apple}
                   >
-                    Apple Music
+                    <p>Apple Music</p>
                   </Link>
                 </li>
               </LinksList>
