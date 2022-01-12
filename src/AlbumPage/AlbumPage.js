@@ -117,7 +117,7 @@ const LinksList = styled.ul`
   padding: 0;
   margin-top: 90px;
   width: 107px;
-  display: ${(props) => (props.hover == true ? "flex" : "none")};
+  display: ${(props) => (props.hover === true ? "flex" : "none")};
   flex-flow: column;
   position: absolute;
   background: white;
