@@ -135,7 +135,7 @@ const Link = styled.a`
   align-items: center;
   text-decoration: none;
   color: black;
-  &:hover {
+  &:hover &:active {
     background: red;
     color: white;
     transition: all 0.3s ease-in-out;
@@ -157,6 +157,9 @@ const BodyContainer = styled.div`
 const PlaylistContainer = styled.div`
   width: 60%;
   margin: 2rem;
+  @media (max-width: 768px) {
+    width: 75%;
+  }
 `;
 const SongNoteContainer = styled.div`
   width: 60%;
@@ -165,6 +168,7 @@ const SongNoteContainer = styled.div`
   flex-direction: column;
   @media (max-width: 768px) {
     margin: 3rem;
+    width: 75%;
   }
 `;
 
