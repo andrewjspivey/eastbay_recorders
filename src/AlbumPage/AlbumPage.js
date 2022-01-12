@@ -103,9 +103,8 @@ const LinkButton = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background-color: ${(props) =>
-    props.hover === true ? "rgba(0, 0, 0, 0.1)" : "#ad1000"};
-  color: ${(props) => (props.hover === true ? "#ad1000" : "white")};
+  background-color: #ad1000;
+  color: white;
   box-shadow: ${(props) =>
     props.hover === true
       ? "inset 1px 1px 2px lightgrey, inset -1px 0px 2px lightgrey"
@@ -256,7 +255,12 @@ const AlbumPage = (props) => {
               >
                 Buy Albums
               </LinkButton>
-              <ul style={{ paddingInline: "0px" }}>
+              <ul
+                style={{
+                  paddingInline: "0px",
+                  display: hover === true ? "block" : "none",
+                }}
+              >
                 <li style={{ lineHeight: "20px" }}>
                   <a href={album?.links?.spotify}>Spotify</a>
                 </li>
