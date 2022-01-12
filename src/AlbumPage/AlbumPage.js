@@ -128,8 +128,9 @@ const LinksList = styled.ul`
 
 const Link = styled.a`
   width: 100%;
-  height: 35px;
+  height: 40px;
   list-style-type: none;
+  line-height: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -280,7 +281,7 @@ const AlbumPage = (props) => {
                 onMouseEnter={() => setHover(true)}
                 onClick={() => setHover(true)}
               >
-                <p>Buy Albums</p>
+                <p>Album Links</p>
               </LinkButton>
               <LinksList hover={hover}>
                 <li
