@@ -84,6 +84,7 @@ const LinkContainer = styled.div`
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  color: black;
   padding-top: 1rem;
   padding-bottom: ${(props) => (props.hover === true ? "3rem" : "1rem")};
   @media (max-width: 768px) {
@@ -122,6 +123,7 @@ const LinksList = styled.ul`
   flex-flow: column;
   position: absolute;
   background-color: white;
+  color: black;
   cursor: pointer;
   box-shadow: 1px 1px 2px #d3d3d3, -1px 0px 2px #d3d3d3;
 `;
