@@ -249,24 +249,34 @@ const AlbumPage = (props) => {
                 Buy Albums
               </LinkButton>
               <LinksList hover={hover}>
-                <div
+                <li
                   style={{ width: "100%" }}
-                  onMouseEnter={() => setHover(true)}
-                  onMouseLeave={() => setHover(false)}
+                  // onMouseEnter={() => setHover(true)}
+                  // onMouseLeave={() => setHover(false)}
                 >
-                  <Link target="_blank" href={album?.links?.spotify}>
+                  <Link
+                    onMouseEnter={() => setHover(true)}
+                    onMouseLeave={() => setHover(false)}
+                    target="_blank"
+                    href={album?.links?.spotify}
+                  >
                     Spotify
                   </Link>
-                </div>
-                <div
+                </li>
+                <li
                   style={{ width: "100%" }}
-                  onMouseEnter={() => setHover(true)}
-                  onMouseLeave={() => setHover(false)}
+                  // onMouseEnter={() => setHover(true)}
+                  // onMouseLeave={() => setHover(false)}
                 >
-                  <Link target="_blank" href={album?.links?.apple}>
+                  <Link
+                    onMouseEnter={() => setHover(true)}
+                    onMouseLeave={() => setHover(false)}
+                    target="_blank"
+                    href={album?.links?.apple}
+                  >
                     Apple Music
                   </Link>
-                </div>
+                </li>
               </LinksList>
             </LinkContainer>
             <SongNoteContainer>
