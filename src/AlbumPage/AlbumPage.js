@@ -246,7 +246,7 @@ const AlbumPage = (props) => {
                 onMouseLeave={() => setHover(false)}
                 onClick={() => setHover(true)}
               >
-                Buy Albums
+                <p>Buy Albums</p>
               </LinkButton>
               <LinksList hover={hover}>
                 <li
