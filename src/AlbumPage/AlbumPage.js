@@ -95,8 +95,8 @@ const JumboImage = styled.img`
 //   }
 // `;
 
-const LinkButton = styled.div`
-  /* padding: 15px; */
+const LinkButton = styled.button`
+  border: none;
   height: 40px;
   width: 100px;
   display: flex;
