@@ -85,7 +85,7 @@ const LinkContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 1rem;
-  padding-bottom: 25px;
+  padding-bottom: ${(props) => (props.hover === true ? "3rem" : "1rem")};
   @media (max-width: 768px) {
     padding-top: 0rem;
     padding-bottom: 0rem;
@@ -103,8 +103,9 @@ const LinkButton = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background: ${(props) => (props.hover ? "rgba(0, 0, 0, 0.1)" : "#ad1000")};
-  color: ${(props) => (props.hover ? "#ad1000" : "white")};
+  background-color: ${(props) =>
+    props.hover ? "rgba(0, 0, 0, 0.1)" : "#ad1000"};
+  color: ${(props) => (props.hover === true ? "#ad1000" : "white")};
   box-shadow: ${(props) =>
     props.hover
       ? "inset 1px 1px 2px lightgrey, inset -1px 0px 2px lightgrey"
@@ -115,13 +116,13 @@ const LinkButton = styled.div`
 const LinksList = styled.ul`
   margin: 0;
   padding: 0;
-  padding-top: 10px;
-  margin-top: 105px;
+  /* padding-top: 5px; */
+  margin-top: 110px;
   width: 107px;
   display: ${(props) => (props.hover === true ? "flex" : "none")};
   flex-flow: column;
   position: absolute;
-  background: white;
+  background-color: white;
   cursor: pointer;
   box-shadow: 1px 1px 2px #d3d3d3, -1px 0px 2px #d3d3d3;
 `;
@@ -129,7 +130,7 @@ const LinksList = styled.ul`
 const Link = styled.a`
   width: 100%;
   height: 35px;
-  list-style-type: none;
+  /* list-style-type: none; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,7 +164,7 @@ const PlaylistContainer = styled.div`
 `;
 const SongNoteContainer = styled.div`
   width: 60%;
-  margin: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   display: flex;
   flex-direction: column;
   @media (max-width: 768px) {
@@ -238,7 +239,7 @@ const AlbumPage = (props) => {
             </Jumbotron>
           </JumbotronContainer>
           <BodyContainer>
-            <LinkContainer>
+            <LinkContainer hover={hover}>
               <LinkButton
                 hover={hover}
                 onMouseEnter={() => setHover(true)}
@@ -248,22 +249,24 @@ const AlbumPage = (props) => {
                 Buy Albums
               </LinkButton>
               <LinksList hover={hover}>
-                <Link
+                <div
+                  style={{ width: "100%" }}
                   onMouseEnter={() => setHover(true)}
                   onMouseLeave={() => setHover(false)}
-                  target="_blank"
-                  href={album?.links?.spotify}
                 >
-                  Spotify
-                </Link>
-                <Link
+                  <Link target="_blank" href={album?.links?.spotify}>
+                    Spotify
+                  </Link>
+                </div>
+                <div
+                  style={{ width: "100%" }}
                   onMouseEnter={() => setHover(true)}
                   onMouseLeave={() => setHover(false)}
-                  target="_blank"
-                  href={album?.links?.apple}
                 >
-                  Apple Music
-                </Link>
+                  <Link target="_blank" href={album?.links?.apple}>
+                    Apple Music
+                  </Link>
+                </div>
               </LinksList>
             </LinkContainer>
             <SongNoteContainer>
