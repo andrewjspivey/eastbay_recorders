@@ -130,7 +130,7 @@ const LinksList = styled.ul`
 const Link = styled.a`
   width: 100%;
   height: 35px;
-  /* list-style-type: none; */
+  list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,7 +239,33 @@ const AlbumPage = (props) => {
             </Jumbotron>
           </JumbotronContainer>
           <BodyContainer>
-            <LinkContainer hover={hover}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexDirection: "column",
+                padding: "1rem 0rem",
+              }}
+            >
+              <LinkButton
+                hover={hover}
+                onClick={() => setHover(true)}
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+              >
+                Buy Albums
+              </LinkButton>
+              <ul style={{ paddingInline: "0px" }}>
+                <li style={{ lineHeight: "20px" }}>
+                  <a href={album?.links?.spotify}>Spotify</a>
+                </li>
+                <li style={{ lineHeight: "20px" }}>
+                  <a href={album?.links?.apple}>Apple Music</a>
+                </li>
+              </ul>
+            </div>
+            {/* <LinkContainer hover={hover}>
               <LinkButton
                 hover={hover}
                 onMouseEnter={() => setHover(true)}
@@ -278,7 +304,7 @@ const AlbumPage = (props) => {
                   </Link>
                 </li>
               </LinksList>
-            </LinkContainer>
+            </LinkContainer> */}
             <SongNoteContainer>
               <NameContainer>
                 <ContentHeader>Song Note</ContentHeader>
