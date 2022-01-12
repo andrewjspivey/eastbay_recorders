@@ -104,10 +104,10 @@ const LinkButton = styled.div`
   align-items: center;
   cursor: pointer;
   background-color: ${(props) =>
-    props.hover ? "rgba(0, 0, 0, 0.1)" : "#ad1000"};
+    props.hover === true ? "rgba(0, 0, 0, 0.1)" : "#ad1000"};
   color: ${(props) => (props.hover === true ? "#ad1000" : "white")};
   box-shadow: ${(props) =>
-    props.hover
+    props.hover === true
       ? "inset 1px 1px 2px lightgrey, inset -1px 0px 2px lightgrey"
       : "white"};
   font-size: 12px;
