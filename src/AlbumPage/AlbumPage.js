@@ -135,8 +135,8 @@ const Link = styled.a`
   align-items: center;
   text-decoration: none;
   color: black;
-  &:hover &:active {
-    background: red;
+  &:hover {
+    background: #ad1000;
     color: white;
     transition: all 0.3s ease-in-out;
     opacity: 0.24s ease-in-out;
@@ -243,6 +243,7 @@ const AlbumPage = (props) => {
                 hover={hover}
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
+                onClick={() => setHover(true)}
               >
                 Buy Albums
               </LinkButton>
