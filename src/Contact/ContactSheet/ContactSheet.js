@@ -140,7 +140,7 @@ const ContactSheet = () => {
       <LocationBody>
         <LocationText>
           <h1>
-            2200 Wood St,
+            1740 W Grand Ave,
             <br /> Oakland, CA 94607
             <br /> (510) 418-5090
           </h1>
