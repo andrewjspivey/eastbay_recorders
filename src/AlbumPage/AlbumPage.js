@@ -117,13 +117,12 @@ const LinksList = styled.ul`
   padding: 0;
   margin-top: 90px;
   width: 107px;
-  display: ${(props) => (props.hover ? "flex" : "none")};
+  display: ${(props) => (props.hover == true ? "flex" : "none")};
   flex-flow: column;
   position: absolute;
   background: white;
   cursor: pointer;
-  box-shadow: ${(props) =>
-    props.hover ? " 1px 1px 2px lightgrey,  -1px 0px 2px lightgrey" : "white"};
+  box-shadow: 1px 1px 2px #d3d3d3, -1px 0px 2px #d3d3d3;
 `;
 
 const Link = styled.a`

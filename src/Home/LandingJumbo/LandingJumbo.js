@@ -20,6 +20,9 @@ const JumboContainer = styled.header`
   padding-top: 50px;
   overflow: hidden;
   position: relative;
+  @media (max-width: 481px) {
+    height: 30vh;
+  }
 `;
 
 const JumboHeader = styled.img`
