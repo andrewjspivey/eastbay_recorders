@@ -83,82 +83,12 @@ const JumboImage = styled.img`
   }
 `;
 
-// const LinkContainer = styled.div`
-//   display: flex;
-//   flex-flow: column;
-//   align-items: center;
-//   justify-content: center;
-//   color: black;
-//   padding-top: 1rem;
-//   padding-bottom: ${(props) => (props.hover === true ? "3rem" : "1rem")};
-//   @media (max-width: 768px) {
-//     padding-top: 0rem;
-//     padding-bottom: 0rem;
-//   }
-//   @media (min-width: 1081px) {
-//     padding-top: 2rem;
-//   }
-// `;
-
-// const LinkButton = styled.button`
-//   border: none;
-//   height: 40px;
-//   width: 110px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   cursor: pointer;
-//   background-color: #ad1000;
-//   color: white;
-//   box-shadow: ${(props) =>
-//     props.hover === true
-//       ? "inset 1px 1px 2px lightgrey, inset -1px 0px 2px lightgrey"
-//       : "white"};
-//   font-size: 12px;
-// `;
-
-// const LinksList = styled.ul`
-//   margin: 0;
-//   padding: 0;
-//   /* padding-top: 5px; */
-//   margin-top: 110px;
-//   width: 107px;
-//   display: ${(props) => (props.hover === true ? "flex" : "none")};
-//   flex-flow: column;
-//   position: absolute;
-//   background-color: white;
-//   color: black;
-//   cursor: pointer;
-//   box-shadow: 1px 1px 2px #d3d3d3, -1px 0px 2px #d3d3d3;
-// `;
-
-// const Link = styled.a`
-//   width: 100%;
-//   height: 40px;
-//   list-style-type: none;
-//   line-height: 24px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   text-decoration: none;
-//   cursor: pointer;
-//   color: black;
-//   &:hover {
-//     background-color: #ad1000;
-//     transition: all 0.3s ease-in-out;
-//     opacity: 0.24s ease-in-out;
-//   }
-// `;
-
 const BodyContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
   align-items: center;
-  /* @media (max-width: 768px) {
-    margin-top: 1rem;
-  } */
 `;
 
 const PlaylistContainer = styled.div`
@@ -221,7 +151,6 @@ const Underline = styled.div`
 
 const AlbumPage = (props) => {
   const [album, setAlbum] = useState({});
-  // const [hover, setHover] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
@@ -256,7 +185,7 @@ const AlbumPage = (props) => {
                     Album Links
                   </Button>
                   <Menu {...bindMenu(popupState)}>
-                    <MenuItem>
+                    <MenuItem onClick={popupState.close}>
                       <a
                         style={{ textDecoration: "none", color: "#ad1000" }}
                         target="_blank"
@@ -266,7 +195,7 @@ const AlbumPage = (props) => {
                         Spotify
                       </a>
                     </MenuItem>
-                    <MenuItem>
+                    <MenuItem onClick={popupState.close}>
                       <a
                         style={{ textDecoration: "none", color: "#ad1000" }}
                         target="_blank"
@@ -280,71 +209,6 @@ const AlbumPage = (props) => {
                 </React.Fragment>
               )}
             </PopupState>
-            {/* <div
-              onMouseEnter={() => setHover(true)}
-              onMouseLeave={() => setHover(false)}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexDirection: "column",
-                padding: "1rem 0rem",
-              }}
-            >
-              <LinkButton
-                hover={hover}
-                onClick={() => setHover(true)}
-                onMouseEnter={() => setHover(true)}
-              >
-                Buy Albums
-              </LinkButton>
-              <ul
-                style={{
-                  paddingInline: "0px",
-                  display: hover === true ? "block" : "none",
-                }}
-              >
-                <li style={{ lineHeight: "20px" }}>
-                  <a href={album?.links?.spotify}>Spotify</a>
-                </li>
-                <li style={{ lineHeight: "20px" }}>
-                  <a href={album?.links?.apple}>Apple Music</a>
-                </li>
-              </ul>
-            </div> */}
-            {/* <LinkContainer
-              hover={hover}
-              onMouseEnter={() => setHover(true)}
-              onMouseLeave={() => setHover(false)}
-            >
-              <LinkButton
-                hover={hover}
-                onMouseEnter={() => setHover(true)}
-                onClick={() => setHover(true)}
-              >
-                <p>Album Links</p>
-              </LinkButton>
-              <LinksList hover={hover}>
-                <li
-                  style={{ width: "100%" }}
-                  // onMouseEnter={() => setHover(true)}
-                  // onMouseLeave={() => setHover(false)}
-                >
-                  <Link target="_blank" href={album?.links?.spotify}>
-                    <p style={{ lineHeight: "2rem" }}>Spotify</p>
-                  </Link>
-                </li>
-                <li
-                  style={{ width: "100%" }}
-                  // onMouseEnter={() => setHover(true)}
-                  // onMouseLeave={() => setHover(false)}
-                >
-                  <Link target="_blank" href={album?.links?.apple}>
-                    <p style={{ lineHeight: "2rem" }}>Apple Music</p>
-                  </Link>
-                </li>
-              </LinksList>
-            </LinkContainer> */}
             <SongNoteContainer>
               <NameContainer>
                 <ContentHeader>Song Note</ContentHeader>

@@ -10,10 +10,12 @@ import BlogHome from "./BlogHome/BlogHome";
 import BlogShowPage from "./BlogShowPage/BlogShowPage";
 import SessionShowPage from "./SessionNotes/SessionShowPage";
 import HomeFooter from "./Home/HomeFooter/HomeFooter";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
