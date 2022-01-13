@@ -291,13 +291,8 @@ const AlbumPage = (props) => {
                   // onMouseEnter={() => setHover(true)}
                   // onMouseLeave={() => setHover(false)}
                 >
-                  <Link
-                    onMouseEnter={() => setHover(true)}
-                    onMouseLeave={() => setHover(false)}
-                    target="_blank"
-                    href={album?.links?.spotify}
-                  >
-                    <p>Spotify</p>
+                  <Link target="_blank" href={album?.links?.spotify}>
+                    <p style={{ lineHeight: "2rem" }}>Spotify</p>
                   </Link>
                 </li>
                 <li
@@ -305,13 +300,8 @@ const AlbumPage = (props) => {
                   // onMouseEnter={() => setHover(true)}
                   // onMouseLeave={() => setHover(false)}
                 >
-                  <Link
-                    onMouseEnter={() => setHover(true)}
-                    onMouseLeave={() => setHover(false)}
-                    target="_blank"
-                    href={album?.links?.apple}
-                  >
-                    <p>Apple Music</p>
+                  <Link target="_blank" href={album?.links?.apple}>
+                    <p style={{ lineHeight: "2rem" }}>Apple Music</p>
                   </Link>
                 </li>
               </LinksList>
