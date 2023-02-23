@@ -5,7 +5,7 @@ import Burger from "./Burger";
 
 const Nav = styled.nav`
   width: 100%;
-  height: 55px;
+  height: 65px;
   background-color: #343434;
   color: white;
   position: fixed;
@@ -14,6 +14,7 @@ const Nav = styled.nav`
   border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   .logo {
     padding-left: 2rem;
     color: #dd3233;
