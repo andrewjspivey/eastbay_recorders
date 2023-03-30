@@ -128,7 +128,7 @@ const ContactSheet = () => {
           <NameInputGroup type="email" placeholder="*EMAIL" />
           <NameInputGroup type="phone" placeholder="*PHONE NUMBER" />
           <CategoryGroup>
-            <option value="Questions" selected>
+            <option value="Questions" defaultValue="selected">
               *QUESTIONS
             </option>
             <option value="Comments">*COMMENTS</option>
