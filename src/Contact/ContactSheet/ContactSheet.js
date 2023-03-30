@@ -4,7 +4,6 @@ import styled from "styled-components";
 const ContactBody = styled.div`
   width: 100%;
   display: flex;
-  /* flex-flow: row; */
   justify-content: space-evenly;
   @media (max-width: 1024px) {
   }
@@ -128,7 +127,7 @@ const ContactSheet = () => {
           <NameInputGroup type="email" placeholder="*EMAIL" />
           <NameInputGroup type="phone" placeholder="*PHONE NUMBER" />
           <CategoryGroup>
-            <option value="Questions" selected>
+            <option value="Questions" defaultValue="selected">
               *QUESTIONS
             </option>
             <option value="Comments">*COMMENTS</option>

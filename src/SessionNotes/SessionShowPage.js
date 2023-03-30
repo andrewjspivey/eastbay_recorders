@@ -31,7 +31,7 @@ const HeaderContainer = styled.div`
   }
 `;
 
-const QuoteWrapper = styled.div`
+export const QuoteWrapper = styled.div`
   line-height: 2rem;
   width: 80%;
   padding-top: 3rem;
@@ -64,7 +64,7 @@ const PicContainer = styled.div`
 const BlogImage = styled.img`
   width: 100%;
 `;
-const Quote = styled.p`
+export const Quote = styled.p`
   padding: 0rem 4rem 3rem 4rem;
   color: #ad1100;
   text-align: center;
@@ -79,10 +79,12 @@ const Quote = styled.p`
 const SessionShowPage = () => {
   const [blog, setBlog] = useState({});
   const { id } = useParams();
+
   useEffect(() => {
     const blogInfo = sessionNotes.find((p) => p.id === id);
     setBlog(blogInfo);
   }, [id]);
+
   return (
     <Container>
       {blog ? (
@@ -92,7 +94,7 @@ const SessionShowPage = () => {
           </HeaderContainer>
           <QuoteWrapper>
             <img src={ebr_quote} alt="" />
-            <Quote>{blog.story}</Quote>
+            {blog.story}
           </QuoteWrapper>
           <PicContainer>
             <BlogImage src={blog.pic} alt="" />

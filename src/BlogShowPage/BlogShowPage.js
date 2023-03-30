@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { blogs } from "../data/blogData";
 import styled from "styled-components";
+import { Quote, QuoteWrapper } from "../SessionNotes/SessionShowPage";
 
 const Container = styled.div`
   display: flex;
@@ -66,7 +67,8 @@ const BlogShowPage = () => {
           <HeaderContainer>
             <BlogTitle>{blog.name}</BlogTitle>
           </HeaderContainer>
-          <div style={{ lineHeight: "2rem", width: "80%" }}>{blog.story}</div>
+          {/* <div style={{ lineHeight: "2rem", width: "80%" }}>{blog.story}</div> */}
+          <QuoteWrapper>{blog.story}</QuoteWrapper>
           <PicContainer>
             <BlogImage src={blog.pic} alt="" />
           </PicContainer>

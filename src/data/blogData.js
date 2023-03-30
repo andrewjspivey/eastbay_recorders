@@ -4,13 +4,26 @@ import blog_Charger from "../assets/blog_Charger.jpeg";
 import blog_ghb_momentum from "../assets/blog_ghb_momentum.jpeg";
 import blog_Jaffe from "../assets/blog_Jaffe.jpeg";
 import blog_CountryJoe from "../assets/blog_CountryJoe.jpeg";
+import styled from "styled-components";
+
+const Quote = styled.p`
+  padding: 0rem 4rem 3rem 4rem;
+  color: #343434;
+  text-align: center;
+  @media (max-width: 768px) {
+    padding: 1rem 2rem;
+  }
+  @media (max-width: 418px) {
+    padding: 0rem 1rem;
+  }
+`;
 
 export const blogs = [
   {
     id: "1",
     name: "THE DAMN LIARS AT EBR",
     story: (
-      <p>
+      <Quote>
         Chuck Bradley and The Damn Liars are a traditional country rock band
         from Sacramento. The quartet has made their mark at large outdoor
         festivals and small intimate venues, converting the unwashed one show at
@@ -20,7 +33,7 @@ export const blogs = [
         2018. Michael Rosen produced and engineered the sessions. "Super cool
         traditional country album," Rosen reports. "No samples, all real
         instruments, great songs."
-      </p>
+      </Quote>
     ),
     pic: tdl_ebr,
     link: "https://thedamnliars.com/home",
@@ -30,7 +43,7 @@ export const blogs = [
     id: "2",
     name: "INTRODUCING CHARGER",
     story: (
-      <p>
+      <Quote>
         "It’s fun when you get to write your history anew and feel safe enough
         to leave your comfort zone," says producer/engineer Michael Rosen. "The
         joy for me was to watch somebody step into a different light. He was so
@@ -56,7 +69,7 @@ export const blogs = [
         <br />
         ”There are already plans for the trio to get back into the studio for
         the next set of songs. Stay tuned."
-      </p>
+      </Quote>
     ),
     pic: blog_Charger,
     blogLink: "/blog/2",
@@ -65,7 +78,7 @@ export const blogs = [
     id: "3",
     name: "THE OLD FIRM CASUALS ARE BACK",
     story: (
-      <p>
+      <Quote>
         The Old Firm Casuals knocked out a powerful batch of punk rock at East
         Bay Recorders that will become “Holger Danske,” the band’s second
         full-length record.
@@ -83,7 +96,7 @@ export const blogs = [
         the guitars used on these songs because he signed an NDA. “We decided to
         go old school, so we dove deep into the way back machine to pull out
         guitars that you would never, ever imagine Lars Frederickson playing.”
-      </p>
+      </Quote>
     ),
     pic: blog_OFC_Lars,
     blogLink: "/blog/3",
@@ -92,7 +105,7 @@ export const blogs = [
     id: "4",
     name: "MIXING GBH’S “MOMENTUM”",
     story: (
-      <p>
+      <Quote>
         Michael Rosen teamed up with Lars Frederiksen to mix the latest offering
         from GBH titled “Momentum.” Epitaph released the record in November of
         2017.
@@ -107,7 +120,7 @@ export const blogs = [
         would send back tracks. You’d think something was maybe a glitch or
         whatever and it’d come back, and we’d listen and think ‘that’s f*cking
         amazing!'
-      </p>
+      </Quote>
     ),
     pic: blog_ghb_momentum,
     blogLink: "/blog/4",
@@ -116,7 +129,7 @@ export const blogs = [
     id: "5",
     name: "MATT JAFFE @ EBR",
     story: (
-      <p>
+      <Quote>
         Producer Matthew Kaufman brought alt-rocker Matt Jaffe into East Bay
         Recorders to get down tracks for the singer/songwriters “California’s
         Burning” release. Engineered by Michael Rosen, the dates were filled
@@ -129,7 +142,7 @@ export const blogs = [
         anybody else, so that’s interesting.”
         <br />
         “California’s Burning” came out on September 14, 2018
-      </p>
+      </Quote>
     ),
     pic: blog_Jaffe,
     blogLink: "/blog/5",
@@ -138,7 +151,7 @@ export const blogs = [
     id: "6",
     name: "WORKING WITH A LEGEND",
     story: (
-      <p>
+      <Quote>
         Country Joe McDonald is a folk icon, producing generational defining
         songs like “I Feel Like I’m Fixing to Die Rag” and legendary
         performances at Woodstock (the original) and Monterey Pop Festival.
@@ -169,7 +182,7 @@ export const blogs = [
         keeps it green for me, and it was exactly what he wanted to get down.”
         Following the release of “50,” Country Joe is appearing at Woodstock 50
         on August 17, 2019.
-      </p>
+      </Quote>
     ),
     pic: blog_CountryJoe,
     blogLink: "/blog/6",
