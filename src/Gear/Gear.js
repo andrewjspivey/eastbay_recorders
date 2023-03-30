@@ -8,7 +8,7 @@ import {
   NameContainer,
 } from "../BlogHome/BlogHome";
 import logo_ebr from "../assets/logo_ebr.png";
-import GearMain from "../assets/GearMain.jpeg";
+import ebr_new_studio_gear from "../assets/ebr_new_studio_gear.jpeg";
 import OutBoardGear from "../assets/OutBoardGear.jpeg";
 import ComputerMix from "../assets/computerMix.jpeg";
 import Dynamics from "../assets/Dynamics.jpeg";
@@ -187,7 +187,7 @@ const Gear = () => {
           <JumboHeader src={logo_ebr} />
         </div>
         <HeaderPic>
-          <img style={{ width: "100%" }} src={GearMain} alt="" />
+          <img style={{ width: "100%" }} src={ebr_new_studio_gear} alt="" />
           <NameContainer>
             <JumboTitle>
               <h1 style={{ marginBottom: "10px" }}>GEAR</h1>

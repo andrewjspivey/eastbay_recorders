@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import intro_ebr from "../../assets/intro_ebr.jpeg";
+import ebr_intro_real_music from "../../assets/ebr_intro_real_music.jpeg";
 
 const Container = styled.div`
   width: 85%;
@@ -99,7 +99,7 @@ const Intro = () => {
           </div>
         </TextContent>
         <IntroImageCont>
-          <img style={{ width: "90%" }} src={intro_ebr} alt="" />
+          <img style={{ width: "90%" }} src={ebr_intro_real_music} alt="" />
         </IntroImageCont>
       </IntroContainer>
     </Container>
