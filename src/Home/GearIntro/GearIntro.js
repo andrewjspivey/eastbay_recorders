@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import ebr_new_studio_gear from "../../assets/ebr_new_studio_gear.jpeg";
+import mixer_ebr from "../../assets/mixer_ebr.jpeg";
 
 const Container = styled.div`
   width: 85%;
@@ -138,7 +138,7 @@ const Intro = () => {
           </div>
         </TextContent>
         <IntroImageCont>
-          <img style={{ width: "90%" }} src={ebr_new_studio_gear} alt="mixer" />
+          <img style={{ width: "90%" }} src={mixer_ebr} alt="mixer" />
         </IntroImageCont>
       </IntroContainer>
     </Container>

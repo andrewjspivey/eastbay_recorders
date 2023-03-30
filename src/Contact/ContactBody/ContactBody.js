@@ -68,7 +68,7 @@ const ContactBody = () => {
       <ContactText>
         <ContentHeader>
           READY TO MAKE SOME MUSIC? LET'S DO IT! SEND US AN EMAIL OR REACH OUT
-          TO US ON SOCIAL MEDIA. CAN'T WAIT TO HEAR YOU.
+          TO US ON SOCIAL MEDIA. CAN'T WAIT TO HEAR FROM YOU.
         </ContentHeader>
       </ContactText>
       <ContactLocation>
