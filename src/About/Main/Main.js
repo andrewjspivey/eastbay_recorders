@@ -3,22 +3,13 @@ import styled from "styled-components";
 
 const MainWrapper = styled.div`
   padding: 50px;
-  @media (max-width: 768px) {
-    padding: 50px 50px 50px 50px;
-  }
-  @media (max-width: 600px) {
-    padding: 25px 50px 50px 50px;
-  }
-  @media (max-width: 375px) {
+  @media (max-width: 576px) {
     padding: 25px 30px;
   }
 `;
 const Title = styled.div`
   text-align: center;
-  /* font-size: 2rem;
-  @media (max-width: 768px) {
-    font-size: 1px;
-  } */
+  font-size: 2rem;
 `;
 const Body = styled.div`
   font-size: 14px;
@@ -51,14 +42,22 @@ const ContentHeader = styled.h2`
     line-height: 25px;
   }
 `;
+const StyledSpacer = styled.div`
+  height: 50px;
+  @media (max-width: 768px) {
+    height: 25px;
+  } ;
+`;
 
 const Main = () => {
   return (
     <MainWrapper>
+      {/* <StyledSpacer /> */}
       <Title>
-        <ContentHeader>"THIS SPOT IS A MAGNET FOR MUSIC."</ContentHeader>
+        <ContentHeader>Meet the Team</ContentHeader>
       </Title>
-      <Body>
+      {/* <StyledSpacer /> */}
+      {/* <Body>
         <Paragraph>
           <p>
             Fifteen years ago, Jon Evans was the first
@@ -106,7 +105,7 @@ const Main = () => {
           </p>
           <p>Come and make your mark.</p>
         </Paragraph>
-      </Body>
+      </Body> */}
     </MainWrapper>
   );
 };

@@ -2,7 +2,6 @@ import React from "react";
 import "./AboutUs.css";
 import styled from "styled-components";
 import MichaelLookingDown from "../../assets/MichealLookingDown.jpeg";
-import AnneMarie from "../../assets/AnneMarie.jpeg";
 import Dak from "../../assets/Dak.jpg";
 import AJ_Bio_About from "../../assets/AJ_Bio_About.jpg";
 
@@ -31,10 +30,14 @@ const UnderLine = styled.div`
   width: 60px;
   height: 3px;
   background-color: white;
+  margin-top: 12px;
+  margin-bottom: 18px;
+  @media (max-width: 768px) {
+    margin-top: 9px;
+  }
 `;
 
 const Body = styled.div`
-  /* width: 100%; */
   margin: 2rem 0rem;
   display: flex;
   justify-content: center;
@@ -52,7 +55,6 @@ const Div = styled.div`
   display: flex;
   width: 50%;
   justify-content: center;
-
   @media (max-width: 840px) {
     width: 100%;
   }
@@ -77,6 +79,14 @@ const TitleTag = styled.div`
   font-size: 16px;
 `;
 
+const StyledSpacer = styled.div`
+  height: ${(props) => props.height};
+  @media (max-width: 768px) {
+    height: ${(props) => props.mobileHeight};
+    border-top: 1px solid #eeeee5;
+  } ;
+`;
+
 const AboutUs = () => {
   return (
     <AboutUsWrapper>
@@ -84,9 +94,7 @@ const AboutUs = () => {
         <Div>
           <Text>
             <NameTag>MICHAEL ROSEN</NameTag>
-            <br />
             <UnderLine />
-            <br />
             <TitleTag>PRODUCER/ENGINEER</TitleTag>
             <div style={{ padding: "15px 25px 15px 15px" }}>
               <p>
@@ -126,71 +134,12 @@ const AboutUs = () => {
           <img className="aboutUsImgs" src={MichaelLookingDown} alt="" />
         </Div>
       </Body>
-      <Body>
-        <Div>
-          <Text>
-            <NameTag>ANNE-MARIE-PLEAU</NameTag>
-            <br />
-            <UnderLine />
-            <br />
-            <TitleTag>ENGINEER</TitleTag>
-            <div style={{ padding: "15px 25px 15px 15px" }}>
-              <p>
-                Anne-Marie has been an engineer and studio manager for East Bay
-                Recorders since the summer of 2016. There, she has worked with a
-                wide variety of artists including Old Firm Casuals, Charger,
-                illexotic, Gang of Thieves, Stomper 98, Matt Gage, The Damn
-                Liars, John Lester, Karney, and Ghost Town Rebellion. In 2017
-                she interned at Outland Studio, performing engineering and
-                postproduction services for artists such as Fine Points,
-                Battlehooch, James Williamson and Megan Rose. Anne-Marie is also
-                a theatrical sound designer, a freelance live sound engineer,
-                and currently edits the Working Class Audio podcast.
-              </p>
-            </div>
-          </Text>
-        </Div>
-
-        <Div>
-          <img className="aboutUsImgs" src={AnneMarie} alt="" />
-        </Div>
-      </Body>
-      <Body>
-        <Div>
-          <Text>
-            <NameTag>DAKARE DIXON-ESSIEN</NameTag>
-            <br />
-            <UnderLine />
-            <br />
-            <TitleTag>ENGINEER</TitleTag>
-            <div style={{ padding: "15px 25px 15px 15px" }}>
-              <p>
-                Dakare Dixon-Essien is an audio engineer professional who has
-                worked on projects doing both, production and postproduction
-                work. He specializes working in R&B, Hip Hop, and Rock and Roll
-                genres. His work history includes operating as the live sound
-                engineer for the Helen Street Mixer, the audio engineer for
-                Creekside Community Church, and audio and mixing engineer for
-                the BOOTSTRAPS Podcast, as well as commercials for 30First
-                Clothing Company. He has long had a passion for exploring and
-                shaping sounds and has brought that passion with him to East Bay
-                Recorders.
-              </p>
-            </div>
-          </Text>
-        </Div>
-
-        <Div>
-          <img className="aboutUsImgs" id="dak" src={Dak} alt="" />
-        </Div>
-      </Body>
+      <StyledSpacer height={"50px"} mobileHeight={"25px"} />
       <Body>
         <Div>
           <Text>
             <NameTag>AJ Hicks</NameTag>
-            <br />
             <UnderLine />
-            <br />
             <TitleTag>ENGINEER</TitleTag>
             <div style={{ padding: "15px 25px 15px 15px" }}>
               <p>
@@ -213,6 +162,33 @@ const AboutUs = () => {
 
         <Div>
           <img className="aboutUsImgs" src={AJ_Bio_About} alt="" />
+        </Div>
+      </Body>
+      <StyledSpacer height={"50px"} mobileHeight={"25px"} />
+      <Body>
+        <Div>
+          <Text>
+            <NameTag>DAKARE DIXON-ESSIEN</NameTag>
+            <UnderLine />
+            <TitleTag>ENGINEER</TitleTag>
+            <div style={{ padding: "15px 25px 15px 15px" }}>
+              <p>
+                Dakare Dixon-Essien is an audio engineer professional who has
+                worked on projects doing both, production and postproduction
+                work. He specializes working in R&B, Hip Hop, and Rock and Roll
+                genres. His work history includes operating as the live sound
+                engineer for the Helen Street Mixer, the audio engineer for
+                Creekside Community Church, and audio and mixing engineer for
+                the BOOTSTRAPS Podcast, as well as commercials for 30First
+                Clothing Company. He has long had a passion for exploring and
+                shaping sounds and has brought that passion with him to East Bay
+                Recorders.
+              </p>
+            </div>
+          </Text>
+        </Div>
+        <Div>
+          <img className="aboutUsImgs" id="dak" src={Dak} alt="" />
         </Div>
       </Body>
     </AboutUsWrapper>
