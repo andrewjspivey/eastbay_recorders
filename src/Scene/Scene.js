@@ -26,14 +26,16 @@ const GalleryContainer = styled.div`
   align-items: center;
 `;
 const TextContent = styled.div`
-  width: 80%;
+  width: 65%;
   text-align: center;
   font-weight: normal;
   font-size: 1.5rem;
   line-height: 30px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   @media (max-width: 768px) {
     font-size: 1rem;
+    width: 90%;
+    margin-bottom: 1rem;
   }
 `;
 const StyledGrid = styled.div`
@@ -47,6 +49,20 @@ const StyledGrid = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
+  }
+`;
+
+const StyledText = styled.p`
+  font-family: "Gotham";
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 30px;
+  text-align: center;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 30px;
   }
 `;
 
@@ -80,11 +96,11 @@ const Scene = () => {
       </JumboContainer>
       <GalleryContainer>
         <TextContent>
-          <p>
-            FEELS LIKE THERE'S ALWAYS SOMETHING SPECIAL HAPPENING AT EBR. HERE
-            IS A BEHIND THE SCENES LOOK AT SOME OF OUR RECORDING DATES AND
-            PHOTOS FROM MICHAEL ROSEN'S HISTORY.
-          </p>
+          <StyledText>
+            Feels like there's always something special happening at EBR. Here
+            is a behind the scenes look at some of our recording dates and
+            photos from Michael Rosen's history.
+          </StyledText>
         </TextContent>
         <StyledGrid>
           {imgArray.map((pic, index) => (

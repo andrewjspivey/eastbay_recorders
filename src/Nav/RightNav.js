@@ -67,16 +67,6 @@ const RightNav = ({ open }) => {
       </Link>
 
       <Link
-        to="/scene"
-        style={{
-          color: "whitesmoke",
-          textDecoration: "none",
-        }}
-      >
-        <NavLinks>THE SCENE</NavLinks>
-      </Link>
-
-      <Link
         to="/blog"
         style={{
           color: "whitesmoke",
@@ -84,6 +74,16 @@ const RightNav = ({ open }) => {
         }}
       >
         <NavLinks>BLOG</NavLinks>
+      </Link>
+
+      <Link
+        to="/scene"
+        style={{
+          color: "whitesmoke",
+          textDecoration: "none",
+        }}
+      >
+        <NavLinks>THE SCENE</NavLinks>
       </Link>
 
       <Link

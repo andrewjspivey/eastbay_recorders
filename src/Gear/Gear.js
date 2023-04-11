@@ -16,21 +16,29 @@ import Microphones from "../assets/Microphones.jpeg";
 import Instruments from "../assets/Instruments.jpeg";
 import styled from "styled-components";
 
-const Row = styled.div`
+const IntroDiv = styled.div`
   font-family: "Gotham";
   width: 75%;
   display: flex;
   justify-content: center;
   padding: 0px 1rem;
-  line-height: 30px;
-  font-weight: normal;
   text-align: center;
-  font-size: 1.5rem;
   @media (max-width: 768px) {
-    font-size: 1rem;
     margin-bottom: 1rem;
   }
 `;
+
+const IntroParagraph = styled.p`
+  font-family: "Gotham";
+  font-size: 1.5rem;
+  line-height: 35px;
+  font-weight: normal;
+  @media (max-width: 768px) {
+    line-height: 30px;
+    font-size: 1rem;
+  }
+`;
+
 const Wrapper = styled.div`
   width: 100%;
   margin-bottom: 2rem;
@@ -199,16 +207,16 @@ const Gear = () => {
       <div
         style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}
       >
-        <Row>
-          <p>
-            THE DAYS OF BRAGGING ABOUT RECORDING GEAR ARE THANKFULLY OVER. THAT
-            DOESN'T MEAN THAT STUDIOS CAN IGNORE WHAT TOOLS ARE AT THEIR
-            DISPOSAL. EAST BAY RECORDERS HAS A BLEND OF ANALOG AND DIGITAL TOOLS
-            TO MAKE RECORDING EASY AND WARM. WE'VE ALSO BUILT A COLLECTION OF
-            AMAZING INSTRUMENTS FOR THOSE TIMES WHEN AN ARTIST NEEDS SOMETHING
-            NEW.
-          </p>
-        </Row>
+        <IntroDiv>
+          <IntroParagraph>
+            The days of bragging about recording gear are thankfully over. That
+            doesn't mean that studios can ignore what tools are at their
+            disposal. East Bay Recorders has a blend of analog and digital tools
+            to make recording easy and warm. We've also built a collection of
+            amazing instruments for those times when an artist needs something
+            new.
+          </IntroParagraph>
+        </IntroDiv>
       </div>
       <Wrapper>
         <Section>
@@ -235,7 +243,7 @@ const Gear = () => {
             <Card>
               <CardText>
                 <Number>02/</Number>
-                <Header>Outboard Gear</Header>
+                <Header>Preamps</Header>
                 <Paragraph>
                   Neve 33114 Mic Pre/EQ (2) • Calrec PQ 1161Mic Pre/EQ (4) •
                   Telefunken V72 Mic Pre (2) • API 312 Mic Pre (4) • Vintech 473
