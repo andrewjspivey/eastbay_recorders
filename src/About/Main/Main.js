@@ -11,25 +11,25 @@ const Title = styled.div`
   text-align: center;
   font-size: 2rem;
 `;
-const Body = styled.div`
-  font-size: 14px;
-  padding: 25px 50px 50px 50px;
-  display: flex;
-  @media (max-width: 768px) {
-    display: block;
-    padding: 25px 50px 50px 50px;
-  }
-  @media (max-width: 600px) {
-    padding: 10px;
-  }
-`;
-const Paragraph = styled.div`
-  padding: 15px;
-  line-height: 1.5;
-  @media (max-width: 425px) {
-    padding: 0px;
-  }
-`;
+// const Body = styled.div`
+//   font-size: 14px;
+//   padding: 25px 50px 50px 50px;
+//   display: flex;
+//   @media (max-width: 768px) {
+//     display: block;
+//     padding: 25px 50px 50px 50px;
+//   }
+//   @media (max-width: 600px) {
+//     padding: 10px;
+//   }
+// `;
+// const Paragraph = styled.div`
+//   padding: 15px;
+//   line-height: 1.5;
+//   @media (max-width: 425px) {
+//     padding: 0px;
+//   }
+// `;
 const ContentHeader = styled.h2`
   font-family: "Gotham";
   font-weight: normal;
@@ -41,12 +41,6 @@ const ContentHeader = styled.h2`
     text-align: center;
     line-height: 25px;
   }
-`;
-const StyledSpacer = styled.div`
-  height: 50px;
-  @media (max-width: 768px) {
-    height: 25px;
-  } ;
 `;
 
 const Main = () => {
