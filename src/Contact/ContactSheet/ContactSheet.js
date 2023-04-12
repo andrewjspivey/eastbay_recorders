@@ -123,16 +123,26 @@ const ContactSheet = () => {
         method="POST"
       >
         <ContactGroup>
-          <NameInputGroup type="name" placeholder="*FIRST NAME AND LAST NAME" />
-          <NameInputGroup type="email" placeholder="*EMAIL" />
-          <NameInputGroup type="phone" placeholder="*PHONE NUMBER" />
+          <NameInputGroup
+            type="name"
+            name="name"
+            placeholder="*FIRST NAME AND LAST NAME"
+          />
+          <NameInputGroup type="email" name="email" placeholder="*EMAIL" />
+          <NameInputGroup
+            type="phone"
+            name="phone"
+            placeholder="*PHONE NUMBER"
+          />
           <CategoryGroup>
-            <option value="Questions" defaultValue="selected">
+            <option value="Questions" name="question" defaultValue="selected">
               *QUESTIONS
             </option>
-            <option value="Comments">*COMMENTS</option>
+            <option value="Comments" name="comment">
+              *COMMENTS
+            </option>
           </CategoryGroup>
-          <MessageGroup name="" placeholder="*MESSAGE"></MessageGroup>
+          <MessageGroup name="message" placeholder="*MESSAGE"></MessageGroup>
         </ContactGroup>
         <ContactButton type="submit">Submit</ContactButton>
       </ContactWrapper>
