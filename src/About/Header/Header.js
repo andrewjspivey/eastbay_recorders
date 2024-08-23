@@ -1,5 +1,5 @@
 import React from "react";
-import AboutMain from "../../assets/AboutMain.jpeg";
+import Michael_working_at_desk from "../../assets/Michael_working_at_desk.jpg";
 import logo_ebr from "../../assets/logo_ebr.png";
 import {
   JumboContainer,
@@ -17,7 +17,7 @@ const Header = () => {
         <JumboHeader src={logo_ebr} />
       </div>
       <HeaderPic>
-        <img style={{ width: "100%" }} src={AboutMain} alt="" />
+        <img style={{ width: "100%" }} src={Michael_working_at_desk} alt="" />
         <NameContainer>
           <JumboTitle>
             <h1 style={{ marginBottom: "10px" }}>ABOUT EBR</h1>

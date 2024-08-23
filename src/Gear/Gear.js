@@ -8,12 +8,12 @@ import {
   NameContainer,
 } from "../BlogHome/BlogHome";
 import logo_ebr from "../assets/logo_ebr.png";
-import ebr_new_studio_gear from "../assets/ebr_new_studio_gear.jpeg";
-import OutBoardGear from "../assets/OutBoardGear.jpeg";
-import ComputerMix from "../assets/computerMix.jpeg";
-import Dynamics from "../assets/Dynamics.jpeg";
-import Microphones from "../assets/Microphones.jpeg";
-import Instruments from "../assets/Instruments.jpeg";
+import Gear_Main from "../assets/Gear_Main.jpg";
+import gear_controls_left from "../assets/gear_controls_left.jpg";
+import Desk_dark from "../assets/Desk_dark.jpg";
+import gear_controls_right from "../assets/gear_controls_right.jpg";
+import drumset_mics from "../assets/drumset_mics.jpg";
+import Guitars_amps from "../assets/Guitars_amps.jpg";
 import styled from "styled-components";
 
 const IntroDiv = styled.div`
@@ -195,7 +195,7 @@ const Gear = () => {
           <JumboHeader src={logo_ebr} />
         </div>
         <HeaderPic>
-          <img style={{ width: "100%" }} src={ebr_new_studio_gear} alt="" />
+          <img style={{ width: "100%" }} src={Gear_Main} alt="" />
           <NameContainer>
             <JumboTitle>
               <h1 style={{ marginBottom: "10px" }}>GEAR</h1>
@@ -220,7 +220,7 @@ const Gear = () => {
       </div>
       <Wrapper>
         <Section>
-          <BoxImage src={ComputerMix} alt="Computer Mix"></BoxImage>
+          <BoxImage src={Desk_dark} alt="Computer Mix"></BoxImage>
           <BoxRight>
             <Card>
               <CardText>
@@ -238,7 +238,7 @@ const Gear = () => {
           </BoxRight>
         </Section>
         <SectionFlip>
-          <BoxImage src={OutBoardGear} alt="OutBoard Gear"></BoxImage>
+          <BoxImage src={gear_controls_left} alt="OutBoard Gear"></BoxImage>
           <BoxLeft>
             <Card>
               <CardText>
@@ -257,7 +257,7 @@ const Gear = () => {
           </BoxLeft>
         </SectionFlip>
         <Section>
-          <BoxImage src={Dynamics} alt="Dynamics"></BoxImage>
+          <BoxImage src={gear_controls_right} alt="gear_controls_right"></BoxImage>
           <BoxRight>
             <Card>
               <CardText>
@@ -275,7 +275,7 @@ const Gear = () => {
           </BoxRight>
         </Section>
         <SectionFlip>
-          <BoxImage src={Microphones} alt="Microphones"></BoxImage>
+          <BoxImage src={drumset_mics} alt="drumset_mics"></BoxImage>
           <BoxLeft>
             <Card>
               <CardText>
@@ -297,7 +297,7 @@ const Gear = () => {
           </BoxLeft>
         </SectionFlip>
         <Section>
-          <BoxImage src={Instruments} alt="Instruments"></BoxImage>
+          <BoxImage src={Guitars_amps} alt="Instruments"></BoxImage>
           <BoxRight>
             <Card>
               <CardText>

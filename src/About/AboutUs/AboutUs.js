@@ -1,9 +1,9 @@
 import React from "react";
 import "./AboutUs.css";
 import styled from "styled-components";
-import MichaelLookingDown from "../../assets/MichealLookingDown.jpeg";
+import Michael_at_desk from "../../assets/Michael_at_desk.jpg";
 import Dak from "../../assets/Dak.jpg";
-import AJ_Bio_About from "../../assets/AJ_Bio_About.jpg";
+import AJ_Bio from "../../assets/AJ_Bio.jpg";
 
 const AboutUsWrapper = styled.div`
   background-color: #626362;
@@ -131,7 +131,7 @@ const AboutUs = () => {
           </Text>
         </Div>
         <Div>
-          <img className="aboutUsImgs" src={MichaelLookingDown} alt="" />
+          <img className="aboutUsImgs" src={Michael_at_desk} alt="" />
         </Div>
       </Body>
       <StyledSpacer height={"50px"} mobileHeight={"25px"} />
@@ -161,34 +161,7 @@ const AboutUs = () => {
         </Div>
 
         <Div>
-          <img className="aboutUsImgs" src={AJ_Bio_About} alt="" />
-        </Div>
-      </Body>
-      <StyledSpacer height={"50px"} mobileHeight={"25px"} />
-      <Body>
-        <Div>
-          <Text>
-            <NameTag>DAKARE DIXON-ESSIEN</NameTag>
-            <UnderLine />
-            <TitleTag>ENGINEER</TitleTag>
-            <div style={{ padding: "15px 25px 15px 15px" }}>
-              <p>
-                Dakare Dixon-Essien is an audio engineer professional who has
-                worked on projects doing both, production and postproduction
-                work. He specializes working in R&B, Hip Hop, and Rock and Roll
-                genres. His work history includes operating as the live sound
-                engineer for the Helen Street Mixer, the audio engineer for
-                Creekside Community Church, and audio and mixing engineer for
-                the BOOTSTRAPS Podcast, as well as commercials for 30First
-                Clothing Company. He has long had a passion for exploring and
-                shaping sounds and has brought that passion with him to East Bay
-                Recorders.
-              </p>
-            </div>
-          </Text>
-        </Div>
-        <Div>
-          <img className="aboutUsImgs" id="dak" src={Dak} alt="" />
+          <img className="aboutUsImgs" src={AJ_Bio} alt="" />
         </Div>
       </Body>
     </AboutUsWrapper>
