@@ -2,7 +2,6 @@ import React from "react";
 import "./AboutUs.css";
 import styled from "styled-components";
 import Michael_at_desk from "../../assets/Michael_at_desk.jpg";
-import Dak from "../../assets/Dak.jpg";
 import AJ_Bio from "../../assets/AJ_Bio.jpg";
 
 const AboutUsWrapper = styled.div`
